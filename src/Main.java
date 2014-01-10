@@ -39,6 +39,7 @@ public class Main {
 					DeleteCustomer();
 					break;
 				case METADATA:
+					DisplayDatabaseMetaData();
 					break;
 				case QUERY:
 					break;
@@ -270,4 +271,8 @@ public class Main {
 		return true;
 	}
 
+	private static boolean DisplayDatabaseMetaData() throws SQLException {
+		System.out.println(new DatabaseMetaData(statement));
+		return true;
+	}
 }
