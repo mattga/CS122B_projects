@@ -1,9 +1,9 @@
-import java.util.Scanner;
-
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Scanner;
+
 
 public class Main {
 	private static Scanner s;
@@ -36,6 +36,7 @@ public class Main {
 					AddNewCustomer();
 					break;
 				case DELETE_CUSTOMER:
+					DeleteCustomer();
 					break;
 				case METADATA:
 					break;
@@ -225,5 +226,187 @@ public class Main {
 				+ s3 + "', '" + s4 + "', '" + s5 + "', '" + s6 + "')");
 		System.out.println("Star added at row " + res + " of table.\n");
 		return true;
+	}
+
+	private static boolean DeleteCustomer() throws SQLException {
+		Customer c 	 = new Customer();
+		int      opt = c.displayDeletePrompt().fetchNumericPromptAnswer();
+		int 	 res = -1;
+
+		switch (opt) {
+			case 1:
+				System.out.print("ID: ");
+				c.parseID(s.nextLine());
+				
+				// Remove From Foreign Tables
+				statement.executeUpdate( c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.ID))));
+				// Remove Customer from `customer`
+				res = statement.executeUpdate(c.composeDeleteByIDQuery());
+				break;
+			case 2:
+				System.out.print("Full Name(First Last): ");
+				c.parseFullName(s.nextLine());
+				String q = c.composeFetchByQuery(Customer.Field.NAME);
+				// Remove From Foreign Tables
+				statement.executeUpdate( c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.NAME))));
+				// Remove Customer from `customer`
+				res = statement.executeUpdate(c.composeDeleteByFullNameQuery());
+				break;
+			case 3:
+				System.out.print("Email: ");
+				c.parseEmail(s.nextLine());
+				
+				// Remove From Foreign Tables
+				statement.executeUpdate( c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.EMAIL))));
+				// Remove Customer from `customer`
+				res = statement.executeUpdate(c.composeDeleteByEmailQuery());
+				break;
+		}
+		
+		System.out.println("Removed: " + res + " of table.\n");
+		return true;
+	}
+
+
+	/**
+	 * Encapsulates behavior specific to customers.
+	 * ** More Specifically DeleteCustomer Method.
+	 */
+	public static class Customer {
+		public static enum Field {ID, NAME, EMAIL};
+		public int id;
+		public String first_name;
+		public String last_name;
+		public String cc_id;
+		public String address;
+		public String email;
+		public String password;
+
+
+		public Customer parseID(String line) {
+			this.id = -1;
+			while (this.id == -1) {
+				try {
+					this.id = Integer.parseInt(line);
+				} catch (NumberFormatException e) {
+					System.out.println("Invalid Number Format, Enter an Integer Value.");
+					line = s.nextLine();
+					this.id = -1;
+				}
+			}
+			return this;
+		}
+
+
+		public Customer parseEmail(String line) {
+			this.email = null;
+			while (this.email == null) {
+				this.email = line.matches(".*@.*") ? line : null;
+				if (this.email == null) {
+					System.out.println("Invalid Email Format");
+					line = s.nextLine();
+				}
+			}
+			return this;
+		}
+
+
+		public Customer parseFullName(String line) {
+			while (line.equals("")) {
+				System.out.println("Please Enter A Full Name, eg: John Smith");
+				line = s.nextLine();
+			}
+
+			String result[] = line.split(" ");
+
+			if (result.length > 1) {
+				this.first_name = result[0];
+				this.last_name = result[1];
+			} else {
+				this.first_name = result[0];
+				this.last_name = "";
+			}
+
+			return this;
+		}
+
+
+		public Customer displayDeletePrompt() {
+			System.out.println("Would You Like To Delete By:");
+			System.out.println("1. ID");
+			System.out.println("2. Full Name");
+			System.out.println("3. Email");
+
+			return this;
+		}
+
+
+		public int fetchNumericPromptAnswer() {
+			int opt = -1;
+			while (opt == -1) {
+				try { 
+					opt = Integer.parseInt(s.nextLine()); 
+				} catch(NumberFormatException e) {opt = -1;}
+			}
+			return opt;
+		}
+
+
+		public String composeInsertQuery() {
+			return String.format("INSER INTO `customers` VALUES();");
+		}
+		
+		public String composeFetchByQuery(Field field) {
+			switch(field){
+				case EMAIL:
+					return String.format("SELECT * FROM `customers` WHERE `email` = '%s' LIMIT 1", this.email);
+				case ID:
+					return String.format("SELECT * FROM `customers` WHERE `id` = '%s' LIMIT 1", this.id);
+				case NAME:
+					return String.format("SELECT * FROM `customers` WHERE `first_name` = '%s' AND `last_name` = '%s' LIMIT 1", this.first_name, this.last_name);
+			}
+			return null; // unreachable.
+		}
+		
+		public String composeDeleteForeign(ResultSet rs) {
+			this.id = -1; 
+			try {
+				if(rs.first()) {
+					id = Integer.parseInt(rs.getString(1));
+				}
+				else {
+					return null; // No Foreign Keys
+				}
+			} catch (SQLException e) { e.printStackTrace();}
+			
+			return String.format("DELETE FROM `sales` WHERE `customer_id` = %d;", this.id);
+		}
+
+		public String composeDeleteByEmailQuery() {
+			return String.format("DELETE FROM `customers` WHERE `email` = '%s';", this.email);
+		}
+
+
+		public String composeDeleteByFullNameQuery() {
+			return String.format("DELETE FROM `customers` WHERE `first_name` = '%s' AND `last_name` = '%s';", this.first_name, this.last_name);
+		}
+
+
+		public String composeDeleteByIDQuery() {
+			return String.format("DELETE FROM `customers` WHERE `id` = '%s';", this.id);
+		}
+
+		
+		public String toString(){
+			StringBuffer res = new StringBuffer();
+			res.append("ID:	        "+ this.id);
+			res.append("First Name:	"+ this.first_name);
+			res.append("Last Name:	"+ this.last_name);
+			res.append("Address:	"+ this.address);
+			res.append("Email:  	"+ this.email);
+			res.append("CC ID:	    "+ this.cc_id);
+			res.append("ID:	        "+ this.password);
+			return res.toString();
+		}
 	}
 }
