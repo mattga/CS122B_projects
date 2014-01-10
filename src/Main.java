@@ -221,6 +221,9 @@ public class Main {
 			s1 = "";
 		}
 
+		int res = statement.executeUpdate("INSERT INTO customers VALUES (NULL, '" + s1 + "', '" + s2 + "', '"
+				+ s3 + "', '" + s4 + "', '" + s5 + "', '" + s6 + "')");
+		System.out.println("Star added at row " + res + " of table.\n");
 		return true;
 	}
 }
