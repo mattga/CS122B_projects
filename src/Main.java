@@ -42,6 +42,7 @@ public class Main {
 					DisplayDatabaseMetaData();
 					break;
 				case QUERY:
+					RunUserInputQuery();
 					break;
 				case EXIT:
 					System.out.println("Program Terminated.");
@@ -70,7 +71,7 @@ public class Main {
 
 	}
 
-	private static void printResultSet(ResultSet rs) {
+	public static void printResultSet(ResultSet rs) {
 		try {
 			ResultSetMetaData rsmd = rs.getMetaData();
 			int colNum = rsmd.getColumnCount();
@@ -84,7 +85,7 @@ public class Main {
 
 				// Find max column widths from data
 				for(; !rs.isAfterLast(); rs.next()) {
-					System.out.println(rs.getRow());
+					// System.out.println(rs.getRow());
 					for(int i = 1; i <= colNum; i++)
 						if(rs.getString(i).length() > maxColWidths[i-1])
 							maxColWidths[i-1] = rs.getString(i).length();
@@ -273,6 +274,16 @@ public class Main {
 
 	private static boolean DisplayDatabaseMetaData() throws SQLException {
 		System.out.println(new DatabaseMetaData(statement));
+		return true;
+	}
+	
+	private static boolean RunUserInputQuery() throws SQLException {
+		UserSQLQuery usql = new UserSQLQuery(statement);
+		System.out.println("Enter a SQL Query: ");
+		while (!usql.isValid(s.nextLine())){
+			System.out.println("Invalid Query Try Again.");
+		}		
+		usql.executeQuery();
 		return true;
 	}
 }
