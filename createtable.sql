@@ -1,6 +1,6 @@
-create database moviedb;
+CREATE DATABASE IF NOT EXISTS existmoviedb;
 
-use moviedb;
+USE moviedb;
 
 CREATE TABLE movies (
 	id int PRIMARY KEY auto_increment,
