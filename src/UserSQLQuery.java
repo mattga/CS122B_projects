@@ -2,8 +2,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.mysql.jdbc.exceptions.MySQLIntegrityConstraintViolationException;
-
 
 public class UserSQLQuery {
 	public enum Type {UPDATE, SELECT};

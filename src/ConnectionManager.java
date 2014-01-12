@@ -6,10 +6,10 @@ import java.sql.Statement;
 
 public class ConnectionManager {
 	private static final String jdbcDriver = "com.mysql.jdbc.Driver";
-	private static final String url = "jdbc:mysql://localhost/moviedb";
+	private static final String url = "jdbc:mysql://localhost/moviedb?zeroDateTimeBehavior=convertToNull";
 	
 	private String getURL(String user, String pass) {
-		return url + "?user=" + user + "&password=" + pass;
+		return url + "&user=" + user + "&password=" + pass;
 	}
 	
 	public Statement connect(String user, String pass) {

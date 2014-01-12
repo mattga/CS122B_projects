@@ -86,9 +86,15 @@ public class Main {
 				// Find max column widths from data
 				for(; !rs.isAfterLast(); rs.next()) {
 					// System.out.println(rs.getRow());
-					for(int i = 1; i <= colNum; i++)
-						if(rs.getString(i).length() > maxColWidths[i-1])
+					for(int i = 1; i <= colNum; i++) {
+						if(rsmd.getColumnType(i) == java.sql.Types.DATE) {
+							if(10 > maxColWidths[i-1])
+								maxColWidths[i-1] = 10;
+						}
+						else if(rs.getString(i).length() > maxColWidths[i-1]) {
 							maxColWidths[i-1] = rs.getString(i).length();
+						}
+					}
 				}
 
 				// Print Column names
@@ -100,7 +106,10 @@ public class Main {
 				// Print Data
 				for(rs.first(); !rs.isAfterLast(); rs.next()) {
 					for(int i = 1; i <= colNum; i++) {
-						System.out.printf("%-" + (maxColWidths[i-1]+2) + "s", rs.getString(i));
+						if(rs.getString(i) == null)
+							System.out.printf("%-" + (maxColWidths[i-1]+2) + "s", "NULL");
+						else
+							System.out.printf("%-" + (maxColWidths[i-1]+2) + "s", rs.getString(i));
 					}
 					System.out.println();
 				}
@@ -188,7 +197,7 @@ public class Main {
 	//If the customer has a single name, add it as his last_name and and assign an empty string ("") to first_name.
 	private static boolean AddNewCustomer() throws SQLException {
 		String errBuff = "";
-		
+
 		System.out.print("First Name: ");
 		s1 = s.nextLine();
 		System.out.print("Last Name: ");
@@ -236,29 +245,29 @@ public class Main {
 		int 	 res = 0;
 		String   delQuery    = null;
 		Customer.Field field = null;
-		
+
 		switch (opt) {
-			case 1:
-				System.out.print("ID: ");
-				c.parseID(s.nextLine());
-				
-				delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.ID)));
-				field = Customer.Field.ID;
-				break;
-			case 2:
-				System.out.print("Full Name(First Last): ");
-				c.parseFullName(s.nextLine());
-				
-				delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.NAME)));
-				field = Customer.Field.NAME;
-				break;
-			case 3:
-				System.out.print("Email: ");
-				c.parseEmail(s.nextLine());
-				
-				delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.EMAIL)));
-				field = Customer.Field.EMAIL;
-				break;
+		case 1:
+			System.out.print("ID: ");
+			c.parseID(s.nextLine());
+
+			delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.ID)));
+			field = Customer.Field.ID;
+			break;
+		case 2:
+			System.out.print("Full Name(First Last): ");
+			c.parseFullName(s.nextLine());
+
+			delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.NAME)));
+			field = Customer.Field.NAME;
+			break;
+		case 3:
+			System.out.print("Email: ");
+			c.parseEmail(s.nextLine());
+
+			delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.EMAIL)));
+			field = Customer.Field.EMAIL;
+			break;
 		}
 
 		// delQuery tells us if the customer exists
@@ -276,7 +285,7 @@ public class Main {
 		System.out.println(new DatabaseMetaData(statement));
 		return true;
 	}
-	
+
 	private static boolean RunUserInputQuery() throws SQLException {
 		UserSQLQuery usql = new UserSQLQuery(statement);
 		System.out.println("Enter a SQL Query: ");

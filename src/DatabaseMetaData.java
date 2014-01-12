@@ -96,7 +96,8 @@ public class DatabaseMetaData {
 				
 				
 				// Count the number of items in the result set.
-				for (; !rs.isAfterLast(); rs.next(), count++);
+				rs.last();
+				count = rs.getRow();
 				
 			} catch (SQLException e) {
 				_error = true;
