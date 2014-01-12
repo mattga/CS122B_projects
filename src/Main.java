@@ -241,34 +241,16 @@ public class Main {
 
 	private static boolean DeleteCustomer() throws SQLException {
 		Customer c 	 = new Customer(s);
-		int      opt = c.displayDeletePrompt().fetchNumericPromptAnswer();
+		
 		int 	 res = 0;
 		String   delQuery    = null;
 		Customer.Field field = null;
 
-		switch (opt) {
-		case 1:
-			System.out.print("ID: ");
-			c.parseID(s.nextLine());
-
-			delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.ID)));
-			field = Customer.Field.ID;
-			break;
-		case 2:
-			System.out.print("Full Name(First Last): ");
-			c.parseFullName(s.nextLine());
-
-			delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.NAME)));
-			field = Customer.Field.NAME;
-			break;
-		case 3:
-			System.out.print("Email: ");
-			c.parseEmail(s.nextLine());
-
-			delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.EMAIL)));
-			field = Customer.Field.EMAIL;
-			break;
-		}
+		System.out.print("Enter Customer ID: ");
+		c.parseID(s.nextLine());
+		
+		delQuery = c.composeDeleteForeign( statement.executeQuery(c.composeFetchByQuery(Customer.Field.ID)));
+		field = Customer.Field.ID;
 
 		// delQuery tells us if the customer exists
 		if (delQuery != null) {
@@ -277,7 +259,8 @@ public class Main {
 		} else {
 			System.out.println("Did not find any customer with given parameter.");
 		}
-		System.out.println("Removed: " + res + " of table.\n");
+		
+		System.out.println("Removed: " + res + " Customer from the table.\n");
 		return true;
 	}
 

@@ -40,50 +40,6 @@ public class Customer {
 		return this;
 	}
 
-	
-	public Customer parseEmail(String line) {
-		this.email = null;
-		while (this.email == null) {
-			this.email = line.matches(".*@.*") ? line : null;
-			if (this.email == null) {
-				System.out.println("Invalid Email Format");
-				line = _s.nextLine();
-			}
-		}
-		return this;
-	}
-
-	
-	public Customer parseFullName(String line) {
-		while (line.equals("")) {
-			System.out.println("Please Enter A Full Name, eg: John Smith");
-			line = _s.nextLine();
-		}
-
-		String result[] = line.split(" ");
-
-		if (result.length > 1) {
-			this.first_name = result[0];
-			this.last_name = result[1];
-		} else {
-			this.first_name = result[0];
-			this.last_name = "";
-		}
-
-		return this;
-	}
-
-	
-	public Customer displayDeletePrompt() {
-		System.out.println("Would You Like To Delete By:");
-		System.out.println("1. ID");
-		System.out.println("2. Full Name");
-		System.out.println("3. Email");
-
-		return this;
-	}
-
-	
 	public int fetchNumericPromptAnswer() {
 		int opt = -1;
 		while (opt == -1) {
@@ -139,33 +95,10 @@ public class Customer {
 
 	
 	public String composeDeleteQueryBy(Field field) {
-		String res = null;
-		switch (field) {
-		case EMAIL:
-			res = composeDeleteByEmailQuery();
-			break;
-		case ID:
-			res = composeDeleteByIDQuery();
-			break;
-		case NAME:
-			res = composeDeleteByFullNameQuery();
-			break;
-		}
-		return res;
+		return composeDeleteByIDQuery();
 	}
 
-	
-	public String composeDeleteByEmailQuery() {
-		return String.format("DELETE FROM `customers` WHERE `email` = '%s';", this.email);
-	}
-
-	
-	public String composeDeleteByFullNameQuery() {
-		return String.format("DELETE FROM `customers` WHERE `first_name` = '%s' AND `last_name` = '%s';",
-				this.first_name, this.last_name);
-	}
-
-	
+		
 	public String composeDeleteByIDQuery() {
 		return String.format("DELETE FROM `customers` WHERE `id` = '%s';", this.id);
 	}
