@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS moviedb;
 
 USE moviedb;
 
-CREATE TABLE movies (
+CREATE TABLE IF NOT EXISTS movies (
 	id int PRIMARY KEY auto_increment,
 	title varchar(100) NOT NULL,
 	year int NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE movies (
 	trailer_url varchar(200)
 );
 
-CREATE TABLE stars (
+CREATE TABLE IF NOT EXISTS stars (
 	id int PRIMARY KEY auto_increment,
 	first_name varchar(50) NOT NULL,
 	last_name varchar(50) NOT NULL,
@@ -19,33 +19,33 @@ CREATE TABLE stars (
 	photo_url varchar(200)
 );
 
-CREATE TABLE stars_in_movies (
+CREATE TABLE IF NOT EXISTS stars_in_movies (
 	star_id int NOT NULL,
 	movie_id int NOT NULL,
 	FOREIGN KEY(star_id) REFERENCES stars (id),
 	FOREIGN KEY(movie_id) REFERENCES movies (id)
 );
 
-CREATE TABLE genres (
+CREATE TABLE IF NOT EXISTS genres (
 	id int PRIMARY KEY auto_increment, 
 	name varchar(32) NOT NULL
 );
 
-CREATE TABLE genres_in_movies (
+CREATE TABLE IF NOT EXISTS genres_in_movies (
 	genre_id int NOT NULL,
 	movie_id int NOT NULL,
 	FOREIGN KEY(genre_id) REFERENCES genres (id),
 	FOREIGN KEY(movie_id) REFERENCES movies (id)
 );
 
-CREATE TABLE creditcards (
+CREATE TABLE IF NOT EXISTS creditcards (
 	id varchar(20) PRIMARY KEY,
 	first_name varchar(50) NOT NULL,
 	last_name varchar(50) NOT NULL,
 	expiration DATE NOT NULL
 );
 
-CREATE TABLE customers (
+CREATE TABLE IF NOT EXISTS customers (
 	id int PRIMARY KEY auto_increment,
 	first_name varchar(50) NOT NULL,
 	last_name varchar(50) NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE customers (
 	FOREIGN KEY(cc_id) REFERENCES creditcards (id)
 );
 
-CREATE TABLE sales (
+CREATE TABLE IF NOT EXISTS sales (
 	id int PRIMARY KEY auto_increment,
 	customer_id int NOT NULL,
 	movie_id int NOT NULL,
