@@ -113,6 +113,7 @@ public class Main {
 					}
 					System.out.println();
 				}
+				System.out.println();
 			}
 			else {
 				System.out.println("No results found.\n");
@@ -156,7 +157,7 @@ public class Main {
 		}
 
 		// Query database & print results
-		rs = statement.executeQuery("SELECT m.* FROM movies AS m, stars AS s, stars_in_movies AS sim WHERE m.id = sim.movie_id" +
+		rs = statement.executeQuery("SELECT CONCAT(s.first_name, ' ', s.last_name) AS star, m.* FROM movies AS m, stars AS s, stars_in_movies AS sim WHERE m.id = sim.movie_id" +
 				" AND sim.star_id = s.id" + (s1.equals("")?"":" AND s.first_name='" + s1 + "'") + (s2.equals("")?"":" AND s.last_name='" + s2 + "'"));
 		printResultSet(rs);
 		return true;
