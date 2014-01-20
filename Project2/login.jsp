@@ -5,7 +5,7 @@
 <title>Test Java Servlet</title>
 </head>
 <body>
-	<form action="/cs122b_project2/Login" method="POST">
+	<form action="<%= response.encodeURL("Login") %>" method="POST">
 		Login Email: <input type="text" name="email"><br>
 		Password: <input type="password" name="password"><br>
 		<input type="submit" value="Login">
