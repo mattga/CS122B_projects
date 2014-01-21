@@ -24,7 +24,7 @@ import Types.Star;
 public class Movies {
 	private Connection conn;
 	private Statement statement;
-	private PreparedStatement pstmt;
+	private PreparedStatement pstmt, pstmt2, pstmt3;
 
 	public Movies() {
 		
@@ -37,27 +37,70 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 			statement = conn.createStatement();
 
-			System.out.print("Trying Fetch");
+			System.out.println("Trying Fetch");
 			pstmt = conn.prepareStatement("SELECT * FROM movies AS m, genres_in_movies AS gim, genres AS g " +
 				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ?");
 			pstmt.setString(1,genre);
 			ResultSet rs = pstmt.executeQuery();
 			
+			// Prepare queries for a movies stars & genres.
+			pstmt2 = conn.prepareStatement("SELECT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
+			pstmt3 = conn.prepareStatement("SELECT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
+
 			if (!rs.first()) {
-				System.out.print("No Movies");
+				System.out.println("No Movies");
 				return new Movie[0]; // No Movies
 			} else {
-				System.out.print("Found Some:");
+				System.out.println("Found Some:");
+
 				for(; !rs.isAfterLast(); rs.next()) {
 					Movie m = new Movie(); 
 					m.id 		= rs.getInt("id");
 					m.title 	= rs.getString("title");
-					m.director 	= rs.getString("director");
+					m.director	= rs.getString("director");
 					m.year 		= rs.getInt("year");
 					m.trailer_url = rs.getString("trailer_url");
-					m.genres    = new Genre[0];
-					m.stars		= new Star[0];
-					
+
+					pstmt2.setInt(1,m.id);
+					ResultSet rs2 = pstmt2.executeQuery();
+					if(!rs2.last()) {
+						int i = 0;
+						m.stars = new Star[rs2.getRow()];
+						Star s = null;
+						rs2.first();
+						for(; !rs2.isAfterLast(); rs2.next()) {
+							s = new Star();
+							s.id 			= rs2.getInt("id");
+							s.first_name 	= rs2.getString("first_name");
+							s.last_name 	= rs2.getString("last_name");
+							s.dob			= rs2.getDate("dob").toString();
+							s.photo_url		= rs2.getString("photo_url");
+							s.movies 		= new Movie[0];
+							m.stars[i++] = s;
+						}
+					} else {
+						System.out.println("no stars");
+						m.stars = new Star[0];
+					}
+
+					pstmt3.setInt(1,m.id);
+					rs2 = pstmt3.executeQuery();
+					if(!rs2.last()) {
+						int i = 0;
+						m.genres = new Genre[rs2.getRow()];
+						Genre g = null;
+						rs2.first();
+						for(; !rs2.isAfterLast(); rs2.next()) {
+							g = new Genre();
+							g.genre_id 	= rs2.getInt("id");
+							g.name 		= rs2.getString("name");
+							m.genres[i++] = g;
+						}
+					} else {
+						System.out.println("no genres");
+						m.genres = new Genre[0];
+					}
+
 					resultSet.add(m);
 				}
 			}
@@ -67,7 +110,7 @@ public class Movies {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+
 		// Return a simple array of `Movie` Objects.
 		return resultSet.toArray(new Movie[resultSet.size()]);
 	}
