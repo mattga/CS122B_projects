@@ -27,17 +27,19 @@ public class Movies {
 	private PreparedStatement pstmt;
 
 	public Movies() {
-		conn = MySQL.getInstance().getConnection();
-		statement = MySQL.getInstance().getStatement();
+		
 	}
 	
 	public Movie[] getAllMoviesByGenre(String genre) {
 		ArrayList<Movie> resultSet = new ArrayList<Movie>();
 		
 		try {
+			conn = MySQL.getInstance().getConnection();
+			statement = conn.createStatement();
+
 			System.out.print("Trying Fetch");
 			pstmt = conn.prepareStatement("SELECT * FROM movies AS m, genres_in_movies AS gim, genres AS g " +
-										  "WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ?");
+				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ?");
 			pstmt.setString(1,genre);
 			ResultSet rs = pstmt.executeQuery();
 			
@@ -59,6 +61,9 @@ public class Movies {
 					resultSet.add(m);
 				}
 			}
+			rs.close();
+			statement.close();
+			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

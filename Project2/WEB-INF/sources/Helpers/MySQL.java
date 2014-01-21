@@ -1,9 +1,12 @@
 package Helpers;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.jolbox.bonecp.BoneCP;
+import com.jolbox.bonecp.BoneCPConfig;
 
 /**
  * Singleton Implementation of the MySQL handle that is
@@ -14,8 +17,7 @@ import java.sql.Statement;
  */
 public class MySQL {
 
-	private Connection _connection;
-	private Statement _statement;
+	private BoneCP connectionPool = null;
 	/**
 	 * Holds Single Instance of MySQL, that is shared
 	 * at runtime.
@@ -29,8 +31,16 @@ public class MySQL {
 	private MySQL() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			_connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/moviedb?user=moviedb&password=tiger");
-			_statement = _connection.createStatement();
+
+			BoneCPConfig config = new BoneCPConfig();
+			config.setJdbcUrl("jdbc:mysql://localhost:3306/moviedb"); // jdbc url specific to your database, eg jdbc:mysql://127.0.0.1/yourdb
+			config.setUsername("moviedb"); 
+			config.setPassword("tiger");
+			config.setMinConnectionsPerPartition(5);
+			config.setMaxConnectionsPerPartition(10);
+			config.setPartitionCount(1);
+			connectionPool = new BoneCP(config); // setup the connection pool
+
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -51,10 +61,20 @@ public class MySQL {
 	}
 	
 	public Connection getConnection() {
-		return _connection;
+		try {
+			return connectionPool.getConnection();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	public Statement getStatement() {
-		return _statement;
+		try {
+			return connectionPool.getConnection().createStatement();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
