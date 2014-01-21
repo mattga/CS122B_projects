@@ -2,12 +2,12 @@
 <!DOCTYPE web-app>
 <web-app>
 	<servlet>
-		<servlet-class>Login</servlet-class>
-		<servlet-name>Login</servlet-name>
+		<servlet-class>LoginServelet</servlet-class>
+		<servlet-name>LoginServelet</servlet-name>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>Login</servlet-name>
+		<servlet-name>LoginServelet</servlet-name>
 		<url-pattern>/Login</url-pattern>
 	</servlet-mapping>
 </web-app>
