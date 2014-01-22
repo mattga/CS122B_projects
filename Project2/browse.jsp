@@ -1,10 +1,10 @@
 <%@ page import="Types.Movie" %>
 <html>
 	<head>
-		<title>Browse by Genre</title>
+		<title>FabFlix - Browse Movies</title>
 	</head>
 <body>
-	<h1>Some Action Movies</h1>
+	<h1>Movie List</h1>
 	
 	<% 
 		// All Database Related Logic Abstracted out into Helper Class
@@ -55,7 +55,7 @@
 				out.println("		<td>Genres</td>");
 				String s = "";
 				for(int i = 0; i < m.genres.length; i++)
-					s += (i!=0?", ":"") + m.genres[i];
+					s += (i!=0?", ":"") + m.genres[i].name;
 				out.println("		<td>" + s + "</td>");
 				out.println("	</tr>");
 				out.println("	<tr>");
