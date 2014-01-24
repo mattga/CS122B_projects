@@ -100,6 +100,7 @@ public class Movies {
 			rs = statement.executeQuery(query);
 
 			List<Movie> movieList = getMovieList();
+			statement.close();
 			return movieList.toArray(new Movie[movieList.size()]);
 		} catch (SQLException e) {
 			e.printStackTrace();

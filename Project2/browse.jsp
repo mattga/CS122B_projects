@@ -33,37 +33,39 @@
 
 		// Iterate simple array object...
 		for (Movie m : res) {
-			out.println("<table border=\"0\">");
+			out.println("<table border=\"0\" >");
 			out.println("	<tr>");
-			out.println("		<td>ID</td>");
-			out.println("		<td>" + m.id + "</td>");
-			out.println("	</tr>");
-			out.println("	<tr>");
-			out.println("		<td>Title</td>");
-			out.println("		<td>" + m.title + "</td>");
-			out.println("	</tr>");
-			out.println("	<tr>");
-			out.println("		<td>Year</td>");
-			out.println("		<td>" + m.year + "</td>");
-			out.println("	</tr>");
-			out.println("	<tr>");
-			out.println("		<td>Director</td>");
-			out.println("		<td>" + m.director + "</td>");
-			out.println("	</tr>");
-			out.println("	<tr>");
-			out.println("		<td>Genres</td>");
+			if(m.banner_url.equals(""))
+				out.println("		<td><img src=\"images/default_banner.png\" width=\"85\" height=\"120\"></td>");
+			else
+				out.println("		<td><img src=\"" + m.banner_url + "\" onerror=\"this.src=\'images/default_banner.png\'\" width=\"85\" height=\"120\"></td>");
+			out.println("		<td>");
+			out.println(" 			<table border=\"0\">");
+			out.println("				<tr>");
+			out.println("					<td>" + m.id + "</td>");
+			out.println("					<td><b>" + m.title + " (" + m.year + ")</b></td>");
+			out.println("				</tr>");
+			out.println("				<tr>");
+			out.println("					<td>Director: </td>");
+			out.println("					<td>" + m.director + "</td>");
+			out.println("				</tr>");
+			out.println("				<tr>");
+			out.println("					<td>Genres: </td>");
 			String s = "";
 			for(int i = 0; i < m.genres.length; i++)
 				s += (i!=0?", ":"") + m.genres[i].name;
-			out.println("		<td>" + s + "</td>");
-			out.println("	</tr>");
-			out.println("	<tr>");
-			out.println("		<td>Stars</td>");
+			out.println("					<td>" + s + "</td>");
+			out.println("				</tr>");
+			out.println("				<tr>");
+			out.println("					<td>Starring: </td>");
 			s = "";
 			for(int i = 0; i < m.stars.length; i++)
 				s += (i!=0?", ":"") + m.stars[i].first_name + " " + m.stars[i].last_name;
-			out.println("		<td>" + s + "</td>");
-			out.println("	</tr>");	
+			out.println("					<td>" + s + "</td>");
+			out.println("				</tr>");	
+			out.println("			</table>");
+			out.println("		</td>");
+			out.println("	</tr>");
 			out.println("</table><br>");
 		}
 	}
