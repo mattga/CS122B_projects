@@ -29,23 +29,28 @@ public class Movies {
 	private ResultSet rs;
 
 	public Movies() {
+		try {
+			conn = MySQL.getInstance().getConnection();
+
+			// Prepare queries for a movies stars & genres.
+			pstmt2 = conn.prepareStatement("SELECT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
+			pstmt3 = conn.prepareStatement("SELECT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
 		
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public Movie[] getAllMoviesByGenre(String genre) {
 		try {
 			conn = MySQL.getInstance().getConnection();
-			statement = conn.createStatement();
 
 			System.out.println("Trying Fetch");
 			pstmt = conn.prepareStatement("SELECT * FROM movies AS m, genres_in_movies AS gim, genres AS g " +
 				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ?");
 			pstmt.setString(1,genre);
 			rs = pstmt.executeQuery();
-			
-			// Prepare queries for a movies stars & genres.
-			pstmt2 = conn.prepareStatement("SELECT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
-			pstmt3 = conn.prepareStatement("SELECT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
 			
 			// Return a simple array of `Movie` Objects.
 			List<Movie> movieList = getMovieList();
@@ -59,21 +64,43 @@ public class Movies {
 	public Movie[] getAllMoviesByTitle(String title) {
 		try {
 			conn = MySQL.getInstance().getConnection();
-			statement = conn.createStatement();
 
 			System.out.println("Trying Fetch");
 			pstmt = conn.prepareStatement("SELECT * FROM movies AS m WHERE m.title LIKE ?");
 			pstmt.setString(1,title+"%");
 			rs = pstmt.executeQuery();
-			
-			// Prepare queries for a movies stars & genres.
-			pstmt2 = conn.prepareStatement("SELECT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
-			pstmt3 = conn.prepareStatement("SELECT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
 
 			// Return a simple array of `Movie` Objects.
 			List<Movie> movieList = getMovieList();
 			return movieList.toArray(new Movie[movieList.size()]);
 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public Movie[] getAllMoviesBySearch(String title, String year, String director, String star_fn, String star_ln) {
+		try {
+			conn = MySQL.getInstance().getConnection();
+			Statement statement = conn.createStatement();
+			
+			String query = "SELECT m.* FROM movies AS m, stars_in_movies AS sim, stars AS s WHERE m.id=sim.movie_id AND s.id=sim.star_id";
+			if(title != null)
+				query += " AND (m.title LIKE \'" + title + "%\' OR m.title LIKE \'%" + title + "\' or m.title LIKE \'%" + title + "%\')";
+			if(year != null)
+				query += " AND (m.year LIKE \'" + year + "%\' OR m.year LIKE \'%" + year + "\' or m.year LIKE \'%" + year + "%\')";
+			if(director != null)
+				query += " AND (m.director LIKE \'" + director + "%\' OR m.director LIKE \'%" + director + "\' or m.director LIKE \'%" + director + "%\')";
+			if(star_fn != null)
+				query += " AND (s.first_name LIKE \'" + star_fn + "%\' OR s.first_name LIKE \'%" + star_fn + "\' or s.first_name LIKE \'%" + star_fn + "%\')";
+			if(star_ln != null)
+				query += " AND (s.last_name LIKE \'" + star_ln + "%\' OR s.last_name LIKE \'%" + star_ln + "\' or s.last_name LIKE \'%" + star_ln + "%\')";
+			
+			rs = statement.executeQuery(query);
+
+			List<Movie> movieList = getMovieList();
+			return movieList.toArray(new Movie[movieList.size()]);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -94,6 +121,7 @@ public class Movies {
 				m.title 	= rs.getString("title");
 				m.director	= rs.getString("director");
 				m.year 		= rs.getInt("year");
+				m.banner_url  = rs.getString("banner_url");
 				m.trailer_url = rs.getString("trailer_url");
 
 				pstmt2.setInt(1,m.id);
@@ -139,7 +167,6 @@ public class Movies {
 			}
 		}
 		rs.close();
-		statement.close();
 		conn.close();
 		return resultSet;
 	}
