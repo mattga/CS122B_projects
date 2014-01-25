@@ -10,12 +10,11 @@ import Types.*;
  * {@code <jsp:useBean name="REF_NAME"  class="Stars"/>}
  */
 public class Stars {	
-	private MySQL _sql;
 	/**
 	 * Set up the Database Connection.
 	 */
-	public Stars(){
-		_sql = MySQL.getInstance();
+	public Stars() {
+
 	}
 	
 	/**

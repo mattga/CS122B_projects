@@ -33,8 +33,8 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			// Prepare queries for a movies stars & genres.
-			pstmt2 = conn.prepareStatement("SELECT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
-			pstmt3 = conn.prepareStatement("SELECT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
+			pstmt2 = conn.prepareStatement("SELECT DISTINCT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
+			pstmt3 = conn.prepareStatement("SELECT DISTINCT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
 		
 			conn.close();
 		} catch (SQLException e) {
@@ -47,7 +47,7 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			System.out.println("Trying Fetch");
-			pstmt = conn.prepareStatement("SELECT * FROM movies AS m, genres_in_movies AS gim, genres AS g " +
+			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m, genres_in_movies AS gim, genres AS g " +
 				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ?");
 			pstmt.setString(1,genre);
 			rs = pstmt.executeQuery();
@@ -66,7 +66,7 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			System.out.println("Trying Fetch");
-			pstmt = conn.prepareStatement("SELECT * FROM movies AS m WHERE m.title LIKE ?");
+			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m WHERE m.title LIKE ?");
 			pstmt.setString(1,title+"%");
 			rs = pstmt.executeQuery();
 
@@ -85,7 +85,7 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 			Statement statement = conn.createStatement();
 			
-			String query = "SELECT m.* FROM movies AS m, stars_in_movies AS sim, stars AS s WHERE m.id=sim.movie_id AND s.id=sim.star_id";
+			String query = "SELECT DISTINCT m.* FROM movies AS m, stars_in_movies AS sim, stars AS s WHERE m.id=sim.movie_id AND s.id=sim.star_id";
 			if(title != null)
 				query += " AND (m.title LIKE \'" + title + "%\' OR m.title LIKE \'%" + title + "\' or m.title LIKE \'%" + title + "%\')";
 			if(year != null)
@@ -96,7 +96,7 @@ public class Movies {
 				query += " AND (s.first_name LIKE \'" + star_fn + "%\' OR s.first_name LIKE \'%" + star_fn + "\' or s.first_name LIKE \'%" + star_fn + "%\')";
 			if(star_ln != null)
 				query += " AND (s.last_name LIKE \'" + star_ln + "%\' OR s.last_name LIKE \'%" + star_ln + "\' or s.last_name LIKE \'%" + star_ln + "%\')";
-			
+			System.out.println(query);
 			rs = statement.executeQuery(query);
 
 			List<Movie> movieList = getMovieList();
