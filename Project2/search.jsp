@@ -24,21 +24,23 @@
 	String reuse = request.getParameter("reuse");
 
 	Movie[] res = null;
-	if(reuse == null || reuse.equals("")) {
-		res = movies.getAllMoviesBySearch(title,year,director,star_fn,star_ln);
-		session.setAttribute("MovieList", res);
+
+	// Reuse cached movie list, otherwise pull from database
+	if(reuse != null && reuse.equals("1")) {
+		res = (Movie[])session.getAttribute("searchMovieList");
 	}
 	else {
-		res = (Movie[])session.getAttribute("MovieList");
+		res = movies.getAllMoviesBySearch(title,year,director,star_fn,star_ln);
+		session.setAttribute("searchMovieList", res);
 	}
 
+	// Error check page number and size
 	if(perpage == null || !perpage.matches("5|10|25|50|100"))
 		perpage = "10";
 	if(_page == null || !_page.matches("[0-9]*") || Integer.parseInt(_page) < 1)
 		_page = "1";
 
-	// Probably a much easier way to do this...
-	boolean firstParam = true;
+	// Build url for navigating through pages. Probably a much easier way to do this...
 	String url = "search.jsp?logic=avoid"
 					+ (title != null ? "&title=" + title : "")
 					+ (year != null ? "&year=" + year : "")
@@ -84,7 +86,7 @@
 			out.println("					<td>Starring: </td>");
 			s = "";
 			for(int i = 0; i < m.stars.length; i++)
-				s += (i!=0?", ":"") + "<a href=\"/star.jsp?id=" + m.id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
+				s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
 			out.println("					<td>" + s + "</td>");
 			out.println("				</tr>");	
 			out.println("			</table>");

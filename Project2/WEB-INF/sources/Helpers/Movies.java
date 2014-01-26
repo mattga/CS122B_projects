@@ -1,6 +1,5 @@
 package Helpers;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -48,7 +47,7 @@ public class Movies {
 
 			System.out.println("Trying Fetch");
 			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m, genres_in_movies AS gim, genres AS g " +
-				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ?");
+				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ? ORDER by m.title");
 			pstmt.setString(1,genre);
 			rs = pstmt.executeQuery();
 			
@@ -66,7 +65,7 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			System.out.println("Trying Fetch");
-			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m WHERE m.title LIKE ?");
+			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m WHERE m.title LIKE ? ORDER BY title");
 			pstmt.setString(1,title+"%");
 			rs = pstmt.executeQuery();
 
@@ -131,8 +130,7 @@ public class Movies {
 					int i = 0;
 					m.stars = new Star[rs2.getRow()];
 					Star s = null;
-					rs2.first();
-					for(; !rs2.isAfterLast(); rs2.next()) {
+					for(rs2.first(); !rs2.isAfterLast(); rs2.next()) {
 						s = new Star();
 						s.id 			= rs2.getInt("id");
 						s.first_name 	= rs2.getString("first_name");
