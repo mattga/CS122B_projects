@@ -4,7 +4,7 @@
 		<title>FabFlix - Browse Movies</title>
 	</head>
 <body>
-	<h1>Movie List</h1>
+	<h1>FabFlix - Movie List</h1>
 	
 	<% 
 		// All Database Related Logic Abstracted out into Helper Class
@@ -81,7 +81,7 @@
 			out.println("					<td>Genres: </td>");
 			String s = "";
 			for(int i = 0; i < m.genres.length; i++)
-				s += (i!=0?", ":"") + m.genres[i].name;
+				s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
 			out.println("					<td>" + s + "</td>");
 			out.println("				</tr>");
 			out.println("				<tr>");

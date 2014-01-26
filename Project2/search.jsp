@@ -4,7 +4,7 @@
 	         <title>FabFlix - Search Movies         </title>
 </head>
 <body>
-	<h1>Movie List</h1>
+	<h1>FabFlix - Movie List</h1>
 	
 	<% 
 		// All Database Related Logic Abstracted out into Helper Class
@@ -62,14 +62,14 @@
 			out.println("" + (mi+1) + ".<br><table border=\"0\" >");
 			out.println("	<tr>");
 			if(m.banner_url.equals(""))
-				out.println("		<td><img src=\"images/default_banner.png\" width=\"85\" height=\"120\"></td>");
+				out.println("		<td><a href=\"movie.jsp?id=" + m.id + "\"><img src=\"images/default_banner.png\" width=\"85\" height=\"120\"></a></td>");
 			else
-				out.println("		<td><img src=\"" + m.banner_url + "\" onerror=\"this.src=\'images/default_banner.png\'\" width=\"85\" height=\"120\"></td>");
+				out.println("		<td><a href=\"movie.jsp?id=" + m.id + "\"><img src=\"" + m.banner_url + "\" onerror=\"this.src=\'images/default_banner.png\'\" width=\"85\" height=\"120\"></td>");
 			out.println("		<td>");
 			out.println(" 			<table border=\"0\">");
 			out.println("				<tr>");
 			out.println("					<td>" + m.id + "</td>");
-			out.println("					<td><b>" + m.title + " (" + m.year + ")</b></td>");
+			out.println("					<td><a href=\"movie.jsp?id=" + m.id + "\"><b>" + m.title + " (" + m.year + ")</b></a></td>");
 			out.println("				</tr>");
 			out.println("				<tr>");
 			out.println("					<td>Director: </td>");
@@ -79,7 +79,7 @@
 			out.println("					<td>Genres: </td>");
 			String s = "";
 			for(int i = 0; i < m.genres.length; i++)
-				s += (i!=0?", ":"") + m.genres[i].name;
+				s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
 			out.println("					<td>" + s + "</td>");
 			out.println("				</tr>");
 			out.println("				<tr>");
@@ -88,7 +88,7 @@
 			for(int i = 0; i < m.stars.length; i++)
 				s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
 			out.println("					<td>" + s + "</td>");
-			out.println("				</tr>");	
+			out.println("				</tr>");
 			out.println("			</table>");
 			out.println("		</td>");
 			out.println("	</tr>");

@@ -24,7 +24,7 @@ import Types.Star;
 public class Movies {
 	private Connection conn;
 	private Statement statement;
-	private PreparedStatement pstmt, pstmt2, pstmt3;
+	private PreparedStatement moviesPStmt, movieStarsPStmt, movieGenresPStmt, moviePStmt;
 	private ResultSet rs;
 
 	public Movies() {
@@ -32,9 +32,11 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			// Prepare queries for a movies stars & genres.
-			pstmt2 = conn.prepareStatement("SELECT DISTINCT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
-			pstmt3 = conn.prepareStatement("SELECT DISTINCT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
-		
+			movieStarsPStmt = conn.prepareStatement("SELECT DISTINCT stars.* FROM stars,stars_in_movies WHERE stars.id=stars_in_movies.star_id AND movie_id=?");
+			movieGenresPStmt = conn.prepareStatement("SELECT DISTINCT genres.* FROM genres,genres_in_movies WHERE genres.id=genres_in_movies.genre_id AND movie_id=?");
+			moviePStmt = conn.prepareStatement("SELECT * FROM movies WHERE id=?");
+
+
 			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -46,10 +48,10 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			System.out.println("Trying Fetch");
-			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m, genres_in_movies AS gim, genres AS g " +
+			moviesPStmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m, genres_in_movies AS gim, genres AS g " +
 				"WHERE m.id = gim.movie_id AND gim.genre_id = g.id AND g.name = ? ORDER by m.title");
-			pstmt.setString(1,genre);
-			rs = pstmt.executeQuery();
+			moviesPStmt.setString(1,genre);
+			rs = moviesPStmt.executeQuery();
 			
 			// Return a simple array of `Movie` Objects.
 			List<Movie> movieList = getMovieList();
@@ -65,9 +67,9 @@ public class Movies {
 			conn = MySQL.getInstance().getConnection();
 
 			System.out.println("Trying Fetch");
-			pstmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m WHERE m.title LIKE ? ORDER BY title");
-			pstmt.setString(1,title+"%");
-			rs = pstmt.executeQuery();
+			moviesPStmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies AS m WHERE m.title LIKE ? ORDER BY title");
+			moviesPStmt.setString(1,title+"%");
+			rs = moviesPStmt.executeQuery();
 
 			// Return a simple array of `Movie` Objects.
 			List<Movie> movieList = getMovieList();
@@ -124,8 +126,8 @@ public class Movies {
 				m.banner_url  = rs.getString("banner_url");
 				m.trailer_url = rs.getString("trailer_url");
 
-				pstmt2.setInt(1,m.id);
-				ResultSet rs2 = pstmt2.executeQuery();
+				movieStarsPStmt.setInt(1,m.id);
+				ResultSet rs2 = movieStarsPStmt.executeQuery();
 				if(rs2.last()) {
 					int i = 0;
 					m.stars = new Star[rs2.getRow()];
@@ -135,8 +137,6 @@ public class Movies {
 						s.id 			= rs2.getInt("id");
 						s.first_name 	= rs2.getString("first_name");
 						s.last_name 	= rs2.getString("last_name");
-						s.dob			= rs2.getDate("dob").toString();
-						s.photo_url		= rs2.getString("photo_url");
 						s.movies 		= new Movie[0];
 						m.stars[i++] = s;
 					}
@@ -145,8 +145,8 @@ public class Movies {
 					m.stars = new Star[0];
 				}
 
-				pstmt3.setInt(1,m.id);
-				rs2 = pstmt3.executeQuery();
+				movieGenresPStmt.setInt(1,m.id);
+				rs2 = movieGenresPStmt.executeQuery();
 				if(rs2.last()) {
 					int i = 0;
 					m.genres = new Genre[rs2.getRow()];
@@ -168,5 +168,70 @@ public class Movies {
 		rs.close();
 		conn.close();
 		return resultSet;
+	}
+
+	public Movie getMovie(int id) {
+		try {
+			conn = MySQL.getInstance().getConnection();
+
+			moviePStmt.setInt(1,id);
+			ResultSet rs = moviePStmt.executeQuery();
+			Movie m = null;
+
+			if(rs.first()) {
+				m = new Movie();
+				m.id 		= rs.getInt("id");
+				m.title 	= rs.getString("title");
+				m.director	= rs.getString("director");
+				m.year 		= rs.getInt("year");
+				m.banner_url  = rs.getString("banner_url");
+				m.trailer_url = rs.getString("trailer_url");
+
+				movieStarsPStmt.setInt(1,m.id);
+				ResultSet rs2 = movieStarsPStmt.executeQuery();
+				if(rs2.last()) {
+					int i = 0;
+					m.stars = new Star[rs2.getRow()];
+					Star s = null;
+					for(rs2.first(); !rs2.isAfterLast(); rs2.next()) {
+						s = new Star();
+						s.id 			= rs2.getInt("id");
+						s.first_name 	= rs2.getString("first_name");
+						s.last_name 	= rs2.getString("last_name");
+						s.movies 		= new Movie[0];
+						m.stars[i++] = s;
+					}
+				} else {
+					System.out.println("no stars");
+					m.stars = new Star[0];
+				}
+
+				movieGenresPStmt.setInt(1,m.id);
+				rs2 = movieGenresPStmt.executeQuery();
+				if(rs2.last()) {
+					int i = 0;
+					m.genres = new Genre[rs2.getRow()];
+					Genre g = null;
+					rs2.first();
+					for(; !rs2.isAfterLast(); rs2.next()) {
+						g = new Genre();
+						g.genre_id 	= rs2.getInt("id");
+						g.name 		= rs2.getString("name");
+						m.genres[i++] = g;
+					}
+				} else {
+					System.out.println("no genres");
+					m.genres = new Genre[0];
+				}
+			}
+
+			rs.close();
+			conn.close();
+
+			return m;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
