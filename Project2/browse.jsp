@@ -8,13 +8,17 @@
 <%@ include file="_template/_head.jsp" %>
 
 	<div class="col-md-12">
+		<h1>Movie List</h1>
+	</div>
 
-	<h1>Movie List</h1>
-	
-	<% 
-		// All Database Related Logic Abstracted out into Helper Class
-		// Java Class is not free of HTML.
-	%>
+	<div class="col-md-12 text-center">
+		<ul class="pagination">
+	    <% for (char letter : ("#ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray())) { %>
+	        <li><a href="#letter-<%=letter%>"><%=letter%></a></li>
+	    <% } %>
+	    </ul>
+	</div>
+
 	<jsp:useBean id="movies" class="Helpers.Movies"/>
 	
 	<%
@@ -55,8 +59,8 @@
 		response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
 
 	// Error check page number and size
-	if(perpage == null || !perpage.matches("5|10|25|50|100"))
-		perpage = "10";
+	if(perpage == null || !perpage.matches("8|16|32|64|128"))
+		perpage = "8";
 	if(_page == null || !_page.matches("[0-9]*") || Integer.parseInt(_page) < 1)
 		_page = "1";
 
@@ -68,79 +72,94 @@
 		if(moviesNum == 0)
 			out.println("No Movies<br>");
 
+		int col = 0;
 		// Iterate simple array object...
 		for (int mi = (pageNum-1)*pageSize; mi < moviesNum && mi < pageNum*pageSize; mi++) {
 			Movie m = res[mi];
-			out.println("" + (mi+1) + ".<br>");
+			String imageSrc = m.banner_url.equals("") ? "images/default_banner.png" : m.banner_url;
+			col++;
+			%>			
+			<% if (col % 4 == 1) { 					
 			%>
-			<table border="0">
-				<tr>
+				<div class="row">	
+			<% } %>	
+			<div class="col-sm-4 col-md-3">
+			    <div class="thumbnail">
+			      <img src="<%=imageSrc%>" width="94" height="140" onerror="this.src='images/default_banner.png'">
+			      <div class="caption">
+			        <h3 class="text-center" style="min-height:52px;"><a href="movie.jsp?id=<%=m.id%>"><%=m.title%> (<%=m.year%>)</a></h3>
+			        <dl style="min-height:150px;">
+						<dt>Director: </dt>
+						<dd><%=m.director%></dd>
+						<%
+						String s = "";
+						for(int i = 0; i < m.genres.length; i++)
+							s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
+						%>
+						<dt>Genres: </dt>
+						<dd><%=s%></dd>
+						<%
+						s = "";
+						for(int i = 0; i < m.stars.length; i++)
+							s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
+						%>
+						<dt>Starring: <dt>
+						<dd><%=s%><dd>
+			        </dl>
+			        <h3 class="text-center">$9.99</h3>
+			        <p class="text-center">
+			        	<a href="cart.jsp?from=browse&addindex=<%=mi%>" class="btn btn-lg btn-primary">Add to Cart</a>
+			        </p>
+			      </div>
+			    </div>
+			  </div>
+			<% if (col % 4 == 0) { 
+				col = 0;
+			%>
+				</div>	
+			<% } %>	
 			<%
-			if(m.banner_url.equals(""))
-				out.println("		<td><img src=\"images/default_banner.png\" width=\"85\" height=\"120\"></td>");
-			else
-				out.println("		<td><img src=\"" + m.banner_url + "\" onerror=\"this.src=\'images/default_banner.png\'\" width=\"85\" height=\"120\"></td>");
-			%>
-					<td>
-			 			<table border="0">
-							<tr>
-								<td>#<%=m.id%></td>
-								<td><b><a href="movie.jsp?id=<%=m.id%>"><%=m.title%> (<%=m.year%>)</a></b></td>
-							</tr>
-							<tr>
-								<td>Director:&nbsp;</td>
-								<td><%=m.director%></td>
-							</tr>
-							<tr>
-								<td>Genres:&nbsp;</td>
-								<%
-								String s = "";
-								for(int i = 0; i < m.genres.length; i++)
-									s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
-								%>
-								<td><table style="width: 80%" cellspacing="0"><tr><td><%=s%></td></tr></table></td>
-							</tr>
-							<tr>
-								<td>Starring:&nbsp;</td>
-			
-								<%
-								s = "";
-								for(int i = 0; i < m.stars.length; i++)
-									s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
-									%>
 
-								<td><table style="width: 80%" cellspacing="0"><tr><td><%=s%></td></tr></table></td>
-							</tr>
-							<tr>
-								<td>Cost:&nbsp;</td>
-								<td>
-									<table cellspacing="0">
-										<tr>
-											<td>$9.99&nbsp;&nbsp;</td>
-											<td><a href="cart.jsp?from=browse&addindex=<%=mi%>">Add to Cart</a></td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-			<br>
-			<%
-		}
+		} // end for;
+		%>
+		
+		<%
 		if(url != null) {
-			if(pageNum > 1)
-				out.println("<a href=\"" + url + "&reuse=1&page=" + (pageNum-1) + "&perpage=" + pageSize + "\">&lt;</a>");
-			if(pageNum*pageSize <= moviesNum)
-				out.println("<a href=\"" + url + "&reuse=1&page=" + (pageNum+1) + "&perpage=" + pageSize + "\">&gt;</a>");
-			%>
-			Movies per page: <a href="<%=url%>&reuse=1&page=<%=pageNum %>&perpage=5">5</a> | 
-			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=10">10</a> | 
-			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=25">25</a> | 
-			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=50">50</a> | 
-			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=100">100</a>
+		%>
+		<div class="row">
+			<ul class="pager">
+			<%
+				if(pageNum > 1)
+					out.println("<li class=\"previous\"><a href=\"" + url + "&reuse=1&page=" + (pageNum-1) + "&perpage=" + pageSize + "\">&larr; Previous</a></li>");
+				if(pageNum*pageSize <= moviesNum)
+					out.println("<li class=\"next\"><a href=\"" + url + "&reuse=1&page=" + (pageNum+1) + "&perpage=" + pageSize + "\">Next &rarr;</a></li>");
+			%> 
+			</ul>
+		</div>
 
+		<div class="row">
+				<div class="col-md-12 text-center">
+					<span>Movies per page:</span><br>
+					<ul class="pagination" style="margin-top:0px;">
+				        <li>
+							<a href="<%=url%>&reuse=1&page=<%=pageNum %>&perpage=8">8</a>
+				        </li>
+				        <li>
+				        	<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=16">16</a>
+				        </li>
+				        <li>
+							<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=32">32</a>
+				        </li>
+				        <li>
+				        	<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=64">64</a>
+				        </li>
+				        <li>
+				        	<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=128">128</a>
+				        </li>
+				    </ul>
+				</div>
+			</p>
+		</div>
 			<%
 		}
 	} else {

@@ -15,7 +15,7 @@
         <header class="row">
             <!-- Title Menu -->
             <div class="col-md-8">
-                <h1>Fab.Flix.Me</h1>
+                <h1>Fab.Flix.io</h1>
             </div>
             
             <!-- Search Bar -->
