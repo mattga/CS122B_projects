@@ -42,6 +42,12 @@
 				int index = Integer.parseInt(addIndex);
 				movieCart.addMovie(mList[index]);
 			}
+		} else if(from.equals("search")) {
+			Movie[] mList = (Movie[])session.getAttribute("searchMovieList");
+			if(mList != null) {
+				int index = Integer.parseInt(addIndex);
+				movieCart.addMovie(mList[index]);
+			}
 		}
 	}
 

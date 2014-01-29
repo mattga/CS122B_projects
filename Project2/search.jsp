@@ -95,7 +95,18 @@
 			s = "";
 			for(int i = 0; i < m.stars.length; i++)
 				s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
-			out.println("					<td>" + s + "</td>");
+			out.println("					<td><table style=\"width: 80%\" cellspacing=\"0\"><tr><td>" + s + "</td></tr></table></td>");
+			out.println("				</tr>");
+			out.println("				<tr>");
+			out.println("					<td>Cost:&nbsp;</td>");
+			out.println("					<td>");
+			out.println("						<table cellspacing=\"0\">");
+			out.println("							<tr>");
+			out.println("								<td>$9.99&nbsp;&nbsp;</td>");
+			out.println("								<td><a href=\"cart.jsp?from=browse&addindex=" + mi + "\">Add to Cart</a></td>");
+			out.println("							</tr>");
+			out.println("						</table>");
+			out.println("					</td>");
 			out.println("				</tr>");
 			out.println("			</table>");
 			out.println("		</td>");

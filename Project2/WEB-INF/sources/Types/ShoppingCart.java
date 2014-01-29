@@ -32,7 +32,7 @@ public class ShoppingCart {
 		for(;iter.hasNext();) {
 			Movie m2 = iter.next();
 			if(m.id == m2.id) {
-				m.cartQuantity++;
+				m2.cartQuantity++;
 			} else {
 				movieCart.add(m);
 			}
