@@ -100,7 +100,7 @@
 				</th>
 				<th>
 				<%
-					out.println(movieCart.getTotalItems());
+					//out.println(movieCart.getTotalItems());
 				%>
 				</th>
 			</tr>
