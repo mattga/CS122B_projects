@@ -1,11 +1,15 @@
 package Helpers;
-import Types.*;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+import Types.Genre;
+import Types.Movie;
+import Types.Star;
 
 /**
  * Use this class to encapsulate behavior of queries 
@@ -47,9 +51,40 @@ public class Stars {
 	 * @return Movie[]
 	 */
 	public Star[] getAllStars() {
-		return null;
+		ArrayList<Star> stars = new ArrayList<Star>();
+		try {
+			ResultSet rs = conn.prepareStatement("SELECT * FROM stars ORDER BY `last_name` ASC;").executeQuery();
+			if(rs.first()) {
+				for(;!rs.isAfterLast(); rs.next()){
+					Star s = new Star();
+					s.id = rs.getInt("id");
+					s.first_name	= rs.getString("first_name");
+					s.last_name		= rs.getString("last_name");
+					stars.add(s);
+				}
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return stars.toArray(new Star[stars.size()]);
 	}
-
+	
+	public HashMap<String, LinkedList<Star>> OrderIntoABCGroups(Star[] stars) {
+		String groups = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		HashMap<String, LinkedList<Star>> map = new HashMap<>();
+		for (char c : groups.toCharArray()) {
+			LinkedList<Star> cs = new LinkedList<>();
+			for (int i = 0; i < stars.length; i++) {
+				if (stars[i].last_name.startsWith(String.valueOf(c))) {
+					cs.add(stars[i]);
+				}
+			}
+			map.put(String.valueOf(c), cs);
+		}
+		return map;
+	}
+	
 	public Star getStar(int id) {
 		try {
 			conn = MySQL.getInstance().getConnection();

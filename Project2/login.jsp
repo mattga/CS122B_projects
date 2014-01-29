@@ -1,5 +1,9 @@
 <%@ page import="Types.User" %>
 <%@ page import="java.io.IOException" %>
+<% 
+	// used inside _head* jsp file
+	String document_title = "Member Login"; 
+%>
 <%@ include file="_template/_head.login.jsp" %>
 	<div class="col-md-4 col-md-offset-4">
 

@@ -1,6 +1,10 @@
 <%@ page import="Types.Movie" %>
 <%@ page import="Types.User" %>
 <%@ page import="java.net.URLEncoder" %>
+<% 
+	// used inside _head* jsp file
+	String document_title = "Browse"; 
+%>
 <%@ include file="_template/_head.jsp" %>
 
 	<div class="col-md-12">

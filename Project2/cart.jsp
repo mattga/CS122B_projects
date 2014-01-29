@@ -2,6 +2,10 @@
 <%@ page import="Types.User" %>
 <%@ page import="Types.Movie" %>
 <%@ page import="java.net.URLEncoder" %>
+<% 
+	// used inside _head* jsp file
+	String document_title = "Cart"; 
+%>
 <%@ include file="_template/_head.jsp" %>
 	<div class="col-md-12">
 
@@ -52,27 +56,37 @@
 	else if (action != null && id != null && id.matches("[0-9]*") && action.equals("remove"))
 		movieCart.removeMovie(Integer.parseInt(id));
 		
-	out.println("<table>");
-	out.println("	<tr>");
-	out.println("		<td><b>Movie</b></td>");
-	out.println("		<td><b>Price</b></td>");
-	out.println("		<td><b>Quantity</b></td>");
-	out.println("	</tr>");
-	for(Movie m : movieCart.getCart()) {
-		out.println("	<tr>");
-		out.println("		<td><a href=\"movie.jsp?id=" + m.id + ">" + m.title + " (" + m.year + ")</td>");
-		out.println("		<td>$9.99</td>");
-		out.println("		<td>");
-		out.println("			<form action=\"\" method=\"GET\">");
-		out.println("				<input type=\"hidden\" name=\"id\" value=\"" + m.id + "\">");
-		out.println("				<input type=\"number\" name=\"quantity\" value=\"" + m.cartQuantity + "\">");
-		out.println("				<input tpye=\"submit\" name=\"action\" value=\"Update\">");
-		out.println("				<input tpye=\"submit\" name=\"action\" value=\"Remove\">");
-		out.println("			</form>");
-		out.println("		</td>");
-		out.println("	</tr>");
-	}
-	out.println("</table><br>");
+	%>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th>Movie</th>
+				<th>Price</th>
+				<th>Quantity</th>
+			</tr>
+
+			<%
+			// Iterate thorugh cart and display contents.
+			for(Movie m : movieCart.getCart()) {
+			%>
+			<tr>
+				<td><a href="movie.jsp?id=<%=m.id%>"><%=m.title%>  (<%=m.year%>)</td>
+				<td>$9.99</td>
+				<td>
+					<form action="" method="GET">
+						<input type="hidden" name="id" value="<%=m.id %>">
+						<input type="number" name="quantity" value="<%=m.cartQuantity%>">
+						<input tpye="submit" name="action" value="Update">
+						<input tpye="submit" name="action" value="Remove">
+					</form>
+				</td>
+			</tr>
+			<%
+			}
+			%>
+		</tbody>
+	</table><br>
+	<%
 	out.println("Total: " + movieCart.getTotal());
 	%>
 

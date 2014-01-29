@@ -2,7 +2,9 @@
 <html>
 <head>
     <meta name="content-type" description="utf-8">
-    <title>Fab Flix</title>
+        <title>
+        <% out.println(document_title); %> | Fab.Flix.io
+    </title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/custom.css"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,12 +22,15 @@
             <div class="col-md-4">
 
                 <!-- Input Group for Search Box -->
-                <div class="input-group" style="margin:20px 0 20px;">
+                <div class="input-group" style="margin:15px 0 5px;">
                   <input type="text" class="form-control" placeholder="Star, Movie, or Genre">
                   <div class="input-group-btn">
                     <button class="btn btn-primary">Search</button>
                   </div>
                 </div>
+                <p>
+                    <a href="advanced-search.jsp">Advanced Search</a>
+                </p>
 
             </div>
         </header>
@@ -36,6 +41,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="browse.jsp?title">Browse By Title</a></li>
                 <li><a href="browse.jsp?genre">Browse By Genre</a></li>
+                <li><a href="stars.jsp">Browse Stars</a></li>
                 <li><a href="cart.jsp">View Cart</a></li>
                 <li><a href="logout.jsp">Log Out</a></li>
             </ul>

@@ -1,66 +1,75 @@
 <%@ page import="Types.Star" %>
 <%@ page import="Types.User" %>
+<%@ page import="Helpers.Stars" %>
 <%@ page import="java.net.URLEncoder" %>
-<html lang="en">
-<head>
-	<jsp:useBean id="stars" class="Helpers.Stars"/>
+<%
+	// Check session for logged in...
+	String id = request.getParameter("id");
+	String url = "star.jsp?id=" + id;
+	User u = (User)session.getAttribute("user");
+	Stars stars = new Stars();
 
-	<meta charset="UTF-8">
-	<title>FabFlix - Star: 
-		<%
-		String id = request.getParameter("id");
+	if(u == null)
+		response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
 
-		Star s = null;
-		if(id != null && id.matches("[0-9]*"))
-			s = stars.getStar(Integer.parseInt(id));
+	// used inside _head* jsp file
+	String document_title = "Bio: "; 
 
-		if(s != null)
-			out.println(s.first_name + " " + s.last_name);
+	Star s = null;
+	if(id != null && id.matches("[0-9]*"))
+		s = stars.getStar(Integer.parseInt(id));
 
-		// Check session for logged in...
-		String url = "star.jsp?id=" + id;
-		User u = (User)session.getAttribute("user");
-		if(u == null)
-			response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
-
-		%>
-	</title>
-</head>
-<body>
-	<h1>
-		<%
-		if(s != null)
-			out.println(s.first_name + " " + s.last_name);
-		%>
-	</h1>
-	<%
+	// Determine Page title
 	if(s != null) {
-		out.println("<table border=\"0\" >");
-		out.println("	<tr>");
-		if(s.photo_url.equals(""))
-			out.println("		<td valign=\"top\"><img src=\"images/default_profile_image.jpg\" width=\"105\" height=\"120\"></td>");
-		else
-			out.println("		<td valign=\"top\"><img src=\"" + s.photo_url + "\" onerror=\"this.src=\'images/default_profile_image.jpg\'\" width=\"105\" height=\"120\"></td>");
-		out.println("		<td>");
-		out.println(" 			<table border=\"0\">");
-		out.println("				<tr>");
-		out.println("					<td>Date of Birth: </td>");
-		out.println("					<td>" + s.dob + "</td>");
-		out.println("				</tr>");
-		out.println("				<tr>");
-		out.println("					<td valign=\"top\">Movies: </td>");
-		String str = "";
-		for(int i = 0; i < s.movies.length; i++)
-			str += "<a href=\"movie.jsp?id=" + s.movies[i].id + "\">" + s.movies[i].title + "</a><br>";
-		out.println("					<td>" + str + "</td>");
-		out.println("				</tr>");	
-		out.println("			</table>");
-		out.println("		</td>");
-		out.println("	</tr>");
-		out.println("</table><br>");
-	} else
-		out.println("Star not found.");
+		document_title += s.first_name + " " + s.last_name;
+	} else {	
+		document_title = "Unknown Bio";
+	}
+%>
+<%@ include file="_template/_head.jsp" %>
+	<div class="col-md-12">
+
+	<h1><% out.println( s != null ? s.first_name + " " + s.last_name : "Unknown"); %></h1>
+	<%
+	if (s != null) {
+	%>
+		<table border="0" >
+			<tr>
+				<%
+				if (s.photo_url.equals("")) {
+					out.println("<td valign=\"top\"><img src=\"images/default_profile_image.jpg\" width=\"105\" height=\"120\"></td>");
+				
+				} else {
+					out.println("<td valign=\"top\"><img src=\""+s.photo_url+"\" onerror=\"this.src='images/default_profile_image.jpg'\" width=\"105\" height=\"120\"></td>");
+				}
+				%>
+				<td>
+		 			<table border="0">
+						<tr>
+							<td>Date of Birth: </td>
+							<td><%=s.dob%></td>
+						</tr>
+						<tr>
+							<td valign="top">Movies: </td>
+								<%
+								String str = "";
+								for(int i = 0; i < s.movies.length; i++)
+									str += "<a href=\"movie.jsp?id=" + s.movies[i].id + "\">" + s.movies[i].title + "</a><br>";
+								%>
+							<td><%=str%></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	<%
+	} else { %>
+		<p class="alert alert-danger">
+			<b>Sorry.</b> The Star could not be found.
+		</p>
+	<%
+	}
 	%>
 	
-</body>
-</html>
+</div>
+<%@ include file="_template/_foot.jsp" %>
