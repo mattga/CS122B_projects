@@ -1,17 +1,10 @@
 <%@ page import="Types.Movie" %>
 <%@ page import="Types.User" %>
 <%@ page import="java.net.URLEncoder" %>
-<html>
-<head>
-	         <title>FabFlix - Search Movies         </title>
-</head>
-<body>
-	<h1>FabFlix - Movie List</h1>
-	
-	<% 
-		// All Database Related Logic Abstracted out into Helper Class
-		// Java Class is not free of HTML.
-	%>
+<%@ include file="_template/_head.jsp" %>
+	<div class="col-md-12">
+
+	<h1>Search Results</h1>
 	<jsp:useBean id="movies" class="Helpers.Movies"/>
 	
 	<%
@@ -124,5 +117,6 @@
 		out.println("<a href=\"" + url + "&reuse=1&page=" + pageNum + "&perpage=100\">100</a>");
 	}
 	%>
-	<body>
-</html>
+
+	</div>
+<%@ include file="_template/_foot.jsp" %>

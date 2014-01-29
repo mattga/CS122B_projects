@@ -2,13 +2,9 @@
 <%@ page import="Types.User" %>
 <%@ page import="Types.Movie" %>
 <%@ page import="java.net.URLEncoder" %>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>FabFlix - Shopping Cart
-	</title>
-</head>
-<body>
+<%@ include file="_template/_head.jsp" %>
+	<div class="col-md-12">
+
 	<h1>Shopping Cart</h1>
 	<%
 	// Get parameters
@@ -79,5 +75,6 @@
 	out.println("</table><br>");
 	out.println("Total: " + movieCart.getTotal());
 	%>
-</body>
-</html>
+
+	</div>
+<%@ include file="_template/_foot.jsp" %>

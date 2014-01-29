@@ -1,19 +1,21 @@
 <%@ page import="Types.User" %>
 <%@ page import="java.io.IOException" %>
+<%@ include file="_template/_head.login.jsp" %>
+	<div class="col-md-4 col-md-offset-4">
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>FabFlix - Login</title>
-</head>
-<body>
 	<jsp:useBean id="login" class="Helpers.Login"/>
 
 	<form action="" method="POST">
-		Email: <input type="text" name="email"><br>
-		Password: <input type="password" name="password"><br>
-		<input type="submit" value="Login">
+		<div class="form-group">
+		    <label for="email-address">Email address</label>
+		    <input type="email" class="form-control" id="email-address" name="email" placeholder="Enter email">
+		</div>
+		<div class="form-group">
+		    <label for="password-input">Password</label>
+		    <input type="password" class="form-control" id="password-input" name="password" placeholder="Password">
+		</div>
+
+  		<button type="submit" class="btn btn-primary">Log In</button>
 	</form>
 
 	<%
@@ -51,5 +53,5 @@
 		}
 	}
 	%>
-</body>
-</html>
+	</div>
+<%@ include file="_template/_foot.jsp" %>

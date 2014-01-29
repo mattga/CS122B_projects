@@ -1,12 +1,11 @@
 <%@ page import="Types.Movie" %>
 <%@ page import="Types.User" %>
 <%@ page import="java.net.URLEncoder" %>
-<html>
-	<head>
-		<title>FabFlix - Browse Movies</title>
-	</head>
-<body>
-	<h1>FabFlix - Movie List</h1>
+<%@ include file="_template/_head.jsp" %>
+
+	<div class="col-md-12">
+
+	<h1>Movie List</h1>
 	
 	<% 
 		// All Database Related Logic Abstracted out into Helper Class
@@ -131,5 +130,6 @@
 	}
 	%>
 	<form>
-<body>
-</html>
+	</div>
+	
+<%@ include file="_template/_foot.jsp" %>
