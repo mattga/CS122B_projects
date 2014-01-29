@@ -1,4 +1,6 @@
 <%@ page import="Types.Movie" %>
+<%@ page import="Types.User" %>
+<%@ page import="java.net.URLEncoder" %>
 <html>
 	<head>
 		<title>FabFlix - Browse Movies</title>
@@ -13,14 +15,14 @@
 	<jsp:useBean id="movies" class="Helpers.Movies"/>
 	
 	<%
+	Movie[] res = null;
+
 	// Get genre value... If not provided, assign empty string to display all movies.
 	String genre = request.getParameter("genre");
 	String title = request.getParameter("title");
 	String perpage = request.getParameter("perpage");
 	String _page = request.getParameter("page");
 	String reuse = request.getParameter("reuse");
-
-	Movie[] res = null;
 
 	// Reuse cached movie list, otherwise pull from database. Build URL for navigating through pages
 	String url = null;
@@ -44,6 +46,11 @@
 		url = "browse.jsp?title=" + title;
 	}
 
+	// Check session for logged in...
+	User u = (User)session.getAttribute("user");
+	if(u == null)
+		response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
+
 	// Error check page number and size
 	if(perpage == null || !perpage.matches("5|10|25|50|100"))
 		perpage = "10";
@@ -61,7 +68,7 @@
 		// Iterate simple array object...
 		for (int mi = (pageNum-1)*pageSize; mi < moviesNum && mi < pageNum*pageSize; mi++) {
 			Movie m = res[mi];
-			out.println("" + (mi+1) + ".<br><table border=\"0\" >");
+			out.println("" + (mi+1) + ".<br><table border=\"0\">");
 			out.println("	<tr>");
 			if(m.banner_url.equals(""))
 				out.println("		<td><img src=\"images/default_banner.png\" width=\"85\" height=\"120\"></td>");
@@ -70,31 +77,43 @@
 			out.println("		<td>");
 			out.println(" 			<table border=\"0\">");
 			out.println("				<tr>");
-			out.println("					<td>" + m.id + "</td>");
-			out.println("					<td><b>" + m.title + " (" + m.year + ")</b></td>");
+			out.println("					<td>#" + m.id + "&nbsp;</td>");
+			out.println("					<td><b><a href=\"movie.jsp?id=" + m.id + "\">" + m.title + " (" + m.year + ")</a></b></td>");
 			out.println("				</tr>");
 			out.println("				<tr>");
-			out.println("					<td>Director: </td>");
+			out.println("					<td>Director:&nbsp;</td>");
 			out.println("					<td>" + m.director + "</td>");
 			out.println("				</tr>");
 			out.println("				<tr>");
-			out.println("					<td>Genres: </td>");
+			out.println("					<td>Genres:&nbsp;</td>");
 			String s = "";
 			for(int i = 0; i < m.genres.length; i++)
 				s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
-			out.println("					<td>" + s + "</td>");
+			out.println("					<td><table style=\"width: 80%\" cellspacing=\"0\"><tr><td>" + s + "</td></tr></table></td>");
 			out.println("				</tr>");
 			out.println("				<tr>");
-			out.println("					<td>Starring: </td>");
+			out.println("					<td>Starring:&nbsp;</td>");
 			s = "";
 			for(int i = 0; i < m.stars.length; i++)
 				s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
-			out.println("					<td>" + s + "</td>");
+			out.println("					<td><table style=\"width: 80%\" cellspacing=\"0\"><tr><td>" + s + "</td></tr></table></td>");
+			out.println("				</tr>");
+			out.println("				<tr>");
+			out.println("					<td>Cost:&nbsp;</td>");
+			out.println("					<td>");
+			out.println("						<table cellspacing=\"0\">");
+			out.println("							<tr>");
+			out.println("								<td>$9.99&nbsp;&nbsp;</td>");
+			out.println("								<td><a href=\"cart.jsp?from=browse&addindex=" + mi + "\">Add to Cart</a></td>");
+			out.println("							</tr>");
+			out.println("						</table>");
+			out.println("					</td>");
 			out.println("				</tr>");	
 			out.println("			</table>");
 			out.println("		</td>");
 			out.println("	</tr>");
-			out.println("</table><br>");
+			out.println("</table>");
+			out.println("<br>");
 		}
 		if(url != null) {
 			if(pageNum > 1)

@@ -1,4 +1,6 @@
 <%@ page import="Types.Movie" %>
+<%@ page import="Types.User" %>
+<%@ page import="java.net.URLEncoder" %>
 <html>
 <head>
 	         <title>FabFlix - Search Movies         </title>
@@ -47,6 +49,12 @@
 					+ (director != null ? "&director=" + director : "")
 					+ (star_fn != null ? "&starfn=" + star_fn : "")
 					+ (star_ln != null ? "&starln=" + star_ln : "");
+
+
+	// Check session for logged in...
+	User u = (User)session.getAttribute("user");
+	if(u == null)
+		response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
 
 	int pageSize = Integer.parseInt(perpage);
 	int pageNum = Integer.parseInt(_page);

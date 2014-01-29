@@ -1,10 +1,12 @@
 <%@ page import="Types.Movie" %>
+<%@ page import="Types.User" %>
+<%@ page import="java.net.URLEncoder" %>
 <html lang="en">
 <head>
 	<jsp:useBean id="movies" class="Helpers.Movies"/>
 
 	<meta charset="UTF-8">
-	<title>Star - 
+	<title>FabFlix - Movie: 
 		<%
 		String id = request.getParameter("id");
 
@@ -14,6 +16,13 @@
 
 		if(m != null)
 			out.println(m.title);
+		
+		// Check session for logged in...
+		String url = "star.jsp?id=" + id;
+		User u = (User)session.getAttribute("user");
+		if(u == null)
+			response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
+
 		%>
 	</title>
 </head>

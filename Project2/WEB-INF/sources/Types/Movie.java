@@ -15,6 +15,7 @@ public class Movie {
 	public String director;
 	public String banner_url;
 	public String trailer_url;
+	public int cartQuantity;
 	
 	
 	/**
