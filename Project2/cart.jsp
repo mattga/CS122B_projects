@@ -32,7 +32,7 @@
 
 	ShoppingCart movieCart = (ShoppingCart)session.getAttribute("movie_cart");
 
-	if (movieCart != null)
+	if (movieCart == null)
 		movieCart = new ShoppingCart();
 
 	if(from != null && addIndex != null && addIndex.matches("[0-9]*")) {
