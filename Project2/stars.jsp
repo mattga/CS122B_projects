@@ -21,11 +21,16 @@
     <div class="col-md-12">
 
     <h1>Star Directory</h1>
-
+    
+    <ul class="pagination">
+    <% for (char letter : ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray())) { %>
+        <li><a href="#letter-<%=letter%>"><%=letter%></a></li>
+    <% } %>
+    </ul>
     <%
     for (char key : ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray())) {
     %>
-        <h2><%=key%></h2>
+        <h2 id="letter-<%=key%>"><%=key%></h2>
         <% if (sm.get(String.valueOf(key)).size() > 0) { %>
             <ul>
                 <% for (Star st : sm.get(String.valueOf(key))) { %>
@@ -38,6 +43,6 @@
         }
     }
     %>
-    
+    <div style="position:fixed;bottom:-10px;padding:15px;left:50%;margin-left:450px;background-color:#DDD;border-radius:10px;"><a href="#">TOP</a></div>
 </div>
 <%@ include file="_template/_foot.jsp" %>

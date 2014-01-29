@@ -28,15 +28,22 @@ public class ShoppingCart {
 
 	public void addMovie(Movie m) {
 		Iterator<Movie> iter = movieCart.descendingIterator();
-
-		for(;iter.hasNext();) {
-			Movie m2 = iter.next();
-			if(m.id == m2.id) {
-				m2.cartQuantity++;
-			} else {
-				movieCart.add(m);
-			}
-		}	
+		
+		if (!movieCart.contains(m)) {
+			movieCart.add(m);
+			m.cartQuantity = 1;
+		} else {
+			m.cartQuantity++;
+		}
+		
+//		for(;iter.hasNext();) {
+//			Movie m2 = iter.next();
+//			if(m.id == m2.id) {
+//				m2.cartQuantity++;
+//			} else {
+//				movieCart.add(m);
+//			}
+//		}	
 	}
 
 	public void removeMovie(int movieId) {
@@ -58,6 +65,7 @@ public class ShoppingCart {
 		return price;
 	}
 
+	
 	public Iterable<Movie> getCart() {
 		return movieCart;
 	}

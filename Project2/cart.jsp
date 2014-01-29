@@ -2,7 +2,7 @@
 <%@ page import="Types.User" %>
 <%@ page import="Types.Movie" %>
 <%@ page import="java.net.URLEncoder" %>
-<% 
+<%		
 	// used inside _head* jsp file
 	String document_title = "Cart"; 
 %>
@@ -24,11 +24,11 @@
 		url += "&from=" + from;
 	if(addIndex != null)
 		url += "&addindex=" + addIndex;
-
-	// Check session for logged in...
-	User u = (User)session.getAttribute("user");
-	if(u == null)
-		response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
+	
+	//Check session for logged in...
+		User u = (User)session.getAttribute("user");
+		if(u == null)
+			response.sendRedirect("login.jsp?return=" + URLEncoder.encode(url,"UTF-8"));
 
 	ShoppingCart movieCart = (ShoppingCart)session.getAttribute("movie_cart");
 
@@ -40,7 +40,7 @@
 			Movie[] mList = (Movie[])session.getAttribute("browseMovieList");
 			if(mList != null) {
 				int index = Integer.parseInt(addIndex);
-				movieCart.addMovie(mList[index]);
+				movieCart.addMovie(mList[index]); 
 			}
 		} else if(from.equals("search")) {
 			Movie[] mList = (Movie[])session.getAttribute("searchMovieList");
@@ -51,44 +51,62 @@
 		}
 	}
 
-	if(action != null && id != null && id.matches("[0-9]*") && quantity != null && quantity.matches("[0-9]*") && action.equals("update"))
+	if(action != null && id != null && id.matches("[0-9]*") && quantity != null && quantity.matches("[0-9]*") && action.toLowerCase().equals("update")) {
 		movieCart.updateQuantity(Integer.parseInt(id), Integer.parseInt(quantity));
-	else if (action != null && id != null && id.matches("[0-9]*") && action.equals("remove"))
+	} else if (action != null && id != null && id.matches("[0-9]*") && action.toLowerCase().equals("remove")) {
 		movieCart.removeMovie(Integer.parseInt(id));
-		
+	}
+	
+	// Save Any Changes to the Cart.
+	session.setAttribute("movie_cart", movieCart);
 	%>
 	<table class="table table-striped">
 		<tbody>
 			<tr>
+				<th>#</th>
 				<th>Movie</th>
 				<th>Price</th>
 				<th>Quantity</th>
 			</tr>
 
 			<%
+			int i = 0;
 			// Iterate thorugh cart and display contents.
 			for(Movie m : movieCart.getCart()) {
 			%>
 			<tr>
+				<td><%=++i%></td>
 				<td><a href="movie.jsp?id=<%=m.id%>"><%=m.title%>  (<%=m.year%>)</td>
 				<td>$9.99</td>
 				<td>
 					<form action="" method="GET">
 						<input type="hidden" name="id" value="<%=m.id %>">
 						<input type="number" name="quantity" value="<%=m.cartQuantity%>">
-						<input tpye="submit" name="action" value="Update">
-						<input tpye="submit" name="action" value="Remove">
+						<button class="btn btn-default" type="submit" name="action" value="Update"><span class="glyphicon glyphicon-refresh"></span></button>
+						<button class="btn btn-default" type="submit" name="action" value="Remove"><span class="glyphicon glyphicon-remove"></span></button>
 					</form>
 				</td>
 			</tr>
 			<%
 			}
 			%>
+			<tr>
+				<th></th>
+				<th>Total:</th>
+				<th colspan="">
+				<%
+					out.println(movieCart.getTotal());
+				%>
+				</th>
+				<th>
+				<%
+					out.println(movieCart.getTotalItems());
+				%>
+				</th>
+			</tr>
 		</tbody>
-	</table><br>
-	<%
-	out.println("Total: " + movieCart.getTotal());
-	%>
+	</table>
+	
 
 	</div>
 <%@ include file="_template/_foot.jsp" %>

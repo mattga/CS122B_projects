@@ -71,63 +71,77 @@
 		// Iterate simple array object...
 		for (int mi = (pageNum-1)*pageSize; mi < moviesNum && mi < pageNum*pageSize; mi++) {
 			Movie m = res[mi];
-			out.println("" + (mi+1) + ".<br><table border=\"0\">");
-			out.println("	<tr>");
+			out.println("" + (mi+1) + ".<br>");
+			%>
+			<table border="0">
+				<tr>
+			<%
 			if(m.banner_url.equals(""))
 				out.println("		<td><img src=\"images/default_banner.png\" width=\"85\" height=\"120\"></td>");
 			else
 				out.println("		<td><img src=\"" + m.banner_url + "\" onerror=\"this.src=\'images/default_banner.png\'\" width=\"85\" height=\"120\"></td>");
-			out.println("		<td>");
-			out.println(" 			<table border=\"0\">");
-			out.println("				<tr>");
-			out.println("					<td>#" + m.id + "&nbsp;</td>");
-			out.println("					<td><b><a href=\"movie.jsp?id=" + m.id + "\">" + m.title + " (" + m.year + ")</a></b></td>");
-			out.println("				</tr>");
-			out.println("				<tr>");
-			out.println("					<td>Director:&nbsp;</td>");
-			out.println("					<td>" + m.director + "</td>");
-			out.println("				</tr>");
-			out.println("				<tr>");
-			out.println("					<td>Genres:&nbsp;</td>");
-			String s = "";
-			for(int i = 0; i < m.genres.length; i++)
-				s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
-			out.println("					<td><table style=\"width: 80%\" cellspacing=\"0\"><tr><td>" + s + "</td></tr></table></td>");
-			out.println("				</tr>");
-			out.println("				<tr>");
-			out.println("					<td>Starring:&nbsp;</td>");
-			s = "";
-			for(int i = 0; i < m.stars.length; i++)
-				s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
-			out.println("					<td><table style=\"width: 80%\" cellspacing=\"0\"><tr><td>" + s + "</td></tr></table></td>");
-			out.println("				</tr>");
-			out.println("				<tr>");
-			out.println("					<td>Cost:&nbsp;</td>");
-			out.println("					<td>");
-			out.println("						<table cellspacing=\"0\">");
-			out.println("							<tr>");
-			out.println("								<td>$9.99&nbsp;&nbsp;</td>");
-			out.println("								<td><a href=\"cart.jsp?from=browse&addindex=" + mi + "\">Add to Cart</a></td>");
-			out.println("							</tr>");
-			out.println("						</table>");
-			out.println("					</td>");
-			out.println("				</tr>");	
-			out.println("			</table>");
-			out.println("		</td>");
-			out.println("	</tr>");
-			out.println("</table>");
-			out.println("<br>");
+			%>
+					<td>
+			 			<table border="0">
+							<tr>
+								<td>#<%=m.id%></td>
+								<td><b><a href="movie.jsp?id=<%=m.id%>"><%=m.title%> (<%=m.year%>)</a></b></td>
+							</tr>
+							<tr>
+								<td>Director:&nbsp;</td>
+								<td><%=m.director%></td>
+							</tr>
+							<tr>
+								<td>Genres:&nbsp;</td>
+								<%
+								String s = "";
+								for(int i = 0; i < m.genres.length; i++)
+									s += (i!=0?", ":"") + "<a href=\"browse.jsp?genre=" + m.genres[i].name + "\">" + m.genres[i].name + "</a>";
+								%>
+								<td><table style="width: 80%" cellspacing="0"><tr><td><%=s%></td></tr></table></td>
+							</tr>
+							<tr>
+								<td>Starring:&nbsp;</td>
+			
+								<%
+								s = "";
+								for(int i = 0; i < m.stars.length; i++)
+									s += (i!=0?", ":"") + "<a href=\"star.jsp?id=" + m.stars[i].id + "\">" + m.stars[i].first_name + " " + m.stars[i].last_name + "</a>";
+									%>
+
+								<td><table style="width: 80%" cellspacing="0"><tr><td><%=s%></td></tr></table></td>
+							</tr>
+							<tr>
+								<td>Cost:&nbsp;</td>
+								<td>
+									<table cellspacing="0">
+										<tr>
+											<td>$9.99&nbsp;&nbsp;</td>
+											<td><a href="cart.jsp?from=browse&addindex=<%=mi%>">Add to Cart</a></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<%
 		}
 		if(url != null) {
 			if(pageNum > 1)
 				out.println("<a href=\"" + url + "&reuse=1&page=" + (pageNum-1) + "&perpage=" + pageSize + "\">&lt;</a>");
 			if(pageNum*pageSize <= moviesNum)
 				out.println("<a href=\"" + url + "&reuse=1&page=" + (pageNum+1) + "&perpage=" + pageSize + "\">&gt;</a>");
-			out.print("    Movies per page: <a href=\"" + url + "&reuse=1&page=" + pageNum + "&perpage=5\">5</a> | ");
-			out.print("<a href=\"" + url + "&reuse=1&page=" + pageNum + "&perpage=10\">10</a> | ");
-			out.print("<a href=\"" + url + "&reuse=1&page=" + pageNum + "&perpage=25\">25</a> | ");
-			out.print("<a href=\"" + url + "&reuse=1&page=" + pageNum + "&perpage=50\">50</a> | ");
-			out.println("<a href=\"" + url + "&reuse=1&page=" + pageNum + "&perpage=100\">100</a>");
+			%>
+			Movies per page: <a href="<%=url%>&reuse=1&page=<%=pageNum %>&perpage=5">5</a> | 
+			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=10">10</a> | 
+			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=25">25</a> | 
+			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=50">50</a> | 
+			<a href="<%=url%>&reuse=1&page=<%=pageNum%>&perpage=100">100</a>
+
+			<%
 		}
 	} else {
 		out.println("No results<br>");
