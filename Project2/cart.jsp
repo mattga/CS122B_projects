@@ -14,6 +14,7 @@
 	// Get parameters
 	String from = request.getParameter("from");
 	String addIndex = request.getParameter("addindex");
+	String addId = request.getParameter("addid");
 	String id = request.getParameter("id");
 	String quantity = request.getParameter("quantity");
 	String action = request.getParameter("action");
@@ -24,6 +25,8 @@
 		url += "&from=" + from;
 	if(addIndex != null)
 		url += "&addindex=" + addIndex;
+	if(addId != null)
+		url += "&addId="+ addId;
 	
 	//Check session for logged in...
 		User u = (User)session.getAttribute("user");
@@ -35,12 +38,23 @@
 	if (movieCart == null)
 		movieCart = new ShoppingCart();
 
-	if(from != null && addIndex != null && addIndex.matches("[0-9]*")) {
+	if(from != null && ((addIndex != null && addIndex.matches("[0-9]*")) || (addId != null && addId.matches("[0-9]*"))) ) {
 		if(from.equals("browse")) {
 			Movie[] mList = (Movie[])session.getAttribute("browseMovieList");
 			if(mList != null) {
-				int index = Integer.parseInt(addIndex);
-				movieCart.addMovie(mList[index]); 
+				int index;
+				
+				// If we are not gien an index, then we must have an id
+				if (addIndex == null) {
+					index = Integer.parseInt(addId);
+					for (Movie m : mList) {
+						if (m.id == index)
+							movieCart.addMovie(m);
+					}
+				} else { // if we have an index, then we must have been given an index.
+					index = Integer.parseInt(addIndex);
+					movieCart.addMovie(mList[index]);	
+				} 
 			}
 		} else if(from.equals("search")) {
 			Movie[] mList = (Movie[])session.getAttribute("searchMovieList");
@@ -66,6 +80,7 @@
 				<th>#</th>
 				<th>Movie</th>
 				<th>Price</th>
+				<th>Total</th>
 				<th>Quantity</th>
 			</tr>
 
@@ -77,7 +92,8 @@
 			<tr>
 				<td><%=++i%></td>
 				<td><a href="movie.jsp?id=<%=m.id%>"><%=m.title%>  (<%=m.year%>)</td>
-				<td>$9.99</td>
+				<td style="color:#888">$9.99</td>
+				<td><% out.println(m.cartQuantity * 9.99); %></td>
 				<td>
 					<form action="" method="GET">
 						<input type="hidden" name="id" value="<%=m.id %>">
@@ -93,14 +109,15 @@
 			<tr>
 				<th></th>
 				<th>Total:</th>
-				<th colspan="">
+				<th></th>
+				<th>
 				<%
 					out.println(movieCart.getTotal());
 				%>
 				</th>
 				<th>
 				<%
-					//out.println(movieCart.getTotalItems());
+					out.println(movieCart.getItemCount());
 				%>
 				</th>
 			</tr>

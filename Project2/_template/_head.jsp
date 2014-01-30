@@ -22,14 +22,16 @@
             <div class="col-md-4">
 
                 <!-- Input Group for Search Box -->
+                <form action="search.jsp" method="post">
                 <div class="input-group" style="margin:15px 0 5px;">
-                  <input type="text" class="form-control" placeholder="Star, Movie, or Genre">
-                  <div class="input-group-btn">
-                    <button class="btn btn-primary">Search</button>
-                  </div>
+                    <input type="text" class="form-control" name="title" placeholder="Movie Name">
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary">Search</button>
+                    </div>
                 </div>
+                </form>
                 <p>
-                    <a href="advanced-search.jsp">Advanced Search</a>
+                    <a href="advanced_search.jsp">Advanced Search</a>
                 </p>
 
             </div>
@@ -38,7 +40,7 @@
         <!-- Naviation -->
         <nav class="row">
             <ul class="nav nav-pills col-md-12">
-                <li><a href="/">Home</a></li>
+                <!-- <li><a href="">Home</a></li> -->
                 <li><a href="browse.jsp?title">Browse By Title</a></li>
                 <li><a href="browse.jsp">Browse By Genre</a></li>
                 <li><a href="stars.jsp">Browse Stars</a></li>

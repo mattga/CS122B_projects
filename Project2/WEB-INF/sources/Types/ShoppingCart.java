@@ -64,6 +64,13 @@ public class ShoppingCart {
 			price += (m.cartQuantity * 9.99);
 		return price;
 	}
+	
+	public int getItemCount() {
+		int total = 0;
+		for(Movie m : movieCart)
+			total += m.cartQuantity;
+		return total;
+	}
 
 	
 	public Iterable<Movie> getCart() {

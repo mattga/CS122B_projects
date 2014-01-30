@@ -61,7 +61,7 @@
                 <%=s%>
             </td>
             <td>
-                <a href="cart.jsp?from=browse&addindex=<%=mi%>" class="btn btn-lg btn-primary">Add to Cart</a>
+                <a href="cart.jsp?from=browse&addid=<%=m.id%>" class="btn btn-lg btn-primary">Add to Cart</a>
             </td>
         </tr>
         <%
