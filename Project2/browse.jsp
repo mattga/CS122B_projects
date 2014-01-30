@@ -22,7 +22,7 @@
 	String _page = request.getParameter("page");
 	String reuse = request.getParameter("reuse");
 	String filter = request.getParameter("filter");
-
+	
 	// Reuse cached movie list, otherwise pull from database. Build URL for navigating through pages
 	String url = "browse.jsp";
 	if(genre != null) {
@@ -43,7 +43,7 @@
 			session.setAttribute("browseMovieList", res);
 		}
 		url = "browse.jsp?title=" + title;
-	}
+	} 
 
 	// Check session for logged in...
 	User u = (User)session.getAttribute("user");

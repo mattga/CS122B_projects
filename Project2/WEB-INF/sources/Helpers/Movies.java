@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -75,7 +77,44 @@ public class Movies {
 		}
 		return null;
 	}
+	
+	
+	public Movie[] getAllMoviesSortByTitle(int direction) {
+		try {
+			conn = MySQL.getInstance().getConnection();
 
+			System.out.println("Trying Fetch");
+			moviesPStmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies ORDER BY title " + (direction > 0 ? "ASC" : "DESC"));
+			rs = moviesPStmt.executeQuery();
+
+			// Return a simple array of `Movie` Objects.
+			List<Movie> movieList = getMovieList();
+			return movieList.toArray(new Movie[movieList.size()]);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public Movie[] getAllMoviesSortByYear(int direction) {
+		try {
+			conn = MySQL.getInstance().getConnection();
+
+			System.out.println("Trying Fetch");
+			moviesPStmt = conn.prepareStatement("SELECT DISTINCT m.* FROM movies ORDER BY year " + (direction > 0 ? "ASC" : "DESC"));
+			rs = moviesPStmt.executeQuery();
+
+			// Return a simple array of `Movie` Objects.
+			List<Movie> movieList = getMovieList();
+			return movieList.toArray(new Movie[movieList.size()]);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	public Movie[] getAllMoviesBySearch(String title, String year, String director, String star_fn, String star_ln) {
 		try {
 			conn = MySQL.getInstance().getConnection();
@@ -244,5 +283,57 @@ public class Movies {
         	filtered.add(m);
         }
 		return filtered.toArray(new Movie[filtered.size()]);
+	}
+	
+	public static Movie[] sortByTitle(Movie[] arr, int direction){
+		if (direction < 0)
+			Arrays.sort(arr, new TitleComparatorReverse());
+		else 
+			Arrays.sort(arr, new TitleComparator());
+		
+		return arr;
+	}
+	
+	public static Movie[] sortByYear(Movie[] arr, int direction) {
+		if (direction < 0)
+			Arrays.sort(arr, new YearComparatorReverse());
+		else
+			Arrays.sort(arr, new YearComparator());
+		return arr;
+	}
+	
+	public static class TitleComparator implements Comparator<Movie> {
+		@Override
+		public int compare(Movie o1, Movie o2) {
+			return o1.title.compareTo(o2.title);
+		}
+	}
+	public static class TitleComparatorReverse implements Comparator<Movie> {
+		@Override
+		public int compare(Movie o1, Movie o2) {
+			return o2.title.compareTo(o1.title);
+		}
+	}
+	
+	public static class YearComparator implements Comparator<Movie> {
+		@Override
+		public int compare(Movie o1, Movie o2) {
+			if (o1.year == o2.year)
+				return 0;
+			else if (o1.year < o2.year)
+				return -1;
+			return 1;
+		}
+	}
+	
+	public static class YearComparatorReverse implements Comparator<Movie> {
+		@Override
+		public int compare(Movie o1, Movie o2) {
+			if (o1.year == o2.year)
+				return 0;
+			else if (o1.year < o2.year)
+				return 1;
+			return -1;
+		}
 	}
 }
