@@ -45,7 +45,7 @@
                 <li><a href="browse.jsp">Browse By Genre</a></li>
                 <li><a href="stars.jsp">Browse Stars</a></li>
                 <li><a href="cart.jsp">View Cart</a></li>
-                <li><a href="logout.jsp">Log Out</a></li>
+                <!-- <li><a href="logout.jsp">Log Out</a></li> -->
             </ul>
         </nav>
 

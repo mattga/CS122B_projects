@@ -121,6 +121,13 @@
 				%>
 				</th>
 			</tr>
+			<% if (movieCart.getItemCount() > 0) { %>
+				<tr>
+					<th colspan="5" class="text-right">
+						<a href="checkout.jsp" class="btn btn-primary">Checkout</a>
+					</th>
+				</tr>
+			<% } %>
 		</tbody>
 	</table>
 	</div>
