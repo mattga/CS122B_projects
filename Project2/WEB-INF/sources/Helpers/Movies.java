@@ -1,17 +1,12 @@
 package Helpers;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import Types.Genre;
 import Types.Movie;
@@ -233,5 +228,21 @@ public class Movies {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public static Movie[] filter(String filter, Movie[] arr){
+        LinkedList<Movie> filtered = new LinkedList<>();
+        
+		for (Movie m : arr) {
+        	if (filter != null && !filter.equals("0")){
+    			if(!m.title.startsWith(filter))
+    				continue;
+            } else if (filter != null && filter.equals("0")) {
+            	if(!m.title.matches("^\\d.*"))
+            		continue;
+            }
+        	filtered.add(m);
+        }
+		return filtered.toArray(new Movie[filtered.size()]);
 	}
 }

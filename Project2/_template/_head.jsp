@@ -40,7 +40,7 @@
             <ul class="nav nav-pills col-md-12">
                 <li><a href="/">Home</a></li>
                 <li><a href="browse.jsp?title">Browse By Title</a></li>
-                <li><a href="browse.jsp?genre">Browse By Genre</a></li>
+                <li><a href="browse.jsp">Browse By Genre</a></li>
                 <li><a href="stars.jsp">Browse Stars</a></li>
                 <li><a href="cart.jsp">View Cart</a></li>
                 <li><a href="logout.jsp">Log Out</a></li>

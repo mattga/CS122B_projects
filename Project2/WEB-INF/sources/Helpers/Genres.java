@@ -22,7 +22,7 @@ public class Genres {
 		try {
 			conn = MySQL.getInstance().getConnection();
 			// Prepare queries for a movies stars & genres.
-			movieGenresPStmt = conn.prepareStatement("SELECT DISTINCT genres.* FROM genres");
+			movieGenresPStmt = conn.prepareStatement("SELECT DISTINCT genres.* FROM `genres` ORDER BY `name`");
 			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();

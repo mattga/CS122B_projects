@@ -106,7 +106,5 @@
 			</tr>
 		</tbody>
 	</table>
-	
-
 	</div>
 <%@ include file="_template/_foot.jsp" %>
