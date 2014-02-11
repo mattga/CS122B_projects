@@ -64,3 +64,9 @@ CREATE TABLE IF NOT EXISTS sales (
 	FOREIGN KEY(customer_id) REFERENCES customers (id),
 	FOREIGN KEY(movie_id) REFERENCES movies (id)
 );
+
+CREATE TABLE IF NOT EXISTS employees (
+	email varchar(50) PRIMARY KEY,
+	password varchar(20) NOT NULL,
+	fullname varchar(100)
+);
