@@ -34,8 +34,8 @@ public class MySQL {
 
 			BoneCPConfig config = new BoneCPConfig();
 			config.setJdbcUrl("jdbc:mysql://localhost:3306/moviedb"); // jdbc url specific to your database, eg jdbc:mysql://127.0.0.1/yourdb
-			config.setUsername("moviedb"); 
-			config.setPassword("tiger");
+			config.setUsername("testuser"); 
+			config.setPassword("testpass");
 			config.setMinConnectionsPerPartition(5);
 			config.setMaxConnectionsPerPartition(10);
 			config.setPartitionCount(1);

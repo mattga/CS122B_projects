@@ -7,7 +7,7 @@ compile:
 	cp ./WEB-INF/sources/*.class ./WEB-INF/classes/
 
 war: compile
-	jar -cvf ./_deploy/Project2.war ./META-INF/*.* ./WEB-INF/* ./*.* ./js/* ./css/* ./_template/* ./fonts/* ./images/*
+	jar -cvf ./_deploy/Project2.war ./META-INF/*.* ./WEB-INF/* ./*.* ./js/* ./css/* ./_template/* ./fonts/* ./images/* ./partial/*
 	cp ./_deploy/Project2.war $$CATALINA_HOME/webapps/Project2.war
 
 clean:
