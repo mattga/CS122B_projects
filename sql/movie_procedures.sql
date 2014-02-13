@@ -11,6 +11,7 @@ BEGIN
 	WHERE NOT EXISTS (SELECT * FROM genres
 		WHERE name=genre_name);
 	SET @genre_id = LAST_INSERT_ID();
+	SELECT ""
 
 	INSERT INTO stars (first_name, last_name)
 	SELECT star_fn, star_ln FROM DUAL

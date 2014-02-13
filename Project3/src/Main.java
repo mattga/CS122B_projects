@@ -68,6 +68,7 @@ public class Main {
 					System.out.print("Password: ");
 					s2 = s.nextLine();
 					statement = cm.connect(s1, s2);
+					cm.createStoredProcedure();
 				}
 
 				// Display menu if logged in
