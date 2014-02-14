@@ -1,3 +1,5 @@
+package Helpers;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -21,7 +23,7 @@ public class UserSQLQuery {
 		_stmt = s;
 	}
 	
-	public void executeQuery() throws SQLException {
+	public ResultSet executeQuery() throws SQLException {
 		int result = -1;
 		switch (_type) {
 			case UPDATE:
@@ -35,10 +37,9 @@ public class UserSQLQuery {
 				}
 				break;
 			case SELECT:
-				_rs = _stmt.executeQuery(_query);
-				Main.printResultSet(_rs);
-				break;
+				return  _stmt.executeQuery(_query);
 		}
+		return null;
 	}
 	
 	public boolean parseQuery(String query) {

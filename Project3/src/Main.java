@@ -1,12 +1,13 @@
 import java.sql.CallableStatement;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import java.sql.Connection;
-
+import Helpers.UserSQLQuery;
+import Types.DBHealth;
 import Types.Movie;
 import Types.Star;
 
@@ -20,7 +21,7 @@ public class Main {
 	private static CallableStatement callstmt;
 
 	private static enum Option {
-		PRINT_MOVIES, NEW_MOVIE, NEW_STAR, NEW_CUSTOMER, DELETE_CUSTOMER, METADATA, QUERY, EXIT_MENU, EXIT, INVALID, NONE
+		DB_HEALTH_REPORT, PRINT_MOVIES, NEW_MOVIE, NEW_STAR, NEW_CUSTOMER, DELETE_CUSTOMER, METADATA, QUERY, EXIT_MENU, EXIT, INVALID, NONE
 	};
 
 	public static void main(String[] args) {
@@ -36,6 +37,9 @@ public class Main {
 			while (true) {
 				// Implementation of menu functions
 				switch (option) {
+				case DB_HEALTH_REPORT:
+					GenerateDBHealthReport();
+					break;
 				case PRINT_MOVIES:
 					PrintMoviesFeatStar();
 					break;
@@ -153,11 +157,13 @@ public class Main {
 		System.out.printf("\n%-5s%-30s", "7)", "Execute Query");
 		System.out.printf("%-5s%-20s", "8)", "Exit Menu");
 		System.out.printf("%-5s%-20s\n", "9)", "Exit Program");
+		
+		System.out.printf("\n%-5s%-30s", "0)", "Generate DB Health Report\n");
 		System.out.println("===============================================================");
 
 		try {
 			return Option.values()[Character.getNumericValue(s.nextLine()
-					.charAt(0)) - 1];
+					.charAt(0))];
 		} catch (StringIndexOutOfBoundsException
 				| ArrayIndexOutOfBoundsException e) {
 		} // Return INVALID for any other characters
@@ -327,7 +333,16 @@ public class Main {
 		while (!usql.isValid(s.nextLine())) {
 			System.out.println("Invalid Query Try Again.");
 		}
-		usql.executeQuery();
+		ResultSet value = usql.executeQuery();
+		if (value != null){
+			printResultSet(value);
+		}
 		return true;
+	}
+	
+	private static boolean GenerateDBHealthReport() {
+		System.out.println("Generating Report and Saving to Drive Root");
+		DBHealth dbHealthReport = new DBHealth(new UserSQLQuery(statement));
+		return false;
 	}
 }
