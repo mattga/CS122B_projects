@@ -79,6 +79,7 @@ public class PrivilegesTableModel extends AbstractTableModel {
 			dbStmt.setString(1, host);
 			dbStmt.setString(2, user);
 			rs = dbStmt.executeQuery();
+			privileges = PrivilegeTablesParser.parseProcedurePrivileges(rs2, rs);
 			break;
 		case None:
 			break;
@@ -176,7 +177,12 @@ public class PrivilegesTableModel extends AbstractTableModel {
 			case Columns:
 				break;
 			case Procedures:
-				break;
+				switch(columnIndex) {
+				case 0:
+					return privileges[rowIndex].getValue();
+				case 1:
+					return privileges[rowIndex].getKey();
+				}
 			case None:
 				return "Select a user and resource to display privileges for...";
 			}

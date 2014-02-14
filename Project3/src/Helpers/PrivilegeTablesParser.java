@@ -5,16 +5,15 @@ import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class PrivilegeTablesParser {
 	@SuppressWarnings("unchecked")
 	public static Map.Entry<String,String>[] parseDatabasePrivileges(ResultSet globalPrivs, ResultSet dbPrivs) throws SQLException {
 		Map<String,String> map = new HashMap<String,String>(); // key=privilege value=database
-		
+
 		ResultSetMetaData globalMetaDData = globalPrivs.getMetaData();
 		ResultSetMetaData dbMetaData = dbPrivs.getMetaData();
-		
+
 		// Fetch global privileges
 		int colCount = globalMetaDData.getColumnCount();
 		globalPrivs.first();
@@ -38,7 +37,43 @@ public class PrivilegeTablesParser {
 					}
 			}
 		}
-		
+
+		return (Map.Entry<String,String>[])map.entrySet().toArray(new Map.Entry[map.size()]);
+	}
+
+	@SuppressWarnings("unchecked")
+	public static Map.Entry<String,String>[] parseProcedurePrivileges(ResultSet globalPrivs, ResultSet dbPrivs) throws SQLException {
+		Map<String,String> map = new HashMap<String,String>();
+
+		// Fetch global privileges
+		globalPrivs.first();
+		if(globalPrivs.getString("Alter_routine_priv").equals("Y"))
+			map.put("Alter_routine", "All");
+		if(globalPrivs.getString("Create_routine_priv").equals("Y"))
+			map.put("Create_routine", "All");
+		if(globalPrivs.getString("Execute_priv").equals("Y"))
+			map.put("Execute", "All");
+
+		// Fetch individual db privileges
+		if(dbPrivs.first()) {
+			String value = null;
+			if(dbPrivs.getString("Alter_routine_priv").equals("Y")) {
+				value = map.get("Alter_routine");
+				if(value != null && !value.equals("All"))
+					map.put("Alter_routine", dbPrivs.getString("Db"));
+			}
+			if(dbPrivs.getString("Create_routine_priv").equals("Y")) {
+				value = map.get("Create_routine");
+				if(value != null && !value.equals("All"))
+					map.put("Create_routine", dbPrivs.getString("Db"));
+			}
+			if(dbPrivs.getString("Execute_priv").equals("Y")) {
+				value = map.get("Execute");
+				if(value != null && !value.equals("All"))
+					map.put("Execute", dbPrivs.getString("Db"));
+			}
+		}
+
 		return (Map.Entry<String,String>[])map.entrySet().toArray(new Map.Entry[map.size()]);
 	}
 }
