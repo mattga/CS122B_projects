@@ -1,6 +1,7 @@
 package Helpers;
 
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
 import java.sql.Connection;
@@ -27,6 +28,7 @@ public class PrivilegesTableModel extends AbstractTableModel {
 	private ResultSet rs, rs2;
 	private ResultSetMetaData rsmd, rsmd2;
 	private PreparedStatement globalStmt, userStmt, dbStmt, tableStmt, colStmt;
+	private Map.Entry<String,String>[] privileges;
 
 	public PrivilegesTableModel(Connection con) {
 		this.res = Resource.None;
@@ -61,6 +63,7 @@ public class PrivilegesTableModel extends AbstractTableModel {
 			dbStmt.setString(1, host);
 			dbStmt.setString(2, user);
 			rs = dbStmt.executeQuery();
+			privileges = PrivilegeTablesParser.parseDatabasePrivileges(rs2, rs);
 			break;
 		case Tables:
 			tableStmt.setString(1, host);
@@ -109,17 +112,11 @@ public class PrivilegesTableModel extends AbstractTableModel {
 	public int getRowCount() {
 		if(res == Resource.None)
 			return 1;
-
-		try {
-			rs.last();
-			int specRowCount = rs.getRow();
-			if (specRowCount < 0)
-				return specRowCount;
-			return 1;
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
+		
+		if(privileges != null)
+			return privileges.length;
+		
+		System.out.println("Null privileges!!!");
 		return 0;
 	}
 
@@ -170,27 +167,16 @@ public class PrivilegesTableModel extends AbstractTableModel {
 			case Databases:
 				switch(columnIndex) {
 				case 0:
-					if(!rs.first())
-						return "All";
-					else
-						return rs.getString("Db");
+					return privileges[rowIndex].getValue();
 				case 1:
-					return getPrivileges(rowIndex);
+					return privileges[rowIndex].getKey();
 				}
 			case Tables:
 				break;
 			case Columns:
 				break;
 			case Procedures:
-				switch (columnIndex) {
-				case 0:
-					if(!rs.first())
-						return "All";
-					else
-						return rs.getString("Db");
-				case 1:
-					return getPrivileges(rowIndex);
-				}
+				break;
 			case None:
 				return "Select a user and resource to display privileges for...";
 			}
@@ -199,79 +185,5 @@ public class PrivilegesTableModel extends AbstractTableModel {
 		}
 
 		return "NOVALUE";
-	}
-
-	private String getPrivileges(int row) {
-		Set<String> set = new LinkedHashSet<>();
-
-		try {
-			switch(res) {
-			case Databases:
-				// Fetch global privileges
-				int colCount = rsmd2.getColumnCount();
-				rs2.first();
-				for(int i = 3; i < colCount; i++) {
-					String colName = rsmd2.getColumnName(i);
-					if (!colName.contains("_priv"))
-						continue;
-					if(rs2.getString(i).equals("Y"))
-						set.add(colName.substring(0, colName.length()-5));
-				}
-
-				// Fetch specific privileges
-				if(rs.first()) {
-					colCount = rsmd.getColumnCount();
-					for(int i = 4; i < colCount; i++) {
-						String colName = rsmd.getColumnName(i);
-						if (!colName.contains("_priv"))
-							continue;
-						if(rs.getString(i).equals("Y"))
-							set.add(colName.substring(0, colName.length()-5));
-					}
-				}
-				break;
-			case Tables:
-				if(rs.first()) {
-
-				}
-				break;
-			case Columns:
-				if(rs.first()) {
-
-				}
-				break;
-			case Procedures:
-				// Fetch global privileges
-				rs2.first();
-				if(rs2.getString("Execute_priv").equals("Y"))
-					set.add("Execute");
-				if(rs2.getString("Create_routine_priv").equals("Y"))
-					set.add("Create_routine");
-				if(rs2.getString("Alter_routine_priv").equals("Y"))
-					set.add("Alter_routine");
-
-				// Fetch specific privileges
-				if(rs.first()) {
-					if(rs.getString("Execute_priv").equals("Y"))
-						set.add("Execute");
-					if(rs.getString("Create_routine_priv").equals("Y"))
-						set.add("Create_routine");
-					if(rs.getString("Alter_routine_priv").equals("Y"))
-						set.add("Alter_routine");
-				}
-				break;
-			case None:
-				break;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-
-		Object[] setArray = set.toArray();
-		String privSet = "";
-		for (int i = 0; i < set.size(); i++)
-			privSet += (i==0?"":",") + (String)setArray[i];
-
-		return privSet;
 	}
 }
