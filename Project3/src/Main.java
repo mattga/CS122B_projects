@@ -342,7 +342,7 @@ public class Main {
 	
 	private static boolean GenerateDBHealthReport() {
 		System.out.println("Generating Report and Saving to Drive Root");
-		DBHealth dbHealthReport = new DBHealth(new UserSQLQuery(statement));
+		new DBHealth(statement).generateReport("/var/tmp/DB_HealthReport.html");
 		return false;
 	}
 }
