@@ -96,7 +96,7 @@ public class DBHealth {
 												   "ORDER BY d.`dupCount` DESC;";
 	
 	/**
-	 * Birth date > today or year < ~1900. // Use Reg/Exp or Prep Statemtn to replace place holders.
+	 * Birth date > today or year < ~1900. // Use Reg/Exp or Prep Statement to replace place holders.
 	 */
 	private static final String DOB_OUT_OF_RANGE = "SELECT *  FROM  `stars`  WHERE  `dob` <  ? OR `dob` > ?";
 	

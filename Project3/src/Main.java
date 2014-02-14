@@ -21,7 +21,7 @@ public class Main {
 	private static CallableStatement callstmt;
 
 	private static enum Option {
-		DB_HEALTH_REPORT, PRINT_MOVIES, NEW_MOVIE, NEW_STAR, NEW_CUSTOMER, DELETE_CUSTOMER, METADATA, QUERY, EXIT_MENU, EXIT, INVALID, NONE
+		DB_HEALTH_REPORT, PRINT_MOVIES, NEW_MOVIE, NEW_STAR, NEW_CUSTOMER, DELETE_CUSTOMER, METADATA, QUERY, EXIT_MENU, EXIT, USER_MANAGEMENT, INVALID, NONE
 	};
 
 	public static void main(String[] args) {
@@ -37,6 +37,10 @@ public class Main {
 			while (true) {
 				// Implementation of menu functions
 				switch (option) {
+				case USER_MANAGEMENT:
+					System.out.println("Launching User Management Interface...");
+					new UserManagementDialog(cm.getConnection());
+					break;
 				case DB_HEALTH_REPORT:
 					GenerateDBHealthReport();
 					break;
@@ -90,6 +94,34 @@ public class Main {
 
 	}
 
+	private static Option menu() {
+		System.out.println("====================== MovieDB Commands ======================");
+		System.out.printf("%-5s%-30s", "1)", "Print Movies Featuring Star");
+		System.out.printf("%-5s%-20s", "2)", "New Movie");
+		System.out.printf("%-5s%-20s", "3)", "New Star");
+		
+		System.out.printf("\n%-5s%-30s", "4)", "New Customer");
+		System.out.printf("%-5s%-20s", "5)", "Delete Customer");
+		System.out.printf("%-5s%-20s", "6)", "DB Metadata");
+		
+		System.out.printf("\n%-5s%-30s", "7)", "Execute Query");
+		System.out.printf("%-5s%-20s", "8)", "Exit Menu");
+		System.out.printf("%-5s%-20s\n", "9)", "Exit Program");
+
+		System.out.printf("\n%-5s%-30s", "0)", "Generate DB Health Report");
+		System.out.printf("%-5s%-30s\n", "A)", "User Management");
+		System.out.println("===============================================================");
+
+		try {
+			return Option.values()[Character.getNumericValue(s.nextLine()
+					.charAt(0))];
+		} catch (StringIndexOutOfBoundsException
+				| ArrayIndexOutOfBoundsException e) {
+		} // Return INVALID for any other characters
+
+		return Option.INVALID;
+	}
+	
 	public static void printResultSet(ResultSet rs) {
 		try {
 			ResultSetMetaData rsmd = rs.getMetaData();
@@ -144,33 +176,6 @@ public class Main {
 		}
 	}
 
-	private static Option menu() {
-		System.out.println("====================== MovieDB Commands ======================");
-		System.out.printf("%-5s%-30s", "1)", "Print Movies Featuring Star");
-		System.out.printf("%-5s%-20s", "2)", "New Movie");
-		System.out.printf("%-5s%-20s", "3)", "New Star");
-		
-		System.out.printf("\n%-5s%-30s", "4)", "New Customer");
-		System.out.printf("%-5s%-20s", "5)", "Delete Customer");
-		System.out.printf("%-5s%-20s", "6)", "DB Metadata");
-		
-		System.out.printf("\n%-5s%-30s", "7)", "Execute Query");
-		System.out.printf("%-5s%-20s", "8)", "Exit Menu");
-		System.out.printf("%-5s%-20s\n", "9)", "Exit Program");
-		
-		System.out.printf("\n%-5s%-30s", "0)", "Generate DB Health Report\n");
-		System.out.println("===============================================================");
-
-		try {
-			return Option.values()[Character.getNumericValue(s.nextLine()
-					.charAt(0))];
-		} catch (StringIndexOutOfBoundsException
-				| ArrayIndexOutOfBoundsException e) {
-		} // Return INVALID for any other characters
-
-		return Option.INVALID;
-	}
-	
 	private static boolean AddNewMovie() throws SQLException {
 		System.out.println("\nNew Movie.");
 		System.out.println("\nWe need a few details first...\n");
