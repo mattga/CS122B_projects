@@ -1,8 +1,11 @@
+import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
+
+import java.sql.Connection;
 
 import Types.Movie;
 import Types.Star;
@@ -14,6 +17,7 @@ public class Main {
 	private static ConnectionManager cm;
 	private static Statement statement;
 	private static ResultSet rs;
+	private static CallableStatement callstmt;
 
 	private static enum Option {
 		PRINT_MOVIES, NEW_MOVIE, NEW_STAR, NEW_CUSTOMER, DELETE_CUSTOMER, METADATA, QUERY, EXIT_MENU, EXIT, INVALID, NONE
@@ -21,6 +25,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		// Initializations
+		callstmt = null;
 		s = new Scanner(System.in);
 		option = Option.NONE;
 		cm = new ConnectionManager();
@@ -61,7 +66,7 @@ public class Main {
 					if (statement != null)
 						break;
 				case EXIT_MENU:
-					System.out.println("Exiting System Menu.");
+					System.out.println("Exited System Menu.");
 				default:
 					System.out.print("MovieDB Login\nUsername: ");
 					s1 = s.nextLine();
@@ -159,20 +164,37 @@ public class Main {
 
 		return Option.INVALID;
 	}
-
-	@SuppressWarnings("unused")
-	private static boolean AddNewMovie() {
+	
+	private static boolean AddNewMovie() throws SQLException {
 		System.out.println("\nNew Movie.");
 		System.out.println("\nWe need a few details first...\n");
 		
 		Movie m = new Movie();
 		m.getFromStdIn(s);
 		
-		if (m == null) {
-			System.out.println("\nWe were unable to insert your movie into the DB...\n");
-		} else {
-			System.out.println("\nMovie was successfully inserted into the DB...\n");
+		Connection con = cm.getConnection();
+		if(callstmt == null)
+			callstmt = con.prepareCall("{ call add_movie(?, ?, ?, ?, ?, ?)}");
+		callstmt.setString(1,m.title);
+		callstmt.setInt(2, m.year);
+		callstmt.setString(3, m.director);
+		callstmt.setString(4, m.stars[0].first_name);
+		callstmt.setString(5, m.stars[0].last_name);
+		callstmt.setString(6, m.genres[0].name);
+		ResultSet out_rs = callstmt.executeQuery();
+		out_rs.first();
+		System.out.println(out_rs.getString(1));
+		while(callstmt.getMoreResults()) {
+			out_rs = callstmt.getResultSet();
+			out_rs.first();
+			System.out.println(out_rs.getString(1));
 		}
+		
+//		if () {
+//			System.out.println("\nWe were unable to insert your movie into the DB...\n");
+//		} else {
+//			System.out.println("\nMovie was successfully inserted into the DB...\n");
+//		}
 		
 		return false;
 	}
@@ -206,7 +228,7 @@ public class Main {
 		Star newStar = new Star();
 		newStar.getInfoFromStdIn(s, errBuff);
 		
-		if (!errBuff.toString().equals("")){
+		if (!errBuff.toString().equals("")) {
 			System.out.println("An error occurred:");
 			System.out.print(errBuff.toString() + "\n");
 			return false; 
@@ -287,8 +309,7 @@ public class Main {
 			statement.executeUpdate(delQuery);
 			res = statement.executeUpdate(c.composeDeleteQueryBy(field));
 		} else {
-			System.out
-					.println("Did not find any customer with given parameter.");
+			System.out.println("Did not find any customer with given parameter.");
 		}
 
 		System.out.println("Removed: " + res + " Customer from the table.\n");

@@ -29,7 +29,7 @@ public class UserSQLQuery {
 					result = _stmt.executeUpdate(_query);
 					System.out.println("Modified "+ result + "Rows");
 				} catch (com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException e) {
-					System.out.println("Can Not Update Record Due to Constraint Violations");
+					System.out.println("Cannot Update Record Due to Constraint Violations");
 				} catch (Exception e) {
 					System.out.println("Could not Excute Given Query.");
 				}

@@ -7,8 +7,13 @@ compile:
 	cp ./WEB-INF/sources/*.class ./WEB-INF/classes/
 
 war: compile
-	jar -cvf ./_deploy/Project2.war ./META-INF/*.* ./WEB-INF/* ./*.* ./js/* ./css/* ./_template/* ./fonts/* ./images/* ./partial/*
-	cp ./_deploy/Project2.war $$CATALINA_HOME/webapps/Project2.war
+	jar -cvf ./_deploy/FabFlix.war ./META-INF/*.* ./WEB-INF/* ./*.* ./js/* ./css/* ./_template/* ./fonts/* ./images/* ./partial/* makefile
+	cp ./_deploy/FabFlix.war $$CATALINA_HOME/webapps/FabFlix.war
+
+db:
+	mysql -u$(user) -p$(pass) < sql/createtable.sql
+	mysql -u$(user) -p$(pass) < sql/createtestuser.sql
+	mysql -u$(user) -p$(pass) moviedb < sql/data.sql
 
 clean:
 	rm -rf ./WEB-INF/sources/*.class ./WEB-INF/classes/*.class

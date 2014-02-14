@@ -1,2 +1,2 @@
-GRANT ALL PRIVILEGES ON moviedb.* TO moviedb@localhost IDENTIFIED BY 'testuser';
+GRANT ALL PRIVILEGES ON moviedb.* TO testuser@localhost IDENTIFIED BY 'testpass';
 FLUSH PRIVILEGES;
