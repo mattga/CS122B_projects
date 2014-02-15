@@ -80,10 +80,11 @@ public class CreateUserDialog extends JDialog {
 				ResultSet userCheck = stmt.executeQuery("SELECT * FROM mysql.user WHERE user='" + user.getText() + "' AND host='localhost'");
 				if(userCheck.first())
 					JOptionPane.showMessageDialog(parent, "The user " + user.getText() + "@localhost already exists.", "User Exists", JOptionPane.ERROR_MESSAGE);
-				else
+				else {
 					stmt.executeUpdate("CREATE USER '" + user.getText() + "'@'localhost' IDENTIFIED BY '" + String.valueOf(pass.getPassword()) + "'");
+					JOptionPane.showMessageDialog(parent, "The user " + user.getText() + "@localhost has been created.", "User Creation Success", JOptionPane.ERROR_MESSAGE);
+				}
 				CreateUserDialog.this.dispose();
-				JOptionPane.showMessageDialog(parent, "The user " + user.getText() + "@localhost has been created.", "User Creation Success", JOptionPane.ERROR_MESSAGE);
 				userqtm.executeQuery();
 			} catch (SQLException e1) {
 				JOptionPane.showMessageDialog(parent, e1.getMessage(), "User Creation Failed", JOptionPane.ERROR_MESSAGE);

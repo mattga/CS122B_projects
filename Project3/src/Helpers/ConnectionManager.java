@@ -53,9 +53,9 @@ public class ConnectionManager {
 					"SET @star_id = -1; " +
 					"SET @movie_id = -1; " +
 					
-					"SELECT DISTINCT max(id) INTO @genre_id FROM genres " + 
+					"SELECT max(id) INTO @genre_id FROM genres " + 
 						"WHERE name=genre_name; " +
-					"IF @genre_id < 0 THEN " +
+					"IF @genre_id IS NULL OR @genre_id < 0 THEN " +
 						"SELECT \"Genre does not exist. Creating...\"; " +
 						"INSERT INTO genres (name) VALUES (genre_name); " +
 						"SET @genre_id = LAST_INSERT_ID(); " +
@@ -64,9 +64,9 @@ public class ConnectionManager {
 						"SELECT CONCAT(\"Genre already exists with id \",@genre_id); " +
 					"END IF; " +
 					
-					"SELECT DISTINCT max(id) INTO @star_id FROM stars " + 
+					"SELECT max(id) INTO @star_id FROM stars " + 
 						"WHERE first_name=star_fn AND last_name=star_ln; " +
-					"IF @star_id < 0 THEN " +
+					"IF @star_id IS NULL OR @star_id < 0 THEN " +
 						"SELECT \"Star does not exist. Creating...\"; " +
 						"INSERT INTO stars (first_name, last_name) VALUES (star_fn, star_ln); " +
 						"SET @star_id = LAST_INSERT_ID(); " +
@@ -75,9 +75,9 @@ public class ConnectionManager {
 						"SELECT CONCAT(\"Star already exists with id \",@star_id); " +
 					"END IF; " +
 					
-					"SELECT DISTINCT max(id) INTO @movie_id FROM movies " + 
+					"SELECT max(id) INTO @movie_id FROM movies " + 
 						"WHERE title=title AND year=year AND director=director; " +
-					"IF @movie_id < 0 THEN " +
+					"IF @movie_id IS NULL OR @movie_id < 0 THEN " +
 						"SELECT \"Movie does not exist. Creating...\"; " +
 						"INSERT INTO movies (title,year,director) VALUES (title,year,director); " +
 						"SET @movie_id = LAST_INSERT_ID(); " +
@@ -90,6 +90,8 @@ public class ConnectionManager {
 					"SELECT \"Star (id @star_id) and movie (id @movie_id) linked\"; " +
 					"INSERT INTO genres_in_movies VALUES (@genre_id, @movie_id); " +
 					"SELECT \"Genre (id @genre_id) and movie (id @movie_id) linked\"; " +
+					
+					"SELECT \"Movie successfully created.\n\"; " +
 				"END ";
 
 		stmt.executeUpdate("DROP PROCEDURE add_movie");
