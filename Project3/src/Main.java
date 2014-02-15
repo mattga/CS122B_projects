@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
+import Helpers.ConnectionManager;
 import Helpers.UserSQLQuery;
 import Types.DBHealth;
 import Types.Movie;
@@ -39,7 +40,7 @@ public class Main {
 				switch (option) {
 				case USER_MANAGEMENT:
 					System.out.println("Launching User Management Interface...");
-					new UserManagementDialog(cm.getConnection());
+					new UserManagementFrame(cm.getConnection());
 					break;
 				case DB_HEALTH_REPORT:
 					GenerateDBHealthReport();
