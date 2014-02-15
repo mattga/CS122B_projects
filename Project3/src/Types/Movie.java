@@ -75,7 +75,7 @@ public class Movie {
 			}
 			
 			if (stars == null || stars.length < 1) {
-				System.out.print("What is a star in the movie? (First_name Last_name) ");
+				System.out.print("Who is one star in the movie? ");
 				String name = s.nextLine();
 				stars = new Star[1];
 				stars[0] = new Star();
