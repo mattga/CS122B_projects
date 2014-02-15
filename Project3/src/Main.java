@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
+import Helpers.ConnectionManager;
 import Helpers.UserSQLQuery;
 import Types.DBHealth;
 import Types.Movie;
@@ -41,7 +42,7 @@ public class Main {
 				switch (option) {
 				case USER_MANAGEMENT:
 					System.out.println("Launching User Management Interface...");
-					new UserManagementDialog(cm.getConnection());
+					new UserManagementFrame(cm.getConnection());
 					break;
 				case DB_HEALTH_REPORT:
 					GenerateDBHealthReport();
@@ -83,7 +84,7 @@ public class Main {
 					s1 = s.nextLine();
 					System.out.print("Password: ");
 					s2 = s.nextLine();
-					statement = cm.connect("root", "");					
+					statement = cm.connect("root", "ma1991ga");					
 					cm.createStoredProcedure();
 				}
 

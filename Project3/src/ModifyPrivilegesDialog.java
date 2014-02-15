@@ -20,6 +20,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
+
 import Helpers.PrivilegesTableModel;
 
 public class ModifyPrivilegesDialog extends JDialog {
@@ -37,10 +39,10 @@ public class ModifyPrivilegesDialog extends JDialog {
 	private Statement stmt;
 	private String user, host;
 	private PrivilegesTableModel model;
-	
+
 	public ModifyPrivilegesDialog(JFrame parent, Connection con, int row, PrivilegesTableModel model) {
 		this.model = model;
-		
+
 		try {
 			stmt = con.createStatement();
 
@@ -414,14 +416,14 @@ public class ModifyPrivilegesDialog extends JDialog {
 		public void actionPerformed(ActionEvent e) {
 			try {
 				// DB Privileges
-				ResultSet privcheck = null;
+//				ResultSet privcheck = null;
 				if(dbNameList.get(0).getText().equals("All") && dbNameList.get(0).isSelected())
 					for(JCheckBox b2 : dbPrivList) {
 						if(b2.isSelected()) {
-							System.out.println("SELECT * FROM mysql.user WHERE user='" + user + "' AND host='" + host + "'");
-							privcheck = stmt.executeQuery("SELECT * FROM mysql.user WHERE user='" + user + "' AND host='" + host + "'");
-							if(privcheck.first() && privcheck.getString(b2.getText() + "_priv").equals("Y"))
-								stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON *.* FROM " + user + "@" + host);
+							//							System.out.println("SELECT * FROM mysql.user WHERE user='" + user + "' AND host='" + host + "'");
+							//							privcheck = stmt.executeQuery("SELECT * FROM mysql.user WHERE user='" + user + "' AND host='" + host + "'");
+							//							if(privcheck.first() && privcheck.getString(b2.getText() + "_priv").equals("Y"))
+							stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON *.* FROM " + user + "@" + host);
 						}
 					}
 				else
@@ -429,9 +431,9 @@ public class ModifyPrivilegesDialog extends JDialog {
 						if(b.isSelected())
 							for(JCheckBox b2 : dbPrivList) {
 								if(b2.isSelected()) {
-									privcheck = stmt.executeQuery("SELECT * FROM mysql.db WHERE user='" + user + "' AND host='" + host + "' AND Db='" + b.getText() + "'");
-									if(privcheck.first() && privcheck.getString(b2.getText() + "_priv").equals("Y"))
-										stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON " + b.getText() + ".* FROM " + user + "@" + host);
+									//									privcheck = stmt.executeQuery("SELECT * FROM mysql.db WHERE user='" + user + "' AND host='" + host + "' AND Db='" + b.getText() + "'");
+									//									if(privcheck.first() && privcheck.getString(b2.getText() + "_priv").equals("Y"))
+									stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON " + b.getText() + ".* FROM " + user + "@" + host);
 								}
 							}
 					}
@@ -441,9 +443,9 @@ public class ModifyPrivilegesDialog extends JDialog {
 					if(b.isSelected())
 						for(JCheckBox b2 : tablePrivList) {
 							if(b2.isSelected()) {
-								privcheck = stmt.executeQuery("SELECT * FROM mysql.tables_priv WHERE user='" + user + "' AND host='" + host + "' AND Db='" + b.getText().split(".")[0] + "' AND Table_name='" + b.getText().split(".")[1] + "'");
-								if(privcheck.first() && privcheck.getString("Table_priv").contains(b2.getText()) )
-									stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON " + b.getText() + " FROM " + user + "@" + host);
+								//								privcheck = stmt.executeQuery("SELECT * FROM mysql.tables_priv WHERE user='" + user + "' AND host='" + host + "' AND Db='" + b.getText().split(".")[0] + "' AND Table_name='" + b.getText().split(".")[1] + "'");
+								//								if(privcheck.first() && privcheck.getString("Table_priv").contains(b2.getText()) )
+								stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON " + b.getText() + " FROM " + user + "@" + host);
 							}
 						}
 				}
@@ -464,9 +466,9 @@ public class ModifyPrivilegesDialog extends JDialog {
 									query2 += "," + b.getText();
 						String query3 = ") ON " + (String)tableComboBox.getSelectedItem() + " FROM " + user + "@" + host;
 
-						privcheck = stmt.executeQuery("SELECT * FROM mysql.tables_priv WHERE user='" + user + "' AND host='" + host + "' AND Db='" + ((String)tableComboBox.getSelectedItem()).split(".")[0] + "' AND Table_name='" + ((String)tableComboBox.getSelectedItem()).split(".")[1] + "'");
-						if(privcheck.first() )
-							stmt.execute(query1 + query2 + query3);
+						//						privcheck = stmt.executeQuery("SELECT * FROM mysql.tables_priv WHERE user='" + user + "' AND host='" + host + "' AND Db='" + ((String)tableComboBox.getSelectedItem()).split(".")[0] + "' AND Table_name='" + ((String)tableComboBox.getSelectedItem()).split(".")[1] + "'");
+						//						if(privcheck.first() )
+						stmt.execute(query1 + query2 + query3);
 					}
 				}
 
@@ -481,14 +483,16 @@ public class ModifyPrivilegesDialog extends JDialog {
 						if(b.isSelected())
 							for(JCheckBox b2 : procPrivList) {
 								if(b2.isSelected())
-									privcheck = stmt.executeQuery("SELECT * FROM mysql.db WHERE user='" + user + "' AND host='" + host + "' AND Db='" + b.getText() + "'");
-									if(privcheck.first() && privcheck.getString(b2.getText() + "_priv").equals("Y"))
-										stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON " + b.getText() + ".* FROM " + user + "@" + host);
+									//									privcheck = stmt.executeQuery("SELECT * FROM mysql.db WHERE user='" + user + "' AND host='" + host + "' AND Db='" + b.getText() + "'");
+									//									if(privcheck.first() && privcheck.getString(b2.getText() + "_priv").equals("Y"))
+									stmt.executeUpdate("REVOKE " + b2.getText().replace('_', ' ').toUpperCase() + " ON " + b.getText() + ".* FROM " + user + "@" + host);
 							}
 					}
-				
+
 				model.fireTableStructureChanged();
-			} catch(SQLException e2) {
+			} catch(MySQLSyntaxErrorException e2) {
+				JOptionPane.showMessageDialog(ModifyPrivilegesDialog.this, "No privileges exist to be revoked.", "No Grant Defined", JOptionPane.ERROR_MESSAGE);
+			}catch(SQLException e3) {
 				JOptionPane.showMessageDialog(ModifyPrivilegesDialog.this, "MovieDB login must have root access in order to Grant or Revoke privileges.", "No Root Access", JOptionPane.ERROR_MESSAGE);
 			}
 		}
