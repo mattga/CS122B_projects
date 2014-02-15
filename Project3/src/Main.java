@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import Helpers.ConnectionManager;
 import Helpers.UserSQLQuery;
 import Types.DBHealth;
 import Types.Movie;
@@ -20,6 +19,7 @@ public class Main {
 	private static Statement statement;
 	private static ResultSet rs;
 	private static CallableStatement callstmt;
+	private static Boolean loggedin;
 
 	private static enum Option {
 		DB_HEALTH_REPORT, PRINT_MOVIES, NEW_MOVIE, NEW_STAR, NEW_CUSTOMER, DELETE_CUSTOMER, METADATA, QUERY, EXIT_MENU, EXIT, USER_MANAGEMENT, INVALID, NONE
@@ -33,6 +33,7 @@ public class Main {
 		cm = new ConnectionManager();
 		statement = null;
 		rs = null;
+		loggedin = false;
 
 		try {
 			while (true) {
@@ -40,7 +41,7 @@ public class Main {
 				switch (option) {
 				case USER_MANAGEMENT:
 					System.out.println("Launching User Management Interface...");
-					new UserManagementFrame(cm.getConnection());
+					new UserManagementDialog(cm.getConnection());
 					break;
 				case DB_HEALTH_REPORT:
 					GenerateDBHealthReport();
@@ -76,18 +77,31 @@ public class Main {
 						break;
 				case EXIT_MENU:
 					System.out.println("Exited System Menu.");
+					loggedin = false;
 				default:
-					System.out.print("MovieDB Login\nUsername: ");
+					System.out.print("Employee Login\nEmail: ");
 					s1 = s.nextLine();
 					System.out.print("Password: ");
 					s2 = s.nextLine();
-					statement = cm.connect(s1, s2);
+					statement = cm.connect("root", "");					
 					cm.createStoredProcedure();
 				}
 
 				// Display menu if logged in
-				if (statement != null)
-					option = menu();
+				if (statement != null) {
+					if (!loggedin) {
+						rs = statement.executeQuery(String.format("SELECT * FROM `employees` WHERE `email` = '%s' AND `password` = '%s'", s1, s2));
+						if (rs.first()) {
+							loggedin = true;
+						} else {
+							System.out.println("\nInvalid Employee Credentials. This will be reported.\n");
+						}
+					} 
+					
+					if (loggedin)
+						option = menu();
+					
+				}
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -348,8 +362,8 @@ public class Main {
 	}
 	
 	private static boolean GenerateDBHealthReport() {
-		System.out.println("Generating Report and Saving to Drive Root");
-		new DBHealth(statement).generateReport("/var/tmp/DB_HealthReport.html");
+		System.out.println("Generating Report and Saving to: /var/log/DB_HealthReport.html");
+		new DBHealth(statement).generateReport("/var/log/DB_HealthReport.html");
 		return false;
 	}
 }
