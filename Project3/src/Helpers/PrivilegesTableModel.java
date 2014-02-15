@@ -1,14 +1,10 @@
 package Helpers;
 
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.Map;
 
 import javax.swing.table.AbstractTableModel;
 
@@ -26,7 +22,6 @@ public class PrivilegesTableModel extends AbstractTableModel {
 	};
 	private Resource res;
 	private ResultSet rs, rs2;
-	private ResultSetMetaData rsmd, rsmd2;
 	private PreparedStatement globalStmt, userStmt, dbStmt, tableStmt, colStmt;
 	private Map.Entry<String,String>[] privileges;
 
@@ -56,7 +51,6 @@ public class PrivilegesTableModel extends AbstractTableModel {
 		globalStmt.setString(1, host);
 		globalStmt.setString(2, user);
 		rs2 = globalStmt.executeQuery();
-		rsmd2 = rs2.getMetaData();
 
 		switch(res) {
 		case Databases:
@@ -69,11 +63,13 @@ public class PrivilegesTableModel extends AbstractTableModel {
 			tableStmt.setString(1, host);
 			tableStmt.setString(2, user);
 			rs = tableStmt.executeQuery();
+			privileges = PrivilegeTablesParser.parseTablePrivileges(rs);
 			break;
 		case Columns:
 			colStmt.setString(1, host);
 			colStmt.setString(2, user);
 			rs = colStmt.executeQuery();
+			privileges = PrivilegeTablesParser.parseColumnPrivileges(rs);
 			break;
 		case Procedures:
 			dbStmt.setString(1, host);
@@ -85,8 +81,6 @@ public class PrivilegesTableModel extends AbstractTableModel {
 			break;
 		}
 
-		if(rs != null)
-			rsmd = rs.getMetaData();
 
 		this.res = res;
 		this.fireTableStructureChanged();
@@ -173,9 +167,25 @@ public class PrivilegesTableModel extends AbstractTableModel {
 					return privileges[rowIndex].getKey();
 				}
 			case Tables:
-				break;
+				switch(columnIndex) {
+				case 0:
+					return privileges[rowIndex].getValue().split("_")[0];
+				case 1:
+					return privileges[rowIndex].getValue().split("_")[1];
+				case 2:
+					return privileges[rowIndex].getKey();
+				}
 			case Columns:
-				break;
+				switch(columnIndex) {
+				case 0:
+					return privileges[rowIndex].getValue().split("_")[0];
+				case 1:
+					return privileges[rowIndex].getValue().split("_")[1];
+				case 2:
+					return privileges[rowIndex].getValue().split("_")[2];
+				case 3:
+					return privileges[rowIndex].getKey();
+				}
 			case Procedures:
 				switch(columnIndex) {
 				case 0:

@@ -190,6 +190,7 @@ public class Main {
 		callstmt.setString(1,m.title);
 		callstmt.setInt(2, m.year);
 		callstmt.setString(3, m.director);
+		System.out.println(m.stars[0].first_name + " " + m.stars[0].last_name);
 		callstmt.setString(4, m.stars[0].first_name);
 		callstmt.setString(5, m.stars[0].last_name);
 		callstmt.setString(6, m.genres[0].name);

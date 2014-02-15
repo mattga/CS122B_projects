@@ -12,7 +12,6 @@ public class UserSQLQuery {
 	private Statement _stmt;
 	private String _query;
 	private Type _type;
-	private ResultSet _rs;
 	
 	public String[] updateQueries = new String[] {"insert", "update", "delete"};
 	public String[] selectQueries = new String[] {"show", "select"};

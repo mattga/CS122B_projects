@@ -1,7 +1,6 @@
 package Types;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -9,12 +8,9 @@ import java.io.Writer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 
 /**
@@ -246,7 +242,6 @@ public class DBHealth {
 			if (rs.first()) {
 				// Get the values
 				String key;
-				Integer val;
 				for(;!rs.isAfterLast(); rs.next()) {
 					key = rs.getString("title");
 					if (movies.containsKey(key)) {
@@ -291,7 +286,6 @@ public class DBHealth {
 			if (rs.first()) {
 				// Get the values
 				String key;
-				Integer val;
 				for(;!rs.isAfterLast(); rs.next()) {
 					key = rs.getString("first_name") + " " + rs.getString("last_name");
 					if (movies.containsKey(key)) {
@@ -336,7 +330,6 @@ public class DBHealth {
 			if (rs.first()) {
 				// Get the values
 				String key;
-				Integer val;
 				for(;!rs.isAfterLast(); rs.next()) {
 					key = rs.getString("name");
 					if (movies.containsKey(key)) {

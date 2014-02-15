@@ -10,7 +10,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -71,6 +71,8 @@ public class UserManagementFrame extends JFrame {
 		
 		privPanel = new JPanel();
 		privPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED), "Privileges"));
+		privPanel.add(new JLabel("To display privileges, pick a Host/User to the left,"));
+		privPanel.add(new JLabel("and then a resource from the following:"));
 		privPanel.add(resourceComboBox, BorderLayout.NORTH);
 		privPanel.add(new JScrollPane(privTable));
 		
@@ -84,10 +86,10 @@ public class UserManagementFrame extends JFrame {
 		});
 		
 		addUser = new JButton("Add User");
-//		addUser.addActionListener();
+		addUser.addActionListener(new CreateUserActionListener(this, con, userqtm));
 		
 		editPriv = new JButton("Edit Privileges");
-		editPriv.addActionListener(new ModifyPrivilegesActionListener(this, con, userqt));
+		editPriv.addActionListener(new ModifyPrivilegesActionListener(this, con, userqt, privModel));
 		
 		buttonPanel.add(addUser);
 		buttonPanel.add(editPriv);
