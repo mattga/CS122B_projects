@@ -1,0 +1,9130 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE dblp SYSTEM "dblp.dtd">
+<dblp>
+<book mdate="2004-03-08" key="books/acm/Kim95">
+<editor>
+Won Kim
+</editor>
+<title>
+Modern Database Systems: The Object Model, Interoperability, and Beyond.
+</title>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+0-201-59098-0
+</isbn>
+<url>
+db/books/collections/kim95.html
+</url>
+</book>
+<book mdate="2007-03-01" key="books/aw/Stonebraker86">
+<editor>
+Michael Stonebraker
+</editor>
+<title>
+The INGRES Papers: Anatomy of a Relational Database System
+</title>
+<publisher>
+Addison-Wesley
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+0-201-07185-1
+</isbn>
+<url>
+db/books/collections/Stonebraker86.html
+</url>
+</book>
+<book mdate="2005-03-04" key="books/crc/IIR05">
+<editor>
+Richard Zurawski
+</editor>
+<title>
+The Industrial Information Technology Handbook
+</title>
+<isbn>
+0-8493-1985-4
+</isbn>
+<publisher>
+CRC Press
+</publisher>
+<year>
+2005
+</year>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html
+</url>
+</book>
+<book mdate="2008-02-24" key="books/crc/tucker1997">
+<editor>
+Allen B. Tucker
+</editor>
+<title>
+The Computer Science and Engineering Handbook
+</title>
+<publisher>
+CRC Press
+</publisher>
+<isbn>
+0-8493-2909-4
+</isbn>
+<year>
+1997
+</year>
+<url>
+db/books/collections/tucker97.html
+</url>
+</book>
+<book mdate="2006-07-22" key="books/cul/Lange2005">
+<editor>
+Christoph Lange 0002
+</editor>
+<title>
+Wiki - Planen, Einrichten, Verwalten
+</title>
+<publisher>
+CL Computer und Literaturverlag
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+3-936546-28-2
+</isbn>
+<url>
+http://www.cul.de/wiki.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/el/Ceri83">
+<editor>
+Stefano Ceri
+</editor>
+<title>
+Methodology and Tools for Data Base Design.
+</title>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1983
+</year>
+<url>
+db/books/collections/Ceri83.html
+</url>
+</book>
+<book mdate="2006-06-26" key="books/el/Kent1978">
+<editor>
+William Kent
+</editor>
+<title>
+Data and Reality, 1st edition.
+</title>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1978
+</year>
+<isbn>
+0-444-85187-9
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/el/Leeuwen90">
+<editor>
+Jan van Leeuwen
+</editor>
+<title>
+Handbook of Theoretical Computer Science, Volume A: Algorithms and
+Complexity
+</title>
+<publisher>
+Elsevier and MIT Press
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+0-444-88071-2
+</isbn>
+<isbn>
+0-262-22038-5
+</isbn>
+<url>
+db/books/collections/leeuwen90.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/el/Leeuwen90a">
+<editor>
+Jan van Leeuwen
+</editor>
+<title>
+Handbook of Theoretical Computer Science, Volume B: Formal Models and
+Sematics
+</title>
+<publisher>
+Elsevier and MIT Press
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+0-444-88074-7
+</isbn>
+<isbn>
+0-262-22039-3
+</isbn>
+<url>
+db/books/collections/leeuwen90a.html
+</url>
+</book>
+<book mdate="2003-12-04" key="books/harwood/Miranda00">
+<editor>
+Eduardo Reck Miranda
+</editor>
+<title>
+Readings in Music and Artificial Intelligence
+</title>
+<booktitle>
+Readings in Music and Artificial Intelligence
+</booktitle>
+<publisher>
+Harwood Academic publishers
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+90-5755-094-6
+</isbn>
+<url>
+db/books/collections/Miranda2000.html
+</url>
+</book>
+<book mdate="2003-09-26" key="books/idea/Becker03">
+<editor>
+Shirley A. Becker
+</editor>
+<title>
+Effective Databases for Text and 
+Document Management.
+</title>
+<publisher>
+IRM Press
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+1-931777-47-0
+</isbn>
+<url>
+db/books/collections/Becker2003.html
+</url>
+</book>
+<book mdate="2006-02-06" key="books/idea/Ency05">
+<editor>
+Mehdi Khosrow-Pour
+</editor>
+<title>
+Encyclopedia of Information Science and Technology (5 Volumes)
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+1-59140-553-X
+</isbn>
+<url>
+db/books/collections/encyclopedia2005.html
+</url>
+</book>
+<book mdate="2004-01-26" key="books/idea/Rafanelli03">
+<editor>
+Maurizio Rafanelli
+</editor>
+<title>
+Multidimensional Databases: Problems and Solutions
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+1-59140-053-8
+</isbn>
+<url>
+db/books/collections/mddb2003.html
+</url>
+</book>
+<book mdate="2003-12-04" key="books/idea/Siau02">
+<editor>
+Keng Siau
+</editor>
+<title>
+Advanced Topics in Database Research, Vol. 1
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+1-930708-41-6
+</isbn>
+<url>
+db/books/collections/Siau2002.html
+</url>
+</book>
+<book mdate="2003-12-04" key="books/idea/Siau03">
+<editor>
+Keng Siau
+</editor>
+<title>
+Advanced Topics in Database Research, Vol. 2
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+1-59140-063-5
+</isbn>
+<url>
+db/books/collections/Siau2003.html
+</url>
+</book>
+<book mdate="2004-03-30" key="books/idea/Siau04">
+<editor>
+Keng Siau
+</editor>
+<title>
+Advanced Topics in Database Research, Vol. 3
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+1-59140-296-4
+</isbn>
+<url>
+db/books/collections/Siau2004.html
+</url>
+</book>
+<book mdate="2002-11-18" key="books/kl/Djeraba02">
+<editor>
+Chabane Djeraba
+</editor>
+<title>
+Multimedia Mining: A Highway to Intelligent Multimedia Documents
+</title>
+<publisher>
+Kluwer
+</publisher>
+<year>
+2002
+</year>
+<series>
+Multimedia Systems and Applications
+</series>
+<volume>
+22
+</volume>
+<isbn>
+1-4020-7247-3
+</isbn>
+</book>
+<book mdate="2002-01-08" key="books/kl/Snodgrass95">
+<editor>
+Richard T. Snodgrass
+</editor>
+<title>
+The TSQL2 Temporal Query Language
+</title>
+<publisher>
+Kluwer
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+0-7923-9614-6
+</isbn>
+<url>
+db/books/collections/snodgrass95.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Cattell97">
+<editor>
+R. G. G. Cattell
+</editor>
+<title>
+The Object Database Standard: ODMG 2.0
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1997
+</year>
+</book>
+<book mdate="2002-01-03" key="books/mk/Elmagarmid92">
+<editor>
+Ahmed K. Elmagarmid
+</editor>
+<title>
+Database Transaction Models for Advanced Applications.
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+1-55860-214-3
+</isbn>
+<url>
+db/books/collections/transaction92.html
+</url>
+</book>
+<book mdate="2007-03-01" key="books/mk/Gray91">
+<editor>
+Jim Gray
+</editor>
+<title>
+The Benchmark Handbook for Database and Transaction Systems (1st Edition).
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1991
+</year>
+<url>
+db/books/collections/gray91.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Gray93">
+<editor>
+Jim Gray
+</editor>
+<title>
+The Benchmark Handbook for Database and Transaction Systems (2nd Edition).
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+1-55860-292-5
+</isbn>
+<url>
+db/books/collections/gray93.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Minker88">
+<editor>
+Jack Minker
+</editor>
+<title>
+Foundations of Deductive Databases and Logic Programming
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+0-934613-40-0
+</isbn>
+<url>
+db/books/collections/minker88.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Stonebraker88">
+<editor>
+Michael Stonebraker
+</editor>
+<title>
+Readings in Database Systems, First Edition
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+0-934613-65-6
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/mk/Stonebraker94">
+<editor>
+Michael Stonebraker
+</editor>
+<title>
+Readings in Database Systems, Second Edition
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+1-55860-252-6
+</isbn>
+</book>
+<book mdate="2002-02-08" key="books/ph/Comer00">
+<editor>
+Douglas Comer
+</editor>
+<title>
+Internetworking with TCP/IP - Principles, Protocols, and Architectures,
+Fourth Edition
+</title>
+<publisher>
+Prentice-Hall
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+0-13-018380-6
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/ph/Yao85">
+<editor>
+S. Bing Yao
+</editor>
+<title>
+Principles of Database Design, Volume I: Logical Organizations
+</title>
+<publisher href="db/publishers/ph.html">
+Prentice-Hall
+</publisher>
+<year>
+1985
+</year>
+<isbn>
+0-13-708876-0
+</isbn>
+<url>
+db/books/collections/yao85.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Atzeni93">
+<editor>
+Paolo Atzeni
+</editor>
+<title>
+LOGIDATA+: Deductive Databases with Complex Objects
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+701
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-56974-X
+</isbn>
+<url>
+db/journals/lncs/lncs701.html
+</url>
+</book>
+<book mdate="2003-01-16" key="books/sp/CStoday1995">
+<editor>
+Jan van Leeuwen
+</editor>
+<title>
+Computer Science Today: Recent Trends and Developments
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1000
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+3-540-60105-8
+</isbn>
+<url>
+db/books/collections/CStoday.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Barnes97">
+<editor>
+John G. P. Barnes
+</editor>
+<title>
+Ada 95 Rationale, The Language, The Standard Libraries
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1247
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1997
+</year>
+<isbn>
+3-540-63143-7
+</isbn>
+</book>
+<book mdate="2002-08-14" key="books/sp/Beech86">
+<editor>
+David Beech
+</editor>
+<title>
+Concepts in User Interfaces: A Reference Model for the Command and Response
+Languages (By Members of IFIP WG2.7)
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+234
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+3-540-16791-9
+</isbn>
+</book>
+<book mdate="2003-02-13" key="books/sp/Desel01">
+<editor>
+J
+örg Desel
+</editor>
+<title>
+Das ist Informatik
+</title>
+<publisher>
+Springer
+</publisher>
+<year>
+2001
+</year>
+<isbn>
+3-540-41091-0
+</isbn>
+<url>
+db/books/collections/informatik2001.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Hall96">
+<editor>
+Jane Hall
+</editor>
+<title>
+Management of Telecommunication Systems and Services, Modelling and
+Implementing TMN-Based Multi-Domain Management
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1116
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61578-4
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/sp/Patton99">
+<editor>
+Norman W. Paton
+</editor>
+<title>
+Active Rules in Database Systems
+</title>
+<publisher>
+Springer, New York
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+0-387-98529-8
+</isbn>
+<url>
+db/books/collections/patton99.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Vazirgiannis99">
+<editor>
+Michalis Vazirgiannis
+</editor>
+<title>
+Interactive Multimedia Documents: Modeling, Authoring, and Implementation
+Experiences
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1564
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+3-540-66711-3
+</isbn>
+<url>
+http://link.springer.de/link/service/series/0558/tocs/t1564.htm
+</url>
+</book>
+<book mdate="2004-03-08" key="books/acm/Kim95">
+<editor>
+Won Kim
+</editor>
+<title>
+Modern Database Systems: The Object Model, Interoperability, and Beyond.
+</title>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+0-201-59098-0
+</isbn>
+<url>
+db/books/collections/kim95.html
+</url>
+</book>
+<book mdate="2007-03-01" key="books/aw/Stonebraker86">
+<editor>
+Michael Stonebraker
+</editor>
+<title>
+The INGRES Papers: Anatomy of a Relational Database System
+</title>
+<publisher>
+Addison-Wesley
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+0-201-07185-1
+</isbn>
+<url>
+db/books/collections/Stonebraker86.html
+</url>
+</book>
+<book mdate="2005-03-04" key="books/crc/IIR05">
+<editor>
+Richard Zurawski
+</editor>
+<title>
+The Industrial Information Technology Handbook
+</title>
+<isbn>
+0-8493-1985-4
+</isbn>
+<publisher>
+CRC Press
+</publisher>
+<year>
+2005
+</year>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html
+</url>
+</book>
+<book mdate="2008-02-24" key="books/crc/tucker1997">
+<editor>
+Allen B. Tucker
+</editor>
+<title>
+The Computer Science and Engineering Handbook
+</title>
+<publisher>
+CRC Press
+</publisher>
+<isbn>
+0-8493-2909-4
+</isbn>
+<year>
+1997
+</year>
+<url>
+db/books/collections/tucker97.html
+</url>
+</book>
+<book mdate="2006-07-22" key="books/cul/Lange2005">
+<editor>
+Christoph Lange 0002
+</editor>
+<title>
+Wiki - Planen, Einrichten, Verwalten
+</title>
+<publisher>
+C and
+L Computer und Literaturverlag
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+3-936546-28-2
+</isbn>
+<url>
+http://www.cul.de/wiki.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/el/Ceri83">
+<editor>
+Stefano Ceri
+</editor>
+<title>
+Methodology and Tools for Data Base Design.
+</title>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1983
+</year>
+<url>
+db/books/collections/Ceri83.html
+</url>
+</book>
+<book mdate="2006-06-26" key="books/el/Kent1978">
+<editor>
+William Kent
+</editor>
+<title>
+Data and Reality, 1st edition.
+</title>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1978
+</year>
+<isbn>
+0-444-85187-9
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/el/Leeuwen90">
+<editor>
+Jan van Leeuwen
+</editor>
+<title>
+Handbook of Theoretical Computer Science, Volume A: Algorithms and
+Complexity
+</title>
+<publisher>
+Elsevier and MIT Press
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+0-444-88071-2
+</isbn>
+<isbn>
+0-262-22038-5
+</isbn>
+<url>
+db/books/collections/leeuwen90.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/el/Leeuwen90a">
+<editor>
+Jan van Leeuwen
+</editor>
+<title>
+Handbook of Theoretical Computer Science, Volume B: Formal Models and
+Sematics
+</title>
+<publisher>
+Elsevier and MIT Press
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+0-444-88074-7
+</isbn>
+<isbn>
+0-262-22039-3
+</isbn>
+<url>
+db/books/collections/leeuwen90a.html
+</url>
+</book>
+<book mdate="2003-12-04" key="books/harwood/Miranda00">
+<editor>
+Eduardo Reck Miranda
+</editor>
+<title>
+Readings in Music and Artificial Intelligence
+</title>
+<booktitle>
+Readings in Music and Artificial Intelligence
+</booktitle>
+<publisher>
+Harwood Academic publishers
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+90-5755-094-6
+</isbn>
+<url>
+db/books/collections/Miranda2000.html
+</url>
+</book>
+<book mdate="2003-09-26" key="books/idea/Becker03">
+<editor>
+Shirley A. Becker
+</editor>
+<title>
+Effective Databases for Text
+and
+Document Management.
+</title>
+<publisher>
+IRM Press
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+1-931777-47-0
+</isbn>
+<url>
+db/books/collections/Becker2003.html
+</url>
+</book>
+<book mdate="2006-02-06" key="books/idea/Ency05">
+<editor>
+Mehdi Khosrow-Pour
+</editor>
+<title>
+Encyclopedia of Information Science and Technology (5 Volumes)
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+1-59140-553-X
+</isbn>
+<url>
+db/books/collections/encyclopedia2005.html
+</url>
+</book>
+<book mdate="2004-01-26" key="books/idea/Rafanelli03">
+<editor>
+Maurizio Rafanelli
+</editor>
+<title>
+Multidimensional Databases: Problems and Solutions
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+1-59140-053-8
+</isbn>
+<url>
+db/books/collections/mddb2003.html
+</url>
+</book>
+<book mdate="2003-12-04" key="books/idea/Siau02">
+<editor>
+Keng Siau
+</editor>
+<title>
+Advanced Topics in Database Research, Vol. 1
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+1-930708-41-6
+</isbn>
+<url>
+db/books/collections/Siau2002.html
+</url>
+</book>
+<book mdate="2003-12-04" key="books/idea/Siau03">
+<editor>
+Keng Siau
+</editor>
+<title>
+Advanced Topics in Database Research, Vol. 2
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+1-59140-063-5
+</isbn>
+<url>
+db/books/collections/Siau2003.html
+</url>
+</book>
+<book mdate="2004-03-30" key="books/idea/Siau04">
+<editor>
+Keng Siau
+</editor>
+<title>
+Advanced Topics in Database Research, Vol. 3
+</title>
+<publisher>
+Idea Group
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+1-59140-296-4
+</isbn>
+<url>
+db/books/collections/Siau2004.html
+</url>
+</book>
+<book mdate="2002-11-18" key="books/kl/Djeraba02">
+<editor>
+Chabane Djeraba
+</editor>
+<title>
+Multimedia Mining: A Highway to Intelligent Multimedia Documents
+</title>
+<publisher>
+Kluwer
+</publisher>
+<year>
+2002
+</year>
+<series>
+Multimedia Systems and Applications
+</series>
+<volume>
+22
+</volume>
+<isbn>
+1-4020-7247-3
+</isbn>
+</book>
+<book mdate="2002-01-08" key="books/kl/Snodgrass95">
+<editor>
+Richard T. Snodgrass
+</editor>
+<title>
+The TSQL2 Temporal Query Language
+</title>
+<publisher>
+Kluwer
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+0-7923-9614-6
+</isbn>
+<url>
+db/books/collections/snodgrass95.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Cattell97">
+<editor>
+R. G. G. Cattell
+</editor>
+<title>
+The Object Database Standard: ODMG 2.0
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1997
+</year>
+</book>
+<book mdate="2002-01-03" key="books/mk/Elmagarmid92">
+<editor>
+Ahmed K. Elmagarmid
+</editor>
+<title>
+Database Transaction Models for Advanced Applications.
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+1-55860-214-3
+</isbn>
+<url>
+db/books/collections/transaction92.html
+</url>
+</book>
+<book mdate="2007-03-01" key="books/mk/Gray91">
+<editor>
+Jim Gray
+</editor>
+<title>
+The Benchmark Handbook for Database and Transaction Systems (1st Edition).
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1991
+</year>
+<url>
+db/books/collections/gray91.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Gray93">
+<editor>
+Jim Gray
+</editor>
+<title>
+The Benchmark Handbook for Database and Transaction Systems (2nd Edition).
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+1-55860-292-5
+</isbn>
+<url>
+db/books/collections/gray93.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Minker88">
+<editor>
+Jack Minker
+</editor>
+<title>
+Foundations of Deductive Databases and Logic Programming
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+0-934613-40-0
+</isbn>
+<url>
+db/books/collections/minker88.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/mk/Stonebraker88">
+<editor>
+Michael Stonebraker
+</editor>
+<title>
+Readings in Database Systems, First Edition
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+0-934613-65-6
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/mk/Stonebraker94">
+<editor>
+Michael Stonebraker
+</editor>
+<title>
+Readings in Database Systems, Second Edition
+</title>
+<publisher href="db/publishers/mkp.html">
+Morgan Kaufmann
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+1-55860-252-6
+</isbn>
+</book>
+<book mdate="2002-02-08" key="books/ph/Comer00">
+<editor>
+Douglas Comer
+</editor>
+<title>
+Internetworking with TCP/IP - Principles, Protocols, and Architectures,
+Fourth Edition
+</title>
+<publisher>
+Prentice-Hall
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+0-13-018380-6
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/ph/Yao85">
+<editor>
+S. Bing Yao
+</editor>
+<title>
+Principles of Database Design, Volume I: Logical Organizations
+</title>
+<publisher href="db/publishers/ph.html">
+Prentice-Hall
+</publisher>
+<year>
+1985
+</year>
+<isbn>
+0-13-708876-0
+</isbn>
+<url>
+db/books/collections/yao85.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Atzeni93">
+<editor>
+Paolo Atzeni
+</editor>
+<title>
+LOGIDATA+: Deductive Databases with Complex Objects
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+701
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-56974-X
+</isbn>
+<url>
+db/journals/lncs/lncs701.html
+</url>
+</book>
+<book mdate="2003-01-16" key="books/sp/CStoday1995">
+<editor>
+Jan van Leeuwen
+</editor>
+<title>
+Computer Science Today: Recent Trends and Developments
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1000
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+3-540-60105-8
+</isbn>
+<url>
+db/books/collections/CStoday.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Barnes97">
+<editor>
+John G. P. Barnes
+</editor>
+<title>
+Ada 95 Rationale, The Language, The Standard Libraries
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1247
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1997
+</year>
+<isbn>
+3-540-63143-7
+</isbn>
+</book>
+<book mdate="2002-08-14" key="books/sp/Beech86">
+<editor>
+David Beech
+</editor>
+<title>
+Concepts in User Interfaces: A Reference Model for the Command and Response
+Languages (By Members of IFIP WG2.7)
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+234
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+3-540-16791-9
+</isbn>
+</book>
+<book mdate="2003-02-13" key="books/sp/Desel01">
+<editor>
+J
+örg Desel
+</editor>
+<title>
+Das ist Informatik
+</title>
+<publisher>
+Springer
+</publisher>
+<year>
+2001
+</year>
+<isbn>
+3-540-41091-0
+</isbn>
+<url>
+db/books/collections/informatik2001.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Hall96">
+<editor>
+Jane Hall
+</editor>
+<title>
+Management of Telecommunication Systems and Services, Modelling and
+Implementing TMN-Based Multi-Domain Management
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1116
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61578-4
+</isbn>
+</book>
+<book mdate="2002-01-03" key="books/sp/Patton99">
+<editor>
+Norman W. Paton
+</editor>
+<title>
+Active Rules in Database Systems
+</title>
+<publisher>
+Springer, New York
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+0-387-98529-8
+</isbn>
+<url>
+db/books/collections/patton99.html
+</url>
+</book>
+<book mdate="2002-01-03" key="books/sp/Vazirgiannis99">
+<editor>
+Michalis Vazirgiannis
+</editor>
+<title>
+Interactive Multimedia Documents: Modeling, Authoring, and Implementation
+Experiences
+</title>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1564
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+3-540-66711-3
+</isbn>
+<url>
+http://link.springer.de/link/service/series/0558/tocs/t1564.htm
+</url>
+</book>
+<incollection mdate="2002-01-03" key="books/acm/kim95/AnnevelinkACFHK95">
+<author>
+Jurgen Annevelink
+</author>
+<author>
+Rafiul Ahad
+</author>
+<author>
+Amelia Carlson
+</author>
+<author>
+Daniel H. Fishman
+</author>
+<author>
+Michael L. Heytens
+</author>
+<author>
+William Kent
+</author>
+<title>
+Object SQL - A Language for the Design and Implementation of Object
+Databases.
+</title>
+<pages>
+42-68
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#AnnevelinkACFHK95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Blakeley95">
+<author>
+Jos
+é A. Blakeley
+</author>
+<title>
+OQL[C++]: Extending C++ with an Object Query Capability.
+</title>
+<pages>
+69-88
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Blakeley95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2004-03-08" key="books/acm/kim95/BreitbartGS95">
+<author>
+Yuri Breitbart
+</author>
+<author>
+Hector Garcia-Molina
+</author>
+<author>
+Abraham Silberschatz
+</author>
+<title>
+Transaction Management in Multidatabase Systems.
+</title>
+<pages>
+573-591
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<url>
+db/books/collections/kim95.html#BreitbartGS95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/ChristodoulakisK95">
+<author>
+Stavros Christodoulakis
+</author>
+<author>
+Leonidas Koveos
+</author>
+<title>
+Multimedia Information Systems: Issues and Approaches.
+</title>
+<pages>
+318-337
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#ChristodoulakisK95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/DayalHW95">
+<author>
+Umeshwar Dayal
+</author>
+<author>
+Eric N. Hanson
+</author>
+<author>
+Jennifer Widom
+</author>
+<title>
+Active Database Systems.
+</title>
+<pages>
+434-456
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#DayalHW95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/DittrichD95">
+<author>
+Angelika Kotz Dittrich
+</author>
+<author>
+Klaus R. Dittrich
+</author>
+<title>
+Where Object-Oriented DBMSs Should Do Better: A Critique Based on Early
+Experiences.
+</title>
+<pages>
+238-254
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#DittrichD95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Garcia-MolinaH95">
+<author>
+Hector Garcia-Molina
+</author>
+<author>
+Meichun Hsu
+</author>
+<title>
+Distributed Databases.
+</title>
+<pages>
+477-493
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Garcia-MolinaH95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Goodman95">
+<author>
+Nathan Goodman
+</author>
+<title>
+An Object-Oriented DBMS War Story: Developing a Genome Mapping Database in
+C++.
+</title>
+<pages>
+216-237
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Goodman95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Kaiser95">
+<author>
+Gail E. Kaiser
+</author>
+<title>
+Cooperative Transactions for Multiuser Environments.
+</title>
+<pages>
+409-433
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Kaiser95
+</url>
+</incollection>
+<incollection mdate="2004-03-08" key="books/acm/kim95/KelleyGKRG95">
+<author>
+William Kelley
+</author>
+<author>
+Sunit K. Gala
+</author>
+<author>
+Won Kim
+</author>
+<author>
+Tom C. Reyes
+</author>
+<author>
+Bruce Graham
+</author>
+<title>
+Schema Architecture of the UniSQL/M Multidatabase System
+</title>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<pages>
+621-648
+</pages>
+<year>
+1995
+</year>
+<url>
+db/books/collections/kim95.html#KelleyGKRG95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/KemperM95">
+<author>
+Alfons Kemper
+</author>
+<author>
+Guido Moerkotte
+</author>
+<title>
+Physical Object Management.
+</title>
+<pages>
+175-202
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#KemperM95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Kim95">
+<author>
+Won Kim
+</author>
+<title>
+Introduction to Part 1: Next-Generation Database Technology.
+</title>
+<pages>
+5-17
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Kim95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Kim95a">
+<author>
+Won Kim
+</author>
+<title>
+Object-Oriented Database Systems: Promises, Reality, and Future.
+</title>
+<pages>
+255-280
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Kim95a
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Kim95b">
+<author>
+Won Kim
+</author>
+<title>
+Introduction to Part 2: Technology for Interoperating Legacy Databases.
+</title>
+<pages>
+515-520
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Kim95b
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/KimCGS95">
+<author>
+Won Kim
+</author>
+<author>
+Injun Choi
+</author>
+<author>
+Sunit K. Gala
+</author>
+<author>
+Mark Scheevel
+</author>
+<title>
+On Resolving Schematic Heterogeneity in Multidatabase Systems.
+</title>
+<pages>
+521-550
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#KimCGS95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/KimG95">
+<author>
+Won Kim
+</author>
+<author>
+Jorge F. Garza
+</author>
+<title>
+Requirements for a Performance Benchmark for Object-Oriented Database
+Systems.
+</title>
+<pages>
+203-215
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#KimG95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/KimK95">
+<author>
+Won Kim
+</author>
+<author>
+William Kelley
+</author>
+<title>
+On View Support in Object-Oriented Databases Systems.
+</title>
+<pages>
+108-129
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#KimK95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Kowalski95">
+<author>
+Vincent J. Kowalski
+</author>
+<title>
+The POSC Solution to Managing E
+and
+P Data.
+</title>
+<pages>
+281-301
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Kowalski95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/KriegerA95">
+<author>
+David Krieger
+</author>
+<author>
+Tim Andrews
+</author>
+<title>
+C++ Bindings to an Object Database.
+</title>
+<pages>
+89-107
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#KriegerA95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Lunt95">
+<author>
+Teresa F. Lunt
+</author>
+<title>
+Authorization in Object-Oriented Databases.
+</title>
+<pages>
+130-145
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Lunt95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/MengY95">
+<author>
+Weiyi Meng
+</author>
+<author>
+Clement T. Yu
+</author>
+<title>
+Query Processing in Multidatabase Systems.
+</title>
+<pages>
+551-572
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#MengY95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Motro95">
+<author>
+Amihai Motro
+</author>
+<title>
+Management of Uncerainty in database Systems.
+</title>
+<pages>
+457-476
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Motro95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Omiecinski95">
+<author>
+Edward Omiecinski
+</author>
+<title>
+Parallel Relational Database Systems.
+</title>
+<pages>
+494-512
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Omiecinski95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/OzsuB95">
+<author>
+M. Tamer
+Özsu
+</author>
+<author>
+Jos
+é A. Blakeley
+</author>
+<title>
+Query Processing in Object-Oriented Database Systems.
+</title>
+<pages>
+146-174
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#OzsuB95
+</url>
+</incollection>
+<incollection mdate="2004-03-08" key="books/acm/kim95/RusinkiewiczS95">
+<author>
+Marek Rusinkiewicz
+</author>
+<author>
+Amit P. Sheth
+</author>
+<title>
+Specification and Execution of Transactional Workflows.
+</title>
+<pages>
+592-620
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<url>
+db/books/collections/kim95.html#RusinkiewiczS95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2004-03-08" key="books/acm/kim95/Samet95">
+<author>
+Hanan Samet
+</author>
+<title>
+Spatial Data Structures.
+</title>
+<pages>
+361-385
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<url>
+db/books/collections/kim95.html#Samet95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/SametA95">
+<author>
+Hanan Samet
+</author>
+<author>
+Walid G. Aref
+</author>
+<title>
+Spatial Data Models and Query Processing.
+</title>
+<pages>
+338-360
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#SametA95
+</url>
+</incollection>
+<incollection mdate="2004-03-08" key="books/acm/kim95/ShanADDK95">
+<author>
+Ming-Chien Shan
+</author>
+<author>
+Rafi Ahmed
+</author>
+<author>
+Jim Davis
+</author>
+<author>
+Weimin Du
+</author>
+<author>
+William Kent
+</author>
+<title>
+Pegasus: A Heterogeneous Information Management System.
+</title>
+<pages>
+664-682
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<url>
+db/books/collections/kim95.html#ShanADDK95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Snodgrass95">
+<author>
+Richard T. Snodgrass
+</author>
+<title>
+Temporal Object-Oriented Databases: A Critical Comparison.
+</title>
+<pages>
+386-408
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Snodgrass95
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/SoleyK95">
+<author>
+Richard Mark Soley
+</author>
+<author>
+William Kent
+</author>
+<title>
+The OMG Object Model.
+</title>
+<pages>
+18-41
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#SoleyK95
+</url>
+</incollection>
+<incollection mdate="2004-03-08" key="books/acm/kim95/Stout95">
+<author>
+Ralph L. Stout
+</author>
+<title>
+EDA/SQL.
+</title>
+<pages>
+649-663
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<url>
+db/books/collections/kim95.html#Stout95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2002-01-03" key="books/acm/kim95/Thompson95">
+<author>
+Craig W. Thompson
+</author>
+<title>
+The Changing Database Standards Landscape.
+</title>
+<pages>
+302-317
+</pages>
+<year>
+1995
+</year>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<url>
+db/books/collections/kim95.html#Thompson95
+</url>
+</incollection>
+<incollection mdate="2009-06-12" key="books/acm/kim95/BreitbartR95">
+<author>
+Yuri Breitbart
+</author>
+<author>
+Tom C. Reyes
+</author>
+<title>
+Overview of the ADDS System.
+</title>
+<pages>
+683-701
+</pages>
+<booktitle>
+Modern Database Systems
+</booktitle>
+<crossref>
+books/acm/Kim95
+</crossref>
+<url>
+db/books/collections/kim95.html#BreitbartR95
+</url>
+<year>
+1995
+</year>
+</incollection>
+<incollection mdate="2006-02-24" key="books/aw/kimL89/BjornerstedtH89">
+<author>
+Anders Bj
+örnerstedt
+</author>
+<author>
+Christer Hulten
+</author>
+<title>
+Version Control in an Object-Oriented Architecture.
+</title>
+<pages>
+451-485
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#BjornerstedtH89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/BretlMOPSSWW89">
+<author>
+Robert Bretl
+</author>
+<author>
+David Maier
+</author>
+<author>
+Allen Otis
+</author>
+<author>
+D. Jason Penney
+</author>
+<author>
+Bruce Schuchardt
+</author>
+<author>
+Jacob Stein
+</author>
+<author>
+E. Harold Williams
+</author>
+<author>
+Monty Williams
+</author>
+<title>
+The GemStone Data Management System.
+</title>
+<pages>
+283-308
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#BretlMOPSSWW89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/CareyDRS89">
+<author>
+Michael J. Carey
+</author>
+<author>
+David J. DeWitt
+</author>
+<author>
+Joel E. Richardson
+</author>
+<author>
+Eugene J. Shekita
+</author>
+<title>
+Storage Management in EXODUS.
+</title>
+<pages>
+341-369
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#CareyDRS89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Decouchant89">
+<author>
+Dominique Decouchant
+</author>
+<title>
+A Distributed Object Manager for the Smalltalk-80 System.
+</title>
+<pages>
+487-520
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#Decouchant89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/DiederichM89">
+<author>
+Jim Diederich
+</author>
+<author>
+Jack Milton
+</author>
+<title>
+Objects, Messages, and Rules in Database Design.
+</title>
+<pages>
+177-197
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#DiederichM89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/EllisG89">
+<author>
+Clarence A. Ellis
+</author>
+<author>
+Simon J. Gibbs
+</author>
+<title>
+Active Objects: Ealities and Possibilities.
+</title>
+<pages>
+561-572
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#EllisG89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/FishmanABCCDHHKLLMNRSW89">
+<author>
+Daniel H. Fishman
+</author>
+<author>
+Jurgen Annevelink
+</author>
+<author>
+David Beech
+</author>
+<author>
+E. C. Chow
+</author>
+<author>
+Tim Connors
+</author>
+<author>
+J. W. Davis
+</author>
+<author>
+Waqar Hasan
+</author>
+<author>
+C. G. Hoch
+</author>
+<author>
+William Kent
+</author>
+<author>
+S. Leichner
+</author>
+<author>
+Peter Lyngb
+æk
+</author>
+<author>
+Brom Mahbod
+</author>
+<author>
+Marie-Anne Neimat
+</author>
+<author>
+Tore Risch
+</author>
+<author>
+Ming-Chien Shan
+</author>
+<author>
+W. Kevin Wilkinson
+</author>
+<title>
+Overview of the Iris DBMS.
+</title>
+<pages>
+219-250
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#FishmanABCCDHHKLLMNRSW89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/KimBCGW89">
+<author>
+Won Kim
+</author>
+<author>
+Nat Ballou
+</author>
+<author>
+Hong-Tai Chou
+</author>
+<author>
+Jorge F. Garza
+</author>
+<author>
+Darrell Woelk
+</author>
+<title>
+Features of the ORION Object-Oriented Database System.
+</title>
+<pages>
+251-282
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#KimBCGW89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/KimKD89">
+<author>
+Won Kim
+</author>
+<author>
+Kyung-Chang Kim
+</author>
+<author>
+Alfred G. Dale
+</author>
+<title>
+Indexing Techniques for Object-Oriented Databases.
+</title>
+<pages>
+371-394
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#KimKD89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/King89">
+<author>
+Roger King
+</author>
+<title>
+My Cat Is Object-Oriented.
+</title>
+<pages>
+23-30
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#King89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Maier89">
+<author>
+David Maier
+</author>
+<title>
+Making Database Systems Fast Enough for CAD Applications.
+</title>
+<pages>
+573-582
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#Maier89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/MellenderRS89">
+<author>
+Fred Mellender
+</author>
+<author>
+Steve Riegel
+</author>
+<author>
+Andrew Straw
+</author>
+<title>
+Optimizing Smalltalk Message Performance.
+</title>
+<pages>
+423-450
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#MellenderRS89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Moon89">
+<author>
+David A. Moon
+</author>
+<title>
+The Common List Object-Oriented Programming Language Standard.
+</title>
+<pages>
+49-78
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#Moon89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Moss89">
+<author>
+J. Eliot B. Moss
+</author>
+<title>
+Object Orientation as Catalyst for Language-Database Inegration.
+</title>
+<pages>
+583-592
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#Moss89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Nierstrasz89">
+<author>
+Oscar Nierstrasz
+</author>
+<title>
+A Survey of Object-Oriented Concepts.
+</title>
+<pages>
+3-21
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#Nierstrasz89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/NierstraszT89">
+<author>
+Oscar Nierstrasz
+</author>
+<author>
+Dennis Tsichritzis
+</author>
+<title>
+Integrated Office Systems.
+</title>
+<pages>
+199-215
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#NierstraszT89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Russinoff89">
+<author>
+David M. Russinoff
+</author>
+<title>
+Proteus: A Frame-Based Nonmonotonic Inference System.
+</title>
+<pages>
+127-150
+</pages>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<publisher>
+ACM Press and Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<url>
+db/books/collections/kim89.html#Russinoff89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/SkarraZ89">
+<author>
+Andrea H. Skarra
+</author>
+<author>
+Stanley B. Zdonik
+</author>
+<title>
+Concurrency Control and Object-Oriented Databases.
+</title>
+<pages>
+395-421
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#SkarraZ89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/SteinLU89">
+<author>
+Lynn Andrea Stein
+</author>
+<author>
+Henry Lieberman
+</author>
+<author>
+David Ungar
+</author>
+<title>
+A Shared View of Sharing: The Treaty of Orlando.
+</title>
+<pages>
+31-48
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#SteinLU89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/TarltonT89">
+<author>
+Mark A. Tarlton
+</author>
+<author>
+P. Nong Tarlton
+</author>
+<title>
+Pogo: A Declarative Representation System for Graphics.
+</title>
+<pages>
+151-176
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#TarltonT89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/TomlinsonS89">
+<author>
+Chris Tomlinson
+</author>
+<author>
+Mark Scheevel
+</author>
+<title>
+Concurrent Object-Oriented Programming Languages.
+</title>
+<pages>
+79-124
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#TomlinsonS89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/TsichritzisN89">
+<author>
+Dennis Tsichritzis
+</author>
+<author>
+Oscar Nierstrasz
+</author>
+<title>
+Directions in Object-Oriented Research.
+</title>
+<pages>
+523-536
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#TsichritzisN89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/Wand89">
+<author>
+Yair Wand
+</author>
+<title>
+A Proposal for a Formal Model of Objects.
+</title>
+<pages>
+537-559
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#Wand89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/kimL89/WeiserL89">
+<author>
+Stephen P. Weiser
+</author>
+<author>
+Frederick H. Lochovsky
+</author>
+<title>
+OZ+: An Object-Oriented Database System.
+</title>
+<pages>
+309-337
+</pages>
+<year>
+1989
+</year>
+<booktitle>
+Object-Oriented Concepts, Databases, and Applications
+</booktitle>
+<url>
+db/books/collections/kim89.html#WeiserL89
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/RoweS86">
+<author>
+Lawrence A. Rowe
+</author>
+<author>
+Michael Stonebraker
+</author>
+<title>
+The Commercial INGRES Epilogue.
+</title>
+<pages>
+63-82
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#RoweS86
+</url>
+<ee>
+db/books/collections/Stonebraker86/RoweS86.html
+</ee>
+<cdrom>
+ingres/P063.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86">
+<author>
+Michael Stonebraker
+</author>
+<title>
+Design of Relational Systems (Introduction to Section 1).
+</title>
+<pages>
+1-3
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86.html
+</ee>
+<cdrom>
+ingres/P001.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86a">
+<author>
+Michael Stonebraker
+</author>
+<title>
+Supporting Studies on Relational Systems (Introduction to Section 2).
+</title>
+<pages>
+83-85
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86a
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86a.html
+</ee>
+<cdrom>
+ingres/P083.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86b">
+<author>
+Michael Stonebraker
+</author>
+<title>
+Distributed Database Systems (Introduction to Section 3).
+</title>
+<pages>
+183-186
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86b
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86b.html
+</ee>
+<cdrom>
+ingres/P183.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86c">
+<author>
+Michael Stonebraker
+</author>
+<title>
+The Design and Implementation of Distributed INGRES.
+</title>
+<pages>
+187-196
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86c
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86c.html
+</ee>
+<cdrom>
+ingres/P187.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86d">
+<author>
+Michael Stonebraker
+</author>
+<title>
+User Interfaces for Database Systems (Introduction to Section 4).
+</title>
+<pages>
+243-245
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86d
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86d.html
+</ee>
+<cdrom>
+ingres/P243.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86e">
+<author>
+Michael Stonebraker
+</author>
+<title>
+Extended Semantics for the Relational Model (Introduction to Section 5).
+</title>
+<pages>
+313-316
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86e
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86e.html
+</ee>
+<cdrom>
+ingres/P313.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/Stonebraker86f">
+<author>
+Michael Stonebraker
+</author>
+<title>
+Database Design (Introduction to Section 6).
+</title>
+<pages>
+393-394
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#Stonebraker86f
+</url>
+<ee>
+db/books/collections/Stonebraker86/Stonebraker86f.html
+</ee>
+<cdrom>
+ingres/P393.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/X86">
+<title>
+Title, Preface, Contents.
+</title>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#X86
+</url>
+<ee>
+db/books/collections/Stonebraker86/X86.html
+</ee>
+<cdrom>
+ingres/frontmatter.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/aw/stonebraker86/X86a">
+<title>
+References.
+</title>
+<pages>
+429-444
+</pages>
+<year>
+1986
+</year>
+<booktitle>
+The INGRES Papers
+</booktitle>
+<url>
+db/books/collections/Stonebraker86.html#X86a
+</url>
+<ee>
+db/books/collections/Stonebraker86/X86a.html
+</ee>
+<cdrom>
+ingres/P429.pdf
+</cdrom>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/BaudinetCW93">
+<author>
+Marianne Baudinet
+</author>
+<author>
+Jan Chomicki
+</author>
+<author>
+Pierre Wolper
+</author>
+<title>
+Temporal Deductive Databases.
+</title>
+<pages>
+294-320
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#BaudinetCW93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/CliffordC93">
+<author>
+James Clifford
+</author>
+<author>
+Albert Croker
+</author>
+<title>
+The Historical Relational Data Model (HRDM) Revisited.
+</title>
+<pages>
+6-27
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#CliffordC93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/CliffordCT93">
+<author>
+James Clifford
+</author>
+<author>
+Albert Croker
+</author>
+<author>
+Alexander Tuzhilin
+</author>
+<title>
+On the Completeness of Query Languages for Grouped and Ungrouped Historical
+Data Models.
+</title>
+<pages>
+496-533
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#CliffordCT93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/ElmasriWK93">
+<author>
+Ramez Elmasri
+</author>
+<author>
+Gene T. J. Wuu
+</author>
+<author>
+Vram Kouramajian
+</author>
+<title>
+A Temporal Model and Query Language for EER Databases.
+</title>
+<pages>
+212-229
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#ElmasriWK93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/ElmasriWK93a">
+<author>
+Ramez Elmasri
+</author>
+<author>
+Gene T. J. Wuu
+</author>
+<author>
+Vram Kouramajian
+</author>
+<title>
+The Time Index and the Monotonic B+-tree.
+</title>
+<pages>
+433-456
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#ElmasriWK93a
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Gadia93">
+<author>
+Shashi K. Gadia
+</author>
+<title>
+Ben-Zvi's Pioneering Work in Relational Temporal Databases.
+</title>
+<pages>
+202-207
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Gadia93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/GadiaN93">
+<author>
+Shashi K. Gadia
+</author>
+<author>
+Sunil S. Nair
+</author>
+<title>
+Temporal Databases: A Prelude to Parametric Data.
+</title>
+<pages>
+28-66
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#GadiaN93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Ginsburg93">
+<author>
+Seymour Ginsburg
+</author>
+<title>
+Object and Spreadsheet Histories.
+</title>
+<pages>
+271-293
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Ginsburg93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/JensenM93">
+<author>
+Christian S. Jensen
+</author>
+<author>
+Leo Mark
+</author>
+<title>
+Differential Query Processing in Transaction-Time Databases.
+</title>
+<pages>
+457-491
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#JensenM93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Kolovson93">
+<author>
+Curtis P. Kolovson
+</author>
+<title>
+Indexing Techniques for Historical Databases.
+</title>
+<pages>
+418-432
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Kolovson93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/LeungM93">
+<author>
+T. Y. Cliff Leung
+</author>
+<author>
+Richard R. Muntz
+</author>
+<title>
+Stream Processing: Temporal Query Processing and Optimization.
+</title>
+<pages>
+329-355
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#LeungM93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/LometS93">
+<author>
+David B. Lomet
+</author>
+<author>
+Betty Salzberg
+</author>
+<title>
+Transaction-Time Databases.
+</title>
+<pages>
+388-417
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#LometS93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Lorentzos93">
+<author>
+Nikos A. Lorentzos
+</author>
+<title>
+The Interval-extended Relational Model and Its Applications to Valid-time
+Databases.
+</title>
+<pages>
+67-91
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Lorentzos93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/MontanariP93">
+<author>
+Angelo Montanari
+</author>
+<author>
+Barbara Pernici
+</author>
+<title>
+temporal Reasoning.
+</title>
+<pages>
+534-562
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#MontanariP93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/NavatheA93">
+<author>
+Shamkant B. Navathe
+</author>
+<author>
+Rafi Ahmed
+</author>
+<title>
+Temporal Extensions to the Relational Model and SQL.
+</title>
+<pages>
+92-109
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#NavatheA93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Sadra93">
+<author>
+Nandlal L. Sarda
+</author>
+<title>
+HSQL: A Historical Query Language.
+</title>
+<pages>
+110-140
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Sadra93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Segev93">
+<author>
+Arie Segev
+</author>
+<title>
+Join Processing and Optimization in Temporal Relational Databases.
+</title>
+<pages>
+356-387
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Segev93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/SegevS93">
+<author>
+Arie Segev
+</author>
+<author>
+Arie Shoshani
+</author>
+<title>
+A Temporal Data Model Based on Time Sequences.
+</title>
+<pages>
+248-270
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#SegevS93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Snodgrass93">
+<author>
+Richard T. Snodgrass
+</author>
+<title>
+An Overview of TQuel.
+</title>
+<pages>
+141-182
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Snodgrass93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Tansel93">
+<author>
+Abdullah Uz Tansel
+</author>
+<title>
+A Generalized relational Framework for Modeling Temporal Data.
+</title>
+<pages>
+183-201
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Tansel93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/Tuzhilin93">
+<author>
+Alexander Tuzhilin
+</author>
+<title>
+Applications of temporal Databases to Knowledge-based Simulations.
+</title>
+<pages>
+580-593
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#Tuzhilin93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/WiederholdJL93">
+<author>
+Gio Wiederhold
+</author>
+<author>
+Sushil Jajodia
+</author>
+<author>
+Witold Litwin
+</author>
+<title>
+Integrating Temporal Data in a Heterogeneous Environment.
+</title>
+<pages>
+563-579
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#WiederholdJL93
+</url>
+</incollection>
+<incollection mdate="2002-01-03" key="books/bc/tanselCGSS93/WuuD93">
+<author>
+Gene T. J. Wuu
+</author>
+<author>
+Umeshwar Dayal
+</author>
+<title>
+A Uniform Model for Temporal and Versioned Object-oriented Databases.
+</title>
+<pages>
+230-247
+</pages>
+<year>
+1993
+</year>
+<booktitle>
+Temporal Databases
+</booktitle>
+<url>
+db/books/collections/tansel93.html#WuuD93
+</url>
+</incollection>
+<incollection mdate="2004-01-10" key="books/crc/CRCcompiler2002/AggarwalK02">
+<author>
+Sanjeev Kumar Aggarwal
+</author>
+<author>
+M. Sarath Kumar
+</author>
+<title>
+Debuggers for Programming Languages.
+</title>
+<pages>
+295-328
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#AggarwalK02
+</url>
+<cite>
+books/aw/AhoSU86
+</cite>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/AllanA02">
+<author>
+Vicki H. Allan
+</author>
+<author>
+Stephen J. Allan
+</author>
+<title>
+Software Pipelining.
+</title>
+<pages>
+689-738
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#AllanA02
+</url>
+</incollection>
+<incollection mdate="2004-01-12" key="books/crc/CRCcompiler2002/ChoudharyK02">
+<author>
+Alok N. Choudhary
+</author>
+<author>
+Mahmut T. Kandemir
+</author>
+<title>
+Compilation for Distributed Memory Architectures.
+</title>
+<pages>
+373-408
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#ChoudharyK02
+</url>
+<cite>
+journals/tc/Abu-SufahKL81
+</cite>
+</incollection>
+<incollection mdate="2004-01-05" key="books/crc/CRCcompiler2002/Duesterwald02">
+<author>
+Evelyn Duesterwald
+</author>
+<title>
+Dynamic Compilation.
+</title>
+<pages>
+739-762
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Duesterwald02
+</url>
+<cite>
+conf/sosp/AndersonBDGHLSVWW97
+</cite>
+</incollection>
+<incollection mdate="2004-01-12" key="books/crc/CRCcompiler2002/Gopinath02">
+<author>
+K. Gopinath
+</author>
+<title>
+Register Allocation.
+</title>
+<pages>
+461-534
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Gopinath02
+</url>
+<cite>
+books/cu/Appel1998c
+</cite>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/Govindarajan02">
+<author>
+Ramaswamy Govindarajan
+</author>
+<title>
+Instruction Scheduling.
+</title>
+<pages>
+631-688
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Govindarajan02
+</url>
+</incollection>
+<incollection mdate="2004-01-10" key="books/crc/CRCcompiler2002/GuptaG02">
+<author>
+Rajiv Gupta
+</author>
+<author>
+Neelam Gupta
+</author>
+<title>
+Data Flow Testing.
+</title>
+<pages>
+247-268
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#GuptaG02
+</url>
+<cite>
+conf/pldi/AgrawalH90
+</cite>
+</incollection>
+<incollection mdate="2004-01-06" key="books/crc/CRCcompiler2002/GuptaMZ02">
+<author>
+Rajiv Gupta
+</author>
+<author>
+Eduard Mehofer
+</author>
+<author>
+Youtao Zhang
+</author>
+<title>
+Profile-Guided Compiler Optimizations.
+</title>
+<pages>
+143-174
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#GuptaMZ02
+</url>
+<cite>
+conf/ics/BadawyAYT01
+</cite>
+</incollection>
+<incollection mdate="2004-01-10" key="books/crc/CRCcompiler2002/Khedker02">
+<author>
+Uday P. Khedker
+</author>
+<title>
+Data Flow Analysis.
+</title>
+<pages>
+1-59
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Khedker02
+</url>
+<cite>
+books/aw/AhoSU86
+</cite>
+</incollection>
+<incollection mdate="2004-01-05" key="books/crc/CRCcompiler2002/KrallH02">
+<author>
+Andreas Krall
+</author>
+<author>
+R. Nigel Horspool
+</author>
+<title>
+Optimizations for Object-Oriented Languages.
+</title>
+<pages>
+219-246
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#KrallH02
+</url>
+<cite>
+conf/hpcn/AlpernCGL01
+</cite>
+</incollection>
+<incollection mdate="2004-01-10" key="books/crc/CRCcompiler2002/MundGM02">
+<author>
+G. B. Mund
+</author>
+<author>
+Diganta Goswami
+</author>
+<author>
+Rajib Mall
+</author>
+<title>
+Program Slicing.
+</title>
+<pages>
+269-294
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#MundGM02
+</url>
+<cite>
+journals/ipl/Weiser83
+</cite>
+</incollection>
+<incollection mdate="2004-01-12" key="books/crc/CRCcompiler2002/Paleri02">
+<author>
+Vineeth Kumar Paleri
+</author>
+<title>
+Automatic Generation of Code Optimizers from Formal Specifications.
+</title>
+<pages>
+61-97
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Paleri02
+</url>
+<cite>
+books/aw/AhoSU86
+</cite>
+</incollection>
+<incollection mdate="2006-02-08" key="books/crc/CRCcompiler2002/PrasadA02">
+<author>
+Sanjiva Prasad
+</author>
+<author>
+S. Arun-Kumar
+</author>
+<title>
+Introduction to Operational Semantics.
+</title>
+<pages>
+841-890
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#PrasadA02
+</url>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/QinM02">
+<author>
+Wei Qin
+</author>
+<author>
+Sharad Malik
+</author>
+<title>
+Architecture Description Languages for Retargetable Compilation.
+</title>
+<pages>
+535-564
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#QinM02
+</url>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/RajagopalanM02">
+<author>
+Subramanian Rajagopalan
+</author>
+<author>
+Sharad Malik
+</author>
+<title>
+Retargetable Very Long Instuction Word Compiler Framework for Digital
+Signal Processors.
+</title>
+<pages>
+603-630
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#RajagopalanM02
+</url>
+</incollection>
+<incollection mdate="2004-01-12" key="books/crc/CRCcompiler2002/Rajopadhye02">
+<author>
+Sanjay V. Rajopadhye
+</author>
+<title>
+Dependence Analysis and Parallelizing Transformations.
+</title>
+<pages>
+329-372
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Rajopadhye02
+</url>
+<cite>
+journals/toplas/AllenK87
+</cite>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/Ramanujam02">
+<author>
+J. Ramanujam
+</author>
+<title>
+Automatic Data Distribution.
+</title>
+<pages>
+409-460
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Ramanujam02
+</url>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/Shankar02">
+<author>
+Priti Shankar
+</author>
+<title>
+Instruction Selection Using Tree Parsing.
+</title>
+<pages>
+565-602
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Shankar02
+</url>
+</incollection>
+<incollection mdate="2004-01-10" key="books/crc/CRCcompiler2002/Srikant02">
+<author>
+Y. N. Srikant
+</author>
+<title>
+Scalar Compiler Optimizations on the Static Single Assignment Form and the
+Flow Graph.
+</title>
+<pages>
+99-141
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Srikant02
+</url>
+<cite>
+journals/toplas/GerlekSW95
+</cite>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/Subrahmanyam02">
+<author>
+Ramesh Subrahmanyam
+</author>
+<title>
+Type Systems in Programming Languages.
+</title>
+<pages>
+801-840
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#Subrahmanyam02
+</url>
+</incollection>
+<incollection mdate="2003-10-01" key="books/crc/CRCcompiler2002/VenugopalK02">
+<author>
+R. Venugopal
+</author>
+<author>
+Ravindra B. Keskar
+</author>
+<title>
+Compiling Safe Mobile Code.
+</title>
+<pages>
+763-800
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#VenugopalK02
+</url>
+</incollection>
+<incollection mdate="2004-01-10" key="books/crc/CRCcompiler2002/WilhelmRS02">
+<author>
+Reinhard Wilhelm
+</author>
+<author>
+Thomas W. Reps
+</author>
+<author>
+Shmuel Sagiv
+</author>
+<title>
+Shape Analysis and Applications.
+</title>
+<pages>
+175-218
+</pages>
+<year>
+2002
+</year>
+<booktitle>
+The Compiler Design Handbook
+</booktitle>
+<url>
+db/books/collections/CRCcompiler2002.html#WilhelmRS02
+</url>
+<cite>
+conf/pldi/BodikGS98
+</cite>
+</incollection>
+<incollection mdate="2005-03-04" key="books/crc/IIR2005/AxelssonFHNSV05">
+<author>
+Jakob Axelsson
+</author>
+<author>
+Joakim Fr
+öberg
+</author>
+<author>
+Hans Hansson
+</author>
+<author>
+Christer Norstr
+öm
+</author>
+<author>
+Kristian Sandstr
+öm
+</author>
+<author>
+Bj
+örn Villing
+</author>
+<title>
+A Comparative Case Study of Distributed Network Architectures for Different
+Automotive Applications.
+</title>
+<pages>
+1-20
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#AxelssonFHNSV05
+</url>
+</incollection>
+<incollection mdate="2005-03-04" key="books/crc/IIR2005/Loy05">
+<author>
+Dietmar Loy
+</author>
+<title>
+LonWorks/EIA-709 Networks EIA 709 Protocol (Lon Talk).
+</title>
+<pages>
+1-6
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#Loy05
+</url>
+</incollection>
+<incollection mdate="2005-03-04" key="books/crc/IIR2005/BarrettoBP05">
+<author>
+Marcos Ribeiro Pereira Barretto
+</author>
+<author>
+Paulo Marcelo Porto Alves Blanco
+</author>
+<author>
+Marco Antonio Poli
+</author>
+<title>
+Distributed Components in Microsoft Platforms - Technology Overview.
+</title>
+<pages>
+1-23
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#BarrettoBP05
+</url>
+</incollection>
+<incollection mdate="2007-02-27" key="books/crc/IIR2005/PedreirasAF05">
+<author>
+Paulo Pedreiras
+</author>
+<author>
+Lu
+ís Almeida
+</author>
+<author>
+Jos
+é Alberto Fonseca
+</author>
+<title>
+The Quest for Real-Time Behavior in Ethernet.
+</title>
+<pages>
+1-14
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#PedreirasAF05
+</url>
+</incollection>
+<incollection mdate="2005-03-04" key="books/crc/IIR2005/BarrettoBP05a">
+<author>
+Marcos Ribeiro Pereira Barretto
+</author>
+<author>
+Paulo Marcelo Porto Alves Blanco
+</author>
+<author>
+Marco Antonio Poli
+</author>
+<title>
+CORBA in Manufacturing - Technology Overview.
+</title>
+<pages>
+1-20
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#BarrettoBP05a
+</url>
+</incollection>
+<incollection mdate="2006-05-29" key="books/crc/IIR2005/PenzhornA05">
+<author>
+Walter T. Penzhorn
+</author>
+<author>
+Johann Amsenga
+</author>
+<title>
+IPv6, IPSec, and VPNs.
+</title>
+<pages>
+1-18
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#PenzhornA05
+</url>
+</incollection>
+<incollection mdate="2005-03-04" key="books/crc/IIR2005/BelloP05">
+<author>
+Lucia Lo Bello
+</author>
+<author>
+Enzo Palumbo
+</author>
+<title>
+Overview and Classification of IP Routing Protocols - IP Routing: Interior
+and Exterior Routing Protocols.
+</title>
+<pages>
+1-25
+</pages>
+<year>
+2005
+</year>
+<crossref>
+books/crc/IIR05
+</crossref>
+<booktitle>
+The Industrial Information Technology Handbook
+</booktitle>
+<url>
+db/books/collections/IITHandbook2005.html#BelloP05
+</url>
+</incollection>
+<proceedings mdate="2008-08-25" key="conf/ACISicis/2008">
+<editor>
+Roger Y. Lee
+</editor>
+<title>
+7th IEEE/ACIS International Conference on Computer and Information Science,
+IEEE/ACIS ICIS 2008, 14-16 May 2008, Portland, Oregon, USA
+</title>
+<booktitle>
+ACIS-ICIS
+</booktitle>
+<publisher>
+IEEE Computer Society
+</publisher>
+<year>
+2008
+</year>
+<url>
+db/conf/ACISicis/ACISicis2008.html
+</url>
+<isbn>
+978-0-7695-3131-1
+</isbn>
+</proceedings>
+<proceedings mdate="2007-06-26" key="conf/ACMace/2005">
+<editor>
+Newton Lee
+</editor>
+<title>
+Proceedings of the International Conference on Advances in Computer
+Entertainment Technology, ACE 2005,  Valencia, Spain, June 15-15, 2005
+</title>
+<isbn>
+1-59593-110-4
+</isbn>
+<booktitle>
+Advances in Computer Entertainment Technology
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2005
+</year>
+<url>
+db/conf/ACMace/ace2005.html
+</url>
+</proceedings>
+<proceedings mdate="2006-09-07" key="conf/ACMse/1990">
+<editor>
+A. Joe Turner
+</editor>
+<title>
+Proceedings of the 28th Annual Southeast Regional Conference, 1990,
+Greenville, South Carolina, USA, April 18-20, 1990
+</title>
+<isbn>
+0-89791-356-6
+</isbn>
+<booktitle>
+ACM Southeast Regional Conference
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+1990
+</year>
+<url>
+db/conf/ACMse/ACMse1990.html
+</url>
+</proceedings>
+<proceedings mdate="2006-09-06" key="conf/ACMse/1995">
+<editor>
+Robert Geist
+</editor>
+<title>
+Proceedings of the 33th Annual Southeast Regional Conference, 1995,
+Clemson, South Carolina, USA, March 17-18, 1995
+</title>
+<booktitle>
+ACM Southeast Regional Conference
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+1995
+</year>
+<url>
+db/conf/ACMse/ACMse1995.html
+</url>
+</proceedings>
+<proceedings mdate="2006-09-06" key="conf/ACMse/2000">
+<editor>
+A. Joe Turner
+</editor>
+<title>
+Proceedings of the 38th Annual Southeast Regional Conference, 2000,
+Clemson, South Carolina, USA, April 7-8, 2000
+</title>
+<isbn>
+1-58113-250-6
+</isbn>
+<booktitle>
+ACM Southeast Regional Conference
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2000
+</year>
+<url>
+db/conf/ACMse/ACMse2000.html
+</url>
+</proceedings>
+<proceedings mdate="2006-12-18" key="conf/ACMse/2006">
+<editor>
+Ronaldo Menezes
+</editor>
+<title>
+Proceedings of the 44st Annual Southeast Regional Conference, 2006,
+Melbourne, Florida, USA, March 10-12, 2006
+</title>
+<isbn>
+1-59593-315-8
+</isbn>
+<booktitle>
+ACM Southeast Regional Conference
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2006
+</year>
+<url>
+db/conf/ACMse/ACMse2006.html
+</url>
+</proceedings>
+<proceedings mdate="2006-12-18" key="conf/ACMse/2005-1">
+<editor>
+M
+ário Guimarães
+</editor>
+<title>
+Proceedings of the 43nd Annual Southeast Regional Conference, 2005,
+Kennesaw, Georgia, Alabama, USA, March 18-20, 2005, Volume 1
+</title>
+<isbn>
+1-59593-059-0
+</isbn>
+<booktitle>
+ACM Southeast Regional Conference (1)
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2005
+</year>
+<url>
+db/conf/ACMse/ACMse2005-1.html
+</url>
+</proceedings>
+<proceedings mdate="2006-12-18" key="conf/ACMse/2005-2">
+<editor>
+M
+ário Guimarães
+</editor>
+<title>
+Proceedings of the 43nd Annual Southeast Regional Conference, 2005,
+Kennesaw, Georgia, Alabama, USA, March 18-20, 2005, Volume 2
+</title>
+<isbn>
+1-59593-059-0
+</isbn>
+<booktitle>
+ACM Southeast Regional Conference (2)
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2005
+</year>
+<url>
+db/conf/ACMse/ACMse2005-2.html
+</url>
+</proceedings>
+<proceedings mdate="2008-06-18" key="conf/ACMse/1980">
+<editor>
+E. P. Miles Jr.
+</editor>
+<title>
+Proceedings of the 18th Annual Southeast Regional Conference, 1980,
+Tallahassee, Florida, USA, March 24-26, 1980
+</title>
+<booktitle>
+ACM Southeast Regional Conference
+</booktitle>
+<isbn>
+0-89791-014-1
+</isbn>
+<publisher>
+ACM
+</publisher>
+<year>
+1980
+</year>
+<url>
+db/conf/ACMse/ACMse1980.html
+</url>
+</proceedings>
+<proceedings mdate="2009-07-17" key="conf/ACMse/2009">
+<editor>
+John D. McGregor
+</editor>
+<title>
+Proceedings of the 47th Annual Southeast Regional Conference, 2009,
+Clemson, South Carolina, USA, March 19-21, 2009
+</title>
+<isbn>
+978-1-60558-421-8
+</isbn>
+<booktitle>
+ACM Southeast Regional Conference
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2009
+</year>
+<url>
+db/conf/ACMse/ACMse2009.html
+</url>
+</proceedings>
+<proceedings mdate="2005-07-21" key="conf/EUprojects/2005uaht">
+<editor>
+Constantine Stephanidis
+</editor>
+<title>
+Universal Access in Health Telematics, A Design Code of Practice
+</title>
+<volume>
+3041
+</volume>
+<year>
+2005
+</year>
+<isbn>
+3-540-26167-2
+</isbn>
+<booktitle>
+Universal Access in Health Telematics
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/EUprojects/uaht2005.html
+</url>
+</proceedings>
+<proceedings mdate="2007-08-28" key="conf/ISCApdcs/2001">
+<editor>
+Edwin Hsing-Mean Sha
+</editor>
+<title>
+Proceedings of the ISCA 14th International Conference on Parallel and
+Distributed Computing Systems, August 8-10, 2001, Richardson, Texas, USA
+</title>
+<isbn>
+1-880843-39-0
+</isbn>
+<year>
+2001
+</year>
+<booktitle>
+ISCA PDCS
+</booktitle>
+<publisher>
+ISCA
+</publisher>
+<url>
+db/conf/ISCApdcs/ISCApdcs2001.html
+</url>
+</proceedings>
+<proceedings mdate="2007-05-04" key="conf/ISCApdcs/2006">
+<editor>
+Gregory D. Peterson
+</editor>
+<title>
+Proceedings of the ISCA 19th International Conference on Parallel and
+Distributed Computing Systems, September 20-11, 2006, San Francisco,
+California, USA
+</title>
+<isbn>
+978-1-880843-60-4
+</isbn>
+<year>
+2006
+</year>
+<booktitle>
+ISCA PDCS
+</booktitle>
+<publisher>
+ISCA
+</publisher>
+<url>
+db/conf/ISCApdcs/ISCApdcs2006.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/RelMiCS/2000">
+<editor>
+Jules Desharnais
+</editor>
+<title>
+Participants Copies of Fifth International Seminar on Relational Methods in
+Computer Science,January 9-14, 2000, Valcartier (Quebec), Canada
+</title>
+<booktitle>
+RelMiCS
+</booktitle>
+<year>
+2000
+</year>
+<url>
+db/conf/RelMiCS/RelMiCS2000.html
+</url>
+</proceedings>
+<proceedings mdate="2003-01-08" key="conf/RelMiCS/2001">
+<editor>
+Harrie C. M. de Swart
+</editor>
+<title>
+Relational Methods in Computer Science, 6th International Conference,
+RelMICS 2001, and 1st Workshop of COST Action 274 TARSKI Oisterwijk, The
+Netherlands, October 16-21, 2001, Revised Papers
+</title>
+<booktitle>
+RelMiCS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2561
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+3-540-00315-0
+</isbn>
+<url>
+db/conf/RelMiCS/RelMiCS2001.html
+</url>
+</proceedings>
+<proceedings mdate="2006-12-18" key="conf/RelMiCS/2006">
+<editor>
+Renate A. Schmidt
+</editor>
+<title>
+Relations and Kleene Algebra in Computer Science, 9th International
+Conference on Relational Methods in Computer Science and 4th International
+Workshop on Applications of Kleene Algebra, RelMiCS/AKA 2006, Manchester,
+UK, August 29-September 2, 2006, Proceedings
+</title>
+<booktitle>
+RelMiCS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+4136
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2006
+</year>
+<isbn>
+3-540-37873-1
+</isbn>
+<url>
+db/conf/RelMiCS/RelMiCS2006.html
+</url>
+</proceedings>
+<proceedings mdate="2004-02-25" key="conf/aadebug/1993">
+<editor>
+Peter Fritszon
+</editor>
+<title>
+Automated and Algorithmic Debugging, First International Workshop,
+AADEBUG'93, Link
+öping, Sweden, May 3-5, 1993, Proceedings
+</title>
+<booktitle>
+AADEBUG
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+749
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-57417-4
+</isbn>
+<url>
+db/conf/aadebug/aadebug93.html
+</url>
+</proceedings>
+<proceedings mdate="2004-06-18" key="conf/aadebug/2000">
+<editor>
+Mireille Ducass
+é
+</editor>
+<title>
+Proceedings of the Fourth International Workshop on Automated Debugging,
+AADEBUG 2000, Munich, Germany, August 28-30th, 2000
+</title>
+<booktitle>
+AADEBUG
+</booktitle>
+<year>
+2000
+</year>
+<url>
+db/conf/aadebug/aadebug2000.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-08" key="conf/aaecc/1984">
+<editor>
+Alain Poli
+</editor>
+<title>
+Applied Algebra, Algorithms and Error-Correcting Codes, 2nd International
+Conference, AAECC-2, Toulouse, France, October 1-5, 1984, Proceedings
+</title>
+<booktitle>
+AAECC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+228
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+3-540-16767-6
+</isbn>
+<url>
+db/conf/aaecc/aaecc1984.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-04" key="conf/aaecc/1985">
+<editor>
+Jacques Calmet
+</editor>
+<title>
+Algebraic Algorithms and Error-Correcting Codes, 3rd International
+Conference, AAECC-3, Grenoble, France, July 15-19, 1985, Proceedings
+</title>
+<booktitle>
+AAECC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+229
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+3-540-16776-5
+</isbn>
+<url>
+db/conf/aaecc/aaecc1985.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-28" key="conf/aaecc/1988">
+<editor>
+Teo Mora
+</editor>
+<title>
+Applied Algebra, Algebraic Algorithms and Error-Correcting Codes, 6th
+International Conference, AAECC-6, Rome, Italy, July 4-8, 1988, Proceedings
+</title>
+<booktitle>
+AAECC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+357
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1989
+</year>
+<isbn>
+3-540-51083-4
+</isbn>
+<url>
+db/conf/aaecc/aaecc1988.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-06" key="conf/aaecc/1990">
+<editor>
+Shojiro Sakata
+</editor>
+<title>
+Applied Algebra, Algebraic Algorithms and Error-Correcting Codes, 8th
+International Symposium, AAECC-8, Tokyo, Japan, August 20-24, 1990,
+Proceedings
+</title>
+<booktitle>
+AAECC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+508
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1991
+</year>
+<isbn>
+3-540-54195-0
+</isbn>
+<url>
+db/conf/aaecc/aaecc1990.html
+</url>
+</proceedings>
+<proceedings mdate="2004-03-23" key="conf/ac/1972se">
+<editor>
+Friedrich L. Bauer
+</editor>
+<title>
+Software Engineering, An Advanced Course, Reprint of the First Edition
+(February 21 - March 3, 1972)
+</title>
+<booktitle>
+Advanced Course: Software Engineering
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+30
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1975
+</year>
+<isbn>
+3-540-07168-7
+</isbn>
+<url>
+db/conf/ac/se1972.html
+</url>
+</proceedings>
+<proceedings mdate="2002-08-13" key="conf/ac/1975nt">
+<editor>
+Wilfried Brauer
+</editor>
+<title>
+Net Theory and Applications, Proceedings of the Advanced Course on General
+Net Theory of Processes and Systems, Hamburg, October 8-19, 1979
+</title>
+<booktitle>
+Advanced Course: Net Theory and Applications 1975
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+84
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1980
+</year>
+<isbn>
+3-540-10001-6
+</isbn>
+<url>
+db/conf/ac/nt.html
+</url>
+</proceedings>
+<proceedings mdate="2002-11-14" key="conf/ac/1979ass">
+<editor>
+Dines Bj
+ørner
+</editor>
+<title>
+Abstract Software Specifications, 1979 Copenhagen Winter School, January 22
+- February 2, 1979, Proceedings
+</title>
+<booktitle>
+Abstract Software Specifications
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+86
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1980
+</year>
+<isbn>
+3-540-10007-5
+</isbn>
+<url>
+db/conf/ac/ass1979.html
+</url>
+</proceedings>
+<proceedings mdate="2004-02-26" key="conf/ac/1983compiler">
+<editor>
+Bernard Lorho
+</editor>
+<title>
+Method and tools for compiler construction, An advanced course, INRIA, 5-16
+December 1983
+</title>
+<booktitle>
+Method and tools for compiler construction
+</booktitle>
+<year>
+1983
+</year>
+<isbn>
+0-521-26843-5
+</isbn>
+<publisher>
+Cambridge University Press
+</publisher>
+<url>
+db/conf/ac/compiler1983.html
+</url>
+</proceedings>
+<proceedings mdate="2002-09-03" key="conf/ac/1986parallel">
+<editor>
+Marisa Venturini Zilli
+</editor>
+<title>
+Mathematical Models for the Semantics of Parallelism, Advanced School,
+Rome, Italy, September 24 - October 1, 1986, Proceedings
+</title>
+<booktitle>
+Mathematical Models for the Semantics of Parallelism
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+280
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1987
+</year>
+<isbn>
+3-540-18419-8
+</isbn>
+<url>
+db/conf/ac/parallel1986.html
+</url>
+</proceedings>
+<proceedings mdate="2002-08-13" key="conf/ac/1987acai">
+<editor>
+Rolf Nossum
+</editor>
+<title>
+Advanced Topics in Artificial Intelligence, 2nd Advanced Course, ACAI '87,
+Oslo, Norway, July  28 - August 7, 1987
+</title>
+<booktitle>
+Advanced Topics in Artificial Intelligence
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+345
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+3-540-50676-4
+</isbn>
+<url>
+db/conf/ac/acai1987.html
+</url>
+</proceedings>
+<proceedings mdate="2004-03-23" key="conf/ac/1987sr">
+<editor>
+Sergio Bittanti
+</editor>
+<title>
+Software Reliability Modelling and Identification (Como, Italy, September
+2-4, 1987)
+</title>
+<booktitle>
+Software Reliability Modelling and Identification
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+341
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+3-540-50695-0
+</isbn>
+<url>
+db/conf/ac/sr1987.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-15" key="conf/ac/1993adcs">
+<editor>
+Stig I. Andersson
+</editor>
+<title>
+Analysis of Dynamical and Cognitive Systems, Advanced Course, Stockholm,
+Sweden, August 9-14, 1993, Proceedings
+</title>
+<booktitle>
+Analysis of Dynamical and Cognitive Systems
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+888
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+3-540-58843-4
+</isbn>
+<url>
+db/conf/ac/adcs1993.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-07" key="conf/ac/1994mc">
+<editor>
+Christoph G. G
+ünther
+</editor>
+<title>
+Mobile Communications: Advanced Systems and Components, 1994 International
+Zurich Seminar on Digital Communications, Zurich Switzerland, March 8-11,
+1994, Proceedings
+</title>
+<booktitle>
+Mobile Communications
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+783
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+3-540-57856-0
+</isbn>
+<url>
+db/conf/ac/mc1994.html
+</url>
+</proceedings>
+<proceedings mdate="2003-01-15" key="conf/ac/1998security">
+<editor>
+Ivan Damg
+ård
+</editor>
+<title>
+Lectures on Data Security, Modern Cryptology in Theory and Practice, Summer
+School, Aarhus, Denmark, July 1998
+</title>
+<booktitle>
+Lectures on Data Security
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1561
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+3-540-65757-6
+</isbn>
+<url>
+db/conf/ac/security1998.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/ac/2001cdm">
+<editor>
+Helmut Alt
+</editor>
+<title>
+Computational Discrete Mathematics, Advanced Lectures
+</title>
+<booktitle>
+Computational Discrete Mathematics
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2122
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2001
+</year>
+<isbn>
+3-540-42775-9
+</isbn>
+<url>
+db/conf/ac/cdm2001.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-13" key="conf/acpc/1991">
+<editor>
+Hans P. Zima
+</editor>
+<title>
+Parallel Computation, First International ACPC Conference, Salzburg,
+Austria, September 30 - October 2, 1991, Proceedings
+</title>
+<booktitle>
+ACPC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+591
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+3-540-55437-8
+</isbn>
+<url>
+db/conf/acpc/acpc1991.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-13" key="conf/acpc/1993">
+<editor>
+Jens Volkert
+</editor>
+<title>
+Parallel Computation, Second International ACPC Conference, Gmunden,
+Austria, October 4-6, 1993, Proceedings
+</title>
+<booktitle>
+ACPC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+734
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-57314-3
+</isbn>
+<url>
+db/conf/acpc/acpc1993.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/acpc/1996">
+<editor>
+L
+ászló Böszörményi
+</editor>
+<title>
+Parallel Computation, Third International ACPC Conference with Special
+Emphasis on Parallel Databases and Parallel I/O, Klagenfurt, Austria,
+September 23-25, 1996, Proceedings
+</title>
+<booktitle>
+ACPC
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1127
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61695-0
+</isbn>
+<url>
+db/conf/acpc/acpc1996.html
+</url>
+</proceedings>
+<proceedings mdate="2004-08-24" key="conf/acsc/2002">
+<editor>
+Michael J. Oudshoorn
+</editor>
+<title>
+Computer Science 2002, Twenty-Fifth Australasian Computer Science
+Conference (ACSC2002), Monash University, Melbourne, Victoria,
+January/February 2002
+</title>
+<booktitle>
+ACSC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+4
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+0-909-92582-8
+</isbn>
+<url>
+db/conf/acsc/acsc2002.html
+</url>
+</proceedings>
+<proceedings mdate="2004-08-18" key="conf/acsc/2003">
+<editor>
+Michael J. Oudshoorn
+</editor>
+<title>
+Computer Science 2003, Twenty-Sixth Australasian Computer Science
+Conference (ACSC2003), Adelaide, South Australia, February 2003
+</title>
+<booktitle>
+ACSC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+16
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+0-909-92594-1
+</isbn>
+<url>
+db/conf/acsc/acsc2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-08-18" key="conf/acsc/2004">
+<editor>
+Vladimir Estivill-Castro
+</editor>
+<title>
+Computer Science 2004, Twenty-Seveth Australasian Computer Science
+Conference (ACSC2004), Dunedin, New Zealand, January 2004
+</title>
+<booktitle>
+ACSC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+26
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+1-920682-05-8
+</isbn>
+<url>
+db/conf/acsc/acsc2004.html
+</url>
+</proceedings>
+<proceedings mdate="2005-04-22" key="conf/acsc/2005">
+<editor>
+Vladimir Estivill-Castro
+</editor>
+<title>
+Computer Science 2005, Twenty-Eighth Australasian Computer Science
+Conference (ACSC2005), Newcastle, NSW, Australia, January/February 2005
+</title>
+<booktitle>
+ACSC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+38
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+1-920682-20-1
+</isbn>
+<url>
+db/conf/acsc/acsc2005.html
+</url>
+</proceedings>
+<proceedings mdate="2008-06-17" key="conf/acsc/2007">
+<editor>
+Gillian Dobbie
+</editor>
+<title>
+Computer Science 2007.  Proceedings of the Thirtieth Australasian Computer
+Science Conference (ACSC2007). Ballarat, Victoria, Australia, January 30 -
+February 2, 2007. Proceedings
+</title>
+<volume>
+62
+</volume>
+<year>
+2007
+</year>
+<isbn>
+1-920-68243-0
+</isbn>
+<booktitle>
+ACSC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<publisher>
+Australian Computer Society
+</publisher>
+<url>
+db/conf/acsc/acsc2007.html
+</url>
+</proceedings>
+<proceedings mdate="2009-03-25" key="conf/acsc/2009">
+<editor>
+Bernard Mans
+</editor>
+<title>
+Computer Science 2009, Thirty-Second Australasian Computer Science
+Conference (ACSC 2009), Wellington, New Zealand, January 19-23, 2009,
+Proceedings
+</title>
+<volume>
+91
+</volume>
+<year>
+2009
+</year>
+<isbn>
+978-1-920682-72-9
+</isbn>
+<booktitle>
+ACSC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<publisher>
+Australian Computer Society
+</publisher>
+<url>
+db/conf/acsc/acsc2009.html
+</url>
+</proceedings>
+<proceedings mdate="2002-09-06" key="conf/adaEurope/1983">
+<editor>
+Peter J. L. Wallis
+</editor>
+<title>
+Ada Software Tools Interfaces, Workshop, Bath, UK, July 13-15, 1983,
+Proceedings
+</title>
+<booktitle>
+Ada Software Tools Interfaces
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+180
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1984
+</year>
+<isbn>
+3-540-13878-1
+</isbn>
+<url>
+db/conf/adaEurope/ada1983.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1991">
+<editor>
+Dimitris Christodoulakis
+</editor>
+<title>
+Ada: The Choice for '92, Ada-Europe International Conference, Athens,
+Greece, May 13-17, 1991, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+499
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1991
+</year>
+<isbn>
+3-540-54092-X
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1991.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1992">
+<editor>
+Jan van Katwijk
+</editor>
+<title>
+Ada: Moving Towards 2000, 11th Ada-Europe International Conference,
+Zandvoort, The Netherlands, June 1-5, 1992, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+603
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+3-540-55585-4
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1992.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1993">
+<editor>
+Michel Gauthier
+</editor>
+<title>
+Ada-Europe '93, 12th Ada-Europe International Conference, Ada Sans Fronti
+ères, Paris, France, June 14-18, 1993, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+688
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-56802-6
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1993.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1994">
+<editor>
+Marcel Toussaint
+</editor>
+<title>
+Ada in Europe, First International Eurospace - Ada-Europe Symposium,
+Copenhagen, Denmark, September 26-30, 1994, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+887
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+3-540-58822-1
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1994.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1995">
+<editor>
+Marcel Toussaint
+</editor>
+<title>
+Ada in Europe, Second International Eurospace - Ada-Europe Symposium,
+Frankfurt/Main, Germany, October 2-6, 1995, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1031
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-60757-9
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1995.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1996">
+<editor>
+Alfred Strohmeier
+</editor>
+<title>
+Reliable Software Technologies - Ada-Europe '96, 1996 Ada-Europe
+International Conference on Reliable Software Technologies, Montreux,
+Switzerland, June 10-14, 1996, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1088
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61317-X
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1996.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/adaEurope/1998">
+<editor>
+Lars Asplund
+</editor>
+<title>
+Reliable Software Technologies - Ada-Europe '98, 1998 Ada-Europe
+International Conference on Reliable Software Technologies, Uppsala,
+Sweden, June 8-12, 1998, Proceedings
+</title>
+<booktitle>
+Ada-Europe
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1411
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1998
+</year>
+<isbn>
+3-540-64536-5
+</isbn>
+<url>
+db/conf/adaEurope/adaEurope1998.html
+</url>
+</proceedings>
+<proceedings mdate="2002-04-29" key="conf/adc/1998">
+<editor>
+John F. Roddick
+</editor>
+<title>
+Database Systems 98, Proceedings of the 9th Australasian Database
+Conference, ADC '98, Perth, Australia, 2-3 February 1998
+</title>
+<series>
+Australian Computer Science Communications
+</series>
+<volume>
+20
+</volume>
+<number>
+2
+</number>
+<publisher>
+Springer
+</publisher>
+<year>
+1998
+</year>
+</proceedings>
+<proceedings mdate="2004-10-08" key="conf/adc/2002">
+<editor>
+Xiaofang Zhou
+</editor>
+<title>
+Database Technologies 2002, Thirteenth Australasian Database Conference
+(ADC2002), Monash University, Melbourne, Victoria, January/February 2002
+</title>
+<booktitle>
+ADC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+5
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+0-909-92583-6
+</isbn>
+<url>
+db/conf/adc/adc2002.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-21" key="conf/adcog/2001">
+<editor>
+Cyril Tse Ning
+</editor>
+<title>
+1st International Conference on Application and Development of Computer
+Games in the 21st Century (ADCOG 2003) held on 22-23 November 2001 in City
+University of Hong Kong, HKSAR, China
+</title>
+<booktitle>
+ADCOG
+</booktitle>
+<year>
+2001
+</year>
+<isbn>
+9624421994
+</isbn>
+<publisher>
+City University of Hong Kong
+</publisher>
+</proceedings>
+<proceedings mdate="2004-09-21" key="conf/adcog/2003">
+<editor>
+Cyril Tse Ning
+</editor>
+<title>
+2nd International Conference on Application and Development of Computer
+Games (ADCOG 2003) held on 6-7 January 2003 in City University of Hong
+Kong, HKSAR, China
+</title>
+<booktitle>
+ADCOG
+</booktitle>
+<year>
+2003
+</year>
+<isbn>
+9624422311
+</isbn>
+<publisher>
+City University of Hong Kong
+</publisher>
+</proceedings>
+<proceedings mdate="2004-09-21" key="conf/adcog/2004">
+<editor>
+Cyril Tse Ning
+</editor>
+<title>
+3rd International Conference on Application and Development of Computer
+Games (ADCOG 2004) held on 26-27 April 2004 in City University of Hong
+Kong, HKSAR, China
+</title>
+<booktitle>
+ADCOG
+</booktitle>
+<year>
+2004
+</year>
+<url>
+db/conf/adcog/adcog2004.html
+</url>
+<isbn>
+9624422508
+</isbn>
+<publisher>
+City University of Hong Kong
+</publisher>
+</proceedings>
+<proceedings mdate="2003-01-13" key="conf/adg/1996">
+<editor>
+Dongming Wang
+</editor>
+<title>
+Automated Deduction in Geometry, International Workshop on Automated
+Deduction in Geometry, Toulouse, France, September  27-29, 1996, Selected
+Papers
+</title>
+<booktitle>
+Automated Deduction in Geometry
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1360
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1997
+</year>
+<isbn>
+3-540-64297-8
+</isbn>
+<url>
+db/conf/adg/adg1996.html
+</url>
+</proceedings>
+<proceedings mdate="2004-05-07" key="conf/adg/2002">
+<editor>
+Franz Winkler
+</editor>
+<title>
+Automated Deduction in Geometry, 4th International Workshop, ADG 2002,
+Hagenberg Castle, Austria, September 4-6, 2002, Revised Papers
+</title>
+<booktitle>
+Automated Deduction in Geometry
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2930
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+3-540-20927-1
+</isbn>
+<url>
+db/conf/adg/adg2002.html
+</url>
+</proceedings>
+<proceedings mdate="2003-01-28" key="conf/adt/1984">
+<editor>
+Hans-J
+örg Kreowski
+</editor>
+<title>
+Recent Trends in Data Type Specification, 3rd Workshop on Theory and
+Applications of Abstract Data Types, Bremen, November 13-16, 1984, Selected
+Papers
+</title>
+<booktitle>
+ADT
+</booktitle>
+<series href="db/series/ifb/index.html">
+Informatik-Fachberichte
+</series>
+<volume>
+116
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1985
+</year>
+<isbn>
+3-540-16077-9
+</isbn>
+<url>
+db/conf/adt/adt1984.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/advis/2000">
+<editor>
+Tatyana M. Yakhno
+</editor>
+<title>
+Advances in Information Systems, First International Conference, ADVIS
+2000, Izmir, Turkey, 25-27 October 2000, Proceedings
+</title>
+<booktitle>
+ADVIS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1909
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2000
+</year>
+<url>
+db/conf/advis/advis2000.html
+</url>
+<isbn>
+3-540-41184-4
+</isbn>
+</proceedings>
+<proceedings mdate="2002-11-13" key="conf/advis/2002">
+<editor>
+Tatyana M. Yakhno
+</editor>
+<title>
+Advances in Information Systems, Second International Conference, ADVIS
+2002, Izmir, Turkey, October 23-25, 2002, Proceedings
+</title>
+<booktitle>
+ADVIS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2457
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<url>
+db/conf/advis/advis2002.html
+</url>
+<isbn>
+3-540-00009-7
+</isbn>
+</proceedings>
+<proceedings mdate="2004-12-20" key="conf/advis/2004">
+<editor>
+Tatyana M. Yakhno
+</editor>
+<title>
+Advances in Information Systems, Third International Conference, ADVIS
+2004, Izmir, Turkey, October 20-22, 2004, Proceedings
+</title>
+<volume>
+3261
+</volume>
+<isbn>
+3-540-23478-0
+</isbn>
+<booktitle>
+ADVIS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<year>
+2004
+</year>
+<url>
+db/conf/advis/advis2004.html
+</url>
+</proceedings>
+<proceedings mdate="2006-02-22" key="conf/afrigraph/2006">
+<editor>
+Stephen N. Spencer
+</editor>
+<title>
+Proceedings of the 4th International Conference on Virtual Reality,
+Computer Graphics, Visualisation and Interaction in Africa, Afrigraph 2006,
+Cape Town, South Africa, January 25-27, 2006
+</title>
+<booktitle>
+Afrigraph
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2006
+</year>
+<url>
+db/conf/afrigraph/afrigraph2006.html
+</url>
+<isbn>
+1-59593-288-7
+</isbn>
+</proceedings>
+<proceedings mdate="2004-02-19" key="conf/agentCL/2003">
+<editor>
+Frank Dignum
+</editor>
+<title>
+Advances in Agent Communication, International Workshop on Agent
+Communication Languages, ACL 2003, Melbourne, Australia, July 14, 2003
+</title>
+<booktitle>
+Workshop on Agent Communication Languages
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2922
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+3-540-20769-4
+</isbn>
+<url>
+db/conf/agentCL/acl2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-12-02" key="conf/agp/1993">
+<editor>
+Domenico Sacc
+à
+</editor>
+<title>
+8th Italian Conference on Logic Programming, GULP'93, Gizzeria, Italy, June
+15-18, 1993
+</title>
+<booktitle>
+GULP
+</booktitle>
+<year>
+1993
+</year>
+<url>
+db/conf/agp/gulp1993.html
+</url>
+</proceedings>
+<proceedings mdate="2004-12-01" key="conf/agp/2003">
+<editor>
+Francesco Buccafurri
+</editor>
+<title>
+2003 Joint Conference on Declarative Programming, AGP-2003, Reggio
+Calabria, Italy, September 3-5, 2003
+</title>
+<booktitle>
+APPIA-GULP-PRODE
+</booktitle>
+<year>
+2003
+</year>
+<url>
+db/conf/agp/agp2003.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-27" key="conf/ai/1996">
+<editor>
+Gordon I. McCalla
+</editor>
+<title>
+Advances in Artificial Intelligence, 11th Biennial Conference of the
+Canadian Society for Computational Studies of Intelligence, AI '96,
+Toronto, Ontario, Canada, May 21-24, 1996, Proceedings
+</title>
+<booktitle>
+Canadian Conference on AI
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1081
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61291-2
+</isbn>
+<url>
+db/conf/ai/ai96.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-27" key="conf/ai/2000">
+<editor>
+Howard J. Hamilton
+</editor>
+<title>
+Advances in Artificial Intelligence, 13th Biennial Conference of the
+Canadian Society for Computational Studies of Intelligence, AI 2000, Montr
+éal, Quebec, Canada, May 14-17, 2000, Proceedings
+</title>
+<booktitle>
+Canadian Conference on AI
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1822
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+3-540-67557-4
+</isbn>
+<url>
+db/conf/ai/ai2000.html
+</url>
+</proceedings>
+<proceedings mdate="2008-05-23" key="conf/ai/2008">
+<editor>
+Sabine Bergler
+</editor>
+<title>
+Advances in Artificial Intelligence , 21st Conference of the Canadian
+Society for Computational Studies of Intelligence, Canadian AI 2008,
+Windsor, Canada, May 28-30, 2008, Proceedings
+</title>
+<volume>
+5032
+</volume>
+<year>
+2008
+</year>
+<isbn>
+978-3-540-68821-1
+</isbn>
+<booktitle>
+Canadian Conference on AI
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/ai/ai2008.html
+</url>
+</proceedings>
+<proceedings mdate="2005-10-17" key="conf/aia/2005">
+<editor>
+M. H. Hamza
+</editor>
+<title>
+IASTED International Conference on Artificial Intelligence and
+Applications, part of the 23rd Multi-Conference on Applied Informatics,
+Innsbruck, Austria, February 14-16, 2005
+</title>
+<booktitle>
+Artificial Intelligence and Applications
+</booktitle>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+0-88986-459-4
+</isbn>
+<url>
+db/conf/aia/aia2005.html
+</url>
+</proceedings>
+<proceedings mdate="2006-06-19" key="conf/aia/2006">
+<editor>
+Vladan Devedzic
+</editor>
+<title>
+IASTED International Conference on Artificial Intelligence and
+Applications, part of the 24th Multi-Conference on Applied Informatics,
+Innsbruck, Austria, February 13-16, 2006
+</title>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<isbn>
+0-88986-558-2
+</isbn>
+<year>
+2006
+</year>
+<booktitle>
+Artificial Intelligence and Applications
+</booktitle>
+<url>
+db/conf/aia/aia2006.html
+</url>
+</proceedings>
+<proceedings mdate="2007-09-19" key="conf/aia/2007">
+<editor>
+Vladan Devedzic
+</editor>
+<title>
+IASTED International Conference on Artificial Intelligence and
+Applications, part of the 25th Multi-Conference on Applied Informatics,
+Innsbruck, Austria, February 12-14, 2007
+</title>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<isbn>
+978-0-88986-631-7
+</isbn>
+<year>
+2007
+</year>
+<booktitle>
+Artificial Intelligence and Applications
+</booktitle>
+<url>
+db/conf/aia/aia2007.html
+</url>
+</proceedings>
+<proceedings mdate="2002-04-17" key="conf/aifipp/1992">
+<editor>
+Jos
+é Cuena
+</editor>
+<title>
+Knowledge Oriented Software Design, Extended Papers from the IFIP TC12
+Workshop on Artificial Intelligence from the Information Processing
+Perspective - AIFIPP '92, Madrid, Spain, 14-15 September, 1992
+</title>
+<booktitle>
+AIFIPP
+</booktitle>
+<series href="db/series/ifip/transactions.html">
+IFIP Transactions
+</series>
+<volume>
+27
+</volume>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+0-444-81541-4
+</isbn>
+<url>
+db/conf/aifipp/aifipp1992.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-31" key="conf/aii/1986">
+<editor>
+Klaus P. Jantke
+</editor>
+<title>
+Analogical and Inductive Inference, International Workshop AII '86,
+Wendisch-Rietz, GDR, October 6-10, 1986, Proceedings
+</title>
+<booktitle>
+AII
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+265
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1987
+</year>
+<isbn>
+3-540-18081-8
+</isbn>
+<url>
+db/conf/aii/aii86.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-31" key="conf/aii/1989">
+<editor>
+Klaus P. Jantke
+</editor>
+<title>
+Analogical and Inductive Inference, International Workshop AII '89,
+Reinhardsbrunn Castle, GDR, October 1-6, 1989, Proceedings
+</title>
+<booktitle>
+AII
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+397
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1989
+</year>
+<isbn>
+3-540-51734-0
+</isbn>
+<url>
+db/conf/aii/aii89.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-31" key="conf/aii/1992">
+<editor>
+Klaus P. Jantke
+</editor>
+<title>
+Analogical and Inductive Inference, International Workshop AII '92,
+Dagstuhl Castle, Germany, October 5-9, 1992, Proceedings
+</title>
+<booktitle>
+AII
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+642
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+3-540-56004-1
+</isbn>
+<url>
+db/conf/aii/aii92.html
+</url>
+</proceedings>
+<proceedings mdate="2002-08-04" key="conf/aiia/1993">
+<editor>
+Pietro Torasso
+</editor>
+<title>
+Advances in Artificial Intelligence, Third Congress of the Italian
+Association for Artificial Intelligence, AI*IA'93, Torino, Italy, October
+26-28, 1993,  Proceedings
+</title>
+<booktitle>
+AI*IA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+728
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-57292-9
+</isbn>
+<url>
+db/conf/aiia/aiia1993.html
+</url>
+</proceedings>
+<proceedings mdate="2002-08-04" key="conf/aiia/1997">
+<editor>
+Maurizio Lenzerini
+</editor>
+<title>
+AI*IA 97: Advances in Artificial Intelligence, 5th Congress of the Italian
+Association for Artificial Intelligence, Rome, Italy, September 17-19,
+1997, Proceedings
+</title>
+<booktitle>
+AI*IA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1321
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1997
+</year>
+<isbn>
+3-540-63576-9
+</isbn>
+<url>
+db/conf/aiia/aiia1997.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/aiia/2001">
+<editor>
+Floriana Esposito
+</editor>
+<title>
+AI*IA 2001: Advances in Artificial Intelligence, 7th Congress of the
+Italian Association for Artificial Intelligence, Bari, Italy, September
+25-28, 2001, Proceedings
+</title>
+<booktitle>
+AI*IA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2175
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2001
+</year>
+<isbn>
+3-540-42601-9
+</isbn>
+<url>
+db/conf/aiia/aiia2001.html
+</url>
+</proceedings>
+<proceedings mdate="2008-03-03" key="conf/aime/2007k">
+<editor>
+David Ria
+ño
+</editor>
+<title>
+Knowledge Management for Health Care Procedures, From Knowledge to Global
+Care, AIME 2007 Workshop K4CARE 2007, Amsterdam, The Netherlands, July 7,
+2007, Revised Selected Papers
+</title>
+<booktitle>
+K4CARE
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+4924
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2008
+</year>
+<isbn>
+978-3-540-78623-8
+</isbn>
+<url>
+db/conf/aime/k4care2007.html
+</url>
+</proceedings>
+<proceedings mdate="2002-10-23" key="conf/aimsa/1998">
+<editor>
+Fausto Giunchiglia
+</editor>
+<title>
+Artificial Intelligence: Methodology, Systems, and Applications, 8th
+International Conference, AIMSA '98, Sozopol, Bulgaria, September 21-13,
+1998, Proceedings
+</title>
+<booktitle>
+AIMSA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1480
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1998
+</year>
+<isbn>
+3-540-64993-X
+</isbn>
+<url>
+db/conf/aimsa/aimsa1998.html
+</url>
+</proceedings>
+<proceedings mdate="2004-02-27" key="conf/aimsa/2002">
+<editor>
+Donia Scott
+</editor>
+<title>
+Artificial Intelligence: Methodology, Systems, and Applications, 10th
+International Conference, AIMSA 2002, Varna, Bulgaria, September 4-6, 2002,
+Proceedings
+</title>
+<booktitle>
+AIMSA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2443
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+3-540-44127-1
+</isbn>
+<url>
+db/conf/aimsa/aimsa2002.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-21" key="conf/aipt/1993">
+<editor>
+J.-P. Claud
+é
+</editor>
+<title>
+Advanced Information Processing Techniques for LAN and MAN Management,
+Proceedings of the IFIP TC6/WG6.4 International Conference on Advanced
+Information Processing Techniques for LAN and MAN Management, Versailles,
+France, 7-9 April, 1993
+</title>
+<booktitle>
+Advanced Information Processing Techniques for LAN and MAN Management
+</booktitle>
+<series href="db/series/ifip/transactions.html">
+IFIP Transactions
+</series>
+<volume>
+C-17
+</volume>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+0-444-81634-8
+</isbn>
+<url>
+db/conf/aipt/aipt1993.html
+</url>
+</proceedings>
+<proceedings mdate="2005-02-10" key="conf/ais/2004">
+<editor>
+Tag Gon Kim
+</editor>
+<title>
+Artificial Intelligence and Simulation, 13th International Conference on
+AI, Simulation, and Planning in High Autonomy Systems, AIS 2004, Jeju
+Island, Korea, October 4-6, 2004, Revised Selected Papers
+</title>
+<volume>
+3397
+</volume>
+<isbn>
+3-540-24476-X
+</isbn>
+<year>
+2005
+</year>
+<booktitle>
+AIS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/ais/ais2004.html
+</url>
+</proceedings>
+<proceedings mdate="2002-09-03" key="conf/aisa/2002">
+<editor>
+Whie Chang
+</editor>
+<title>
+Advanced Internet Services and Applications, First International Workshop,
+AISA 2002, Seoul, Korea, August 1-2, 2002, Proceedings
+</title>
+<booktitle>
+AISA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2402
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+3-540-43968-4
+</isbn>
+<url>
+db/conf/aisa/aisa2002.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-18" key="conf/aisb/1994">
+<editor>
+Terence C. Fogarty
+</editor>
+<title>
+Evolutionary Computing, AISB Workshop, Leeds, UK, April 11-13, 1994,
+Selected Papers
+</title>
+<booktitle>
+Evolutionary Computing, AISB Workshop
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+865
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+3-540-58483-8
+</isbn>
+<url>
+db/conf/aisb/aisb1994.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-18" key="conf/aisb/1995">
+<editor>
+Terence C. Fogarty
+</editor>
+<title>
+Evolutionary Computing, AISB Workshop, Sheffield, UK, April 3-4, 1995,
+Selected Papers
+</title>
+<booktitle>
+Evolutionary Computing, AISB Workshop
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+993
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1995
+</year>
+<isbn>
+3-540-60469-3
+</isbn>
+<url>
+db/conf/aisb/aisb1995.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-18" key="conf/aisb/1996">
+<editor>
+Terence C. Fogarty
+</editor>
+<title>
+Evolutionary Computing, AISB Workshop, Brighton, UK, April 1-2, 1996,
+Selected Papers
+</title>
+<booktitle>
+Evolutionary Computing, AISB Workshop
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1143
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61749-3
+</isbn>
+<url>
+db/conf/aisb/aisb1996.html
+</url>
+</proceedings>
+<proceedings mdate="2004-11-09" key="conf/aka/2004">
+<editor>
+Klaus Turowski
+</editor>
+<title>
+Architekturen, Komponenten, Anwendungen - Proceedings zur 1. Verbundtagung
+Architekturen, Komponenten, Anwendungen (AKA 2004), Universit
+ät Augsburg, 2.-3. Dezember 2004
+</title>
+<booktitle>
+AKA
+</booktitle>
+<series href="db/series/lni/index.html">
+LNI
+</series>
+<volume>
+57
+</volume>
+<publisher>
+GI
+</publisher>
+<year>
+2004
+</year>
+<url>
+db/conf/aka/aka2004.html
+</url>
+</proceedings>
+<proceedings mdate="2004-12-10" key="conf/alenex/2003">
+<editor>
+Richard E. Ladner
+</editor>
+<title>
+Proceedings of the Fifth Workshop on Algorithm Engineering and Experiments,
+Baltimore, MD, USA, January 11, 2003
+</title>
+<booktitle>
+ALENEX
+</booktitle>
+<publisher>
+SIAM
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+0-89871-542-3
+</isbn>
+<url>
+db/conf/alenex/alenex2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-01-19" key="conf/algol/1970">
+<editor>
+J. E. L. Peck
+</editor>
+<title>
+ALGOL 68 Implementation: Proceedings of the IFIP Working Conference on
+ALGOL 68 Implementation, Munich, Germany, July 20-24, 1970
+</title>
+<booktitle>
+ALGOL 68 Implementation
+</booktitle>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1971
+</year>
+<isbn>
+0-7204-2045-8
+</isbn>
+<url>
+db/conf/algol/algol1970.html
+</url>
+</proceedings>
+<proceedings mdate="2008-12-16" key="conf/algosensors/2008">
+<editor>
+S
+ándor P. Fekete
+</editor>
+<title>
+Algorithmic Aspects of Wireless Sensor Networks, Fourth International
+Workshop, ALGOSENSORS 2008, Reykjavik, Iceland, July 2008. Revised Selected
+Papers
+</title>
+<volume>
+5389
+</volume>
+<year>
+2008
+</year>
+<ee>
+http://dx.doi.org/10.1007/978-3-540-92862-1
+</ee>
+<isbn>
+978-3-540-92861-4
+</isbn>
+<booktitle>
+ALGOSENSORS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/algosensors/algosensors2008.html
+</url>
+</proceedings>
+<proceedings mdate="2004-07-30" key="conf/alife/1987">
+<editor>
+Chris Langton
+</editor>
+<title>
+Proceedings of the Interdisciplinary Workshop on the Synthesis and
+Simulation of Living Systems (ALIFE '87), Los Alamos, NM, USA, September
+1987
+</title>
+<series>
+Santa Fe Institute Studies in the Sciences of Complexity
+</series>
+<volume>
+6
+</volume>
+<publisher>
+Addison-Wesley
+</publisher>
+<year>
+1989
+</year>
+<booktitle>
+ALIFE
+</booktitle>
+<url>
+db/conf/alife/alife1987.html
+</url>
+<isbn>
+0-201-09346-4
+</isbn>
+</proceedings>
+<proceedings mdate="2002-02-27" key="conf/amast/1997">
+<editor>
+Michael Johnson
+</editor>
+<title>
+Algebraic Methodology and Software Technology, 6th International
+Conference, AMAST '97, Sydney, Australia, December 13-17, 1997, Proceedings
+</title>
+<booktitle>
+AMAST
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1349
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1997
+</year>
+<isbn>
+3-540-63888-1
+</isbn>
+<url>
+db/conf/amast/amast97.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-27" key="conf/amast/1998">
+<editor>
+Armando Martin Haeberer
+</editor>
+<title>
+Algebraic Methodology and Software Technology, 7th International
+Conference, AMAST '98, Amazonia, Brasil, January 4-8, 1999, Proceedings
+</title>
+<booktitle>
+AMAST
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1548
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+3-540-65462-3
+</isbn>
+<url>
+db/conf/amast/amast98.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-27" key="conf/amast/2000">
+<editor>
+Teodor Rus
+</editor>
+<title>
+Algebraic Methodology and Software Technology.  8th International
+Conference, AMAST 2000, Iowa City, Iowa, USA, May 20-27, 2000, Proceedings
+</title>
+<booktitle>
+AMAST
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1816
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+3-540-67530-2
+</isbn>
+<url>
+db/conf/amast/amast2000.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-03" key="conf/amta/2000">
+<editor>
+John S. White
+</editor>
+<title>
+Envisioning Machine Translation in the Information Future, 4th Conference
+of the Association for Machine Translation in the Americas, AMTA 2000,
+Cuernavaca, Mexico, October 10-14, 2000, Proceedings
+</title>
+<booktitle>
+AMTA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1934
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+3-540-41117-8
+</isbn>
+<url>
+db/conf/amta/amta2000.html
+</url>
+</proceedings>
+<proceedings mdate="2002-10-18" key="conf/amta/2002">
+<editor>
+Stephen D. Richardson
+</editor>
+<title>
+Machine Translation: From Research to Real Users, 5th Conference of the
+Association for Machine Translation in the Americas, AMTA 2002 Tiburon, CA,
+USA, October 6-12, 2002, Proceedings
+</title>
+<booktitle>
+AMTA
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2499
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+3-540-44282-0
+</isbn>
+<url>
+db/conf/amta/amta2002.html
+</url>
+</proceedings>
+<proceedings mdate="2004-12-16" key="conf/anns/2004">
+<editor>
+Waseem Asrar Ahmed
+</editor>
+<title>
+Artificial Neural Networks: Data preparation techniques and application
+development, Proceedings of the 1st International Workshop on Artificial
+Neural Networks: Data preparation techniques and application development,
+ANNs 2004, In conjunction with ICINCO 2004, Set
+úbal, Portugal, August 2004
+</title>
+<isbn>
+972-8865-14-7
+</isbn>
+<booktitle>
+ANNs
+</booktitle>
+<publisher>
+INSTICC Press
+</publisher>
+<year>
+2004
+</year>
+<url>
+db/conf/anns/anns2004.html
+</url>
+</proceedings>
+<proceedings mdate="2008-08-27" key="conf/anns/2005">
+<editor>
+Kurosh Madani
+</editor>
+<title>
+Artificial Neural Networks and Intelligent Information Processing,
+Proceedings of the 1st International Workshop on Artificial Neural Networks
+and Intelligent Information Processing, ANNIIP 2005, In conjunction with
+ICINCO 2005, Barcelona, Spain, September 2005
+</title>
+<isbn>
+972-8865-36-8
+</isbn>
+<booktitle>
+ANNIIP
+</booktitle>
+<publisher>
+INSTICC Press
+</publisher>
+<year>
+2005
+</year>
+<url>
+db/conf/anns/anniip2005.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-17" key="conf/anss/1987">
+<editor>
+Ross A. Gagliano
+</editor>
+<title>
+Proceedings 20th Annual Simulation Symposium (ANSS-20 1987), Tampa,
+Florida, USA, 1987
+</title>
+<booktitle>
+Annual Simulation Symposium
+</booktitle>
+<publisher>
+IEEE Computer Society
+</publisher>
+<year>
+1987
+</year>
+<isbn>
+0-8186-0766-1
+</isbn>
+<url>
+db/conf/anss/anss1987.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-17" key="conf/anss/1988">
+<editor>
+Michael A. Abrams
+</editor>
+<title>
+Proceedings 21st Annual Simulation Symposium (ANSS-21 1988), Tampa,
+Florida, USA, 1988
+</title>
+<booktitle>
+Annual Simulation Symposium
+</booktitle>
+<publisher>
+IEEE Computer Society
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+0-8186-0845-5
+</isbn>
+<url>
+db/conf/anss/anss1988.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-17" key="conf/anss/1989">
+<editor>
+Alan H. Rutan
+</editor>
+<title>
+Proceedings 22nd Annual Simulation Symposium (ANSS-22 1989), Tampa,
+Florida, USA, 1989
+</title>
+<booktitle>
+Annual Simulation Symposium
+</booktitle>
+<publisher>
+IEEE Computer Society
+</publisher>
+<year>
+1989
+</year>
+<isbn>
+0-8186-1946-5
+</isbn>
+<url>
+db/conf/anss/anss1989.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-17" key="conf/anss/1990">
+<editor>
+Ben Pinkowski
+</editor>
+<title>
+Proceedings 23rd Annual Simulation Symposium (ANSS-23 1990), Nashville,
+Tennessee, USA, 1990
+</title>
+<booktitle>
+Annual Simulation Symposium
+</booktitle>
+<publisher>
+IEEE Computer Society
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+0-8186-2067-6
+</isbn>
+<url>
+db/conf/anss/anss1990.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/ants/1996">
+<editor>
+Henri Cohen
+</editor>
+<title>
+Algorithmic Number Theory, Second International Symposium, ANTS-II,
+Talence, France, May 18-23, 1996, Proceedings
+</title>
+<booktitle>
+ANTS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1122
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1996
+</year>
+<isbn>
+3-540-61581-4
+</isbn>
+<url>
+db/conf/ants/ants1996.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-02" key="conf/ants/1998">
+<editor>
+Joe Buhler
+</editor>
+<title>
+Algorithmic Number Theory, Third International Symposium, ANTS-III,
+Portland, Oregon, USA, June 21-25, 1998, Proceedings
+</title>
+<booktitle>
+ANTS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1423
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1998
+</year>
+<isbn>
+3-540-64657-4
+</isbn>
+<url>
+db/conf/ants/ants1998.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/ants/2000">
+<editor>
+Wieb Bosma
+</editor>
+<title>
+Algorithmic Number Theory, 4th International Symposium, ANTS-IV, Leiden,
+The Netherlands, July 2-7, 2000, Proceedings
+</title>
+<booktitle>
+ANTS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1838
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+3-540-67695-3
+</isbn>
+<url>
+db/conf/ants/ants2000.html
+</url>
+</proceedings>
+<proceedings mdate="2004-05-06" key="conf/ants/2004">
+<editor>
+Duncan A. Buell
+</editor>
+<title>
+Algorithmic Number Theory, 6th International Symposium, ANTS-VI,
+Burlington, VT, USA, June 13-18, 2004, Proceedings
+</title>
+<booktitle>
+ANTS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+3076
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+3-540-22156-5
+</isbn>
+<url>
+db/conf/ants/ants2004.html
+</url>
+</proceedings>
+<proceedings mdate="2006-07-18" key="conf/aosd/2006">
+<editor>
+Robert E. Filman
+</editor>
+<title>
+Proceedings of the 5th International Conference on Aspect-Oriented Software
+Development, AOSD 2006, Bonn, Germany, March 20-24, 2006
+</title>
+<booktitle>
+AOSD
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2006
+</year>
+<url>
+db/conf/aosd/aosd2006.html
+</url>
+<isbn>
+1-59593-300-X
+</isbn>
+</proceedings>
+<proceedings mdate="2009-04-14" key="conf/aosd/2009">
+<editor>
+Kevin J. Sullivan
+</editor>
+<title>
+Proceedings of the 8th International Conference on Aspect-Oriented Software
+Development, AOSD 2009, Charlottesville, Virginia, USA, March 2-6, 2009
+</title>
+<booktitle>
+AOSD
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2009
+</year>
+<url>
+db/conf/aosd/aosd2009.html
+</url>
+<isbn>
+978-1-60558-442-3
+</isbn>
+</proceedings>
+<proceedings mdate="2008-04-04" key="conf/aosd/2008">
+<editor>
+Theo D'Hondt
+</editor>
+<title>
+Proceedings of the 7th International Conference on Aspect-Oriented Software
+Development, AOSD 2008, Brussels, Belgium, March 31 - April 4, 2008
+</title>
+<booktitle>
+AOSD
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2008
+</year>
+<url>
+db/conf/aosd/aosd2008.html
+</url>
+<isbn>
+978-1-60558-044-9
+</isbn>
+</proceedings>
+<proceedings mdate="2004-08-18" key="conf/apbc/2003">
+<editor>
+Yi-Ping Phoebe Chen
+</editor>
+<title>
+First Asia-Pacific Bioinformatics Conference (APBC 2003), February 4-7,
+2003, Adelaide, Australia
+</title>
+<booktitle>
+APBC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+19
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+0-909-92597-6
+</isbn>
+<url>
+db/conf/apbc/apbc2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-08-18" key="conf/apbc/2004">
+<editor>
+Yi-Ping Phoebe Chen
+</editor>
+<title>
+Second Asia-Pacific Bioinformatics Conference (APBC 2004), January 18-22,
+2004, Dunedin, New Zealand
+</title>
+<booktitle>
+APBC
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+29
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+1-920682-11-2
+</isbn>
+<url>
+db/conf/apbc/apbc2004.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/apdc/1994">
+<editor>
+Claude Girault
+</editor>
+<title>
+Applications in Parallel and Distributed Computing, Proceedings of the IFIP
+WG10.3 Working Conference on Applications in Parallel and Distributed
+Computing, Caracas, Venezuela, 18-22 April, 1994
+</title>
+<booktitle>
+Applications in Parallel and Distributed Computing
+</booktitle>
+<series href="db/series/ifip/transactions.html">
+IFIP Transactions
+</series>
+<volume>
+A-44
+</volume>
+<publisher>
+North-Holland
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+0-444-81870-7
+</isbn>
+<url>
+db/conf/apdc/apdc1994.html
+</url>
+</proceedings>
+<proceedings mdate="2004-06-01" key="conf/aplas/2003">
+<editor>
+Atsushi Ohori
+</editor>
+<title>
+Programming Languages and Systems, First Asian Symposium, APLAS 2003,
+Beijing, China, November 27-29, 2003, Proceedings
+</title>
+<booktitle>
+APLAS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2895
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+3-540-20536-5
+</isbn>
+<url>
+db/conf/aplas/aplas2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-11-15" key="conf/aplas/2004">
+<editor>
+Wei-Ngan Chin
+</editor>
+<title>
+Programming Languages and Systems: Second Asian Symposium, APLAS 2004,
+Taipei, Taiwan, November 4-6, 2004. Proceedings
+</title>
+<booktitle>
+APLAS
+</booktitle>
+<isbn>
+3-540-23724-0
+</isbn>
+<volume>
+3302
+</volume>
+<year>
+2004
+</year>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/aplas/aplas2004.html
+</url>
+</proceedings>
+<proceedings mdate="2005-12-23" key="conf/aplas/2005">
+<editor>
+Kwangkeun Yi
+</editor>
+<title>
+Programming Languages and Systems, Third Asian Symposium, APLAS 2005,
+Tsukuba, Japan, November 2-5, 2005, Proceedings
+</title>
+<volume>
+3780
+</volume>
+<year>
+2005
+</year>
+<isbn>
+3-540-29735-9
+</isbn>
+<booktitle>
+APLAS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/aplas/aplas2005.html
+</url>
+</proceedings>
+<proceedings mdate="2006-11-02" key="conf/aplas/2006">
+<editor>
+Naoki Kobayashi
+</editor>
+<title>
+Programming Languages and Systems, 4th Asian Symposium, APLAS 2006, Sydney,
+Australia, November 8-10, 2006, Proceedings
+</title>
+<booktitle>
+APLAS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+4279
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2006
+</year>
+<isbn>
+3-540-48937-1
+</isbn>
+<url>
+db/conf/aplas/aplas2006.html
+</url>
+</proceedings>
+<proceedings mdate="2007-11-29" key="conf/aplas/2007">
+<editor>
+Zhong Shao
+</editor>
+<title>
+Programming Languages and Systems, 5th Asian Symposium, APLAS 2007,
+Singapore, November 29-December 1, 2007, Proceedings
+</title>
+<booktitle>
+APLAS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+4807
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2007
+</year>
+<isbn>
+978-3-540-76636-0
+</isbn>
+<url>
+db/conf/aplas/aplas2007.html
+</url>
+</proceedings>
+<proceedings mdate="2008-11-30" key="conf/aplas/2008">
+<editor>
+G. Ramalingam
+</editor>
+<title>
+Programming Languages and Systems, 6th Asian Symposium, APLAS 2008,
+Bangalore, India, December 9-11, 2008. Proceedings
+</title>
+<volume>
+5356
+</volume>
+<year>
+2008
+</year>
+<isbn>
+978-3-540-89329-5
+</isbn>
+<booktitle>
+APLAS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/aplas/aplas2008.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-07" key="conf/apn/1985">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1985, covers the 6th European Workshop on
+Applications and Theory in Petri Nets, Espoo, Finland in June 1985,
+selected papers
+</title>
+<booktitle>
+Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+222
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1986
+</year>
+<isbn>
+3-540-16480-4
+</isbn>
+<url>
+db/conf/apn/apn1985.html
+</url>
+</proceedings>
+<proceedings mdate="2002-06-10" key="conf/apn/1986">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1987, covers the 7th European Workshop on
+Applications and Theory of Petri Nets, Oxford, UK, June 1986
+</title>
+<booktitle>
+Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+266
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1987
+</year>
+<isbn>
+3-540-18086-9
+</isbn>
+<url>
+db/conf/apn/apn1986.html
+</url>
+</proceedings>
+<proceedings mdate="2002-08-14" key="conf/apn/1987">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1988, covers the 8th European Workshop on
+Applications and Theory of Petri Nets, held in Zaragoza, Spain in June
+1987, selected papers
+</title>
+<booktitle>
+European Workshop on Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+340
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1988
+</year>
+<isbn>
+3-540-50580-6
+</isbn>
+<url>
+db/conf/apn/apn1987.html
+</url>
+</proceedings>
+<proceedings mdate="2002-06-10" key="conf/apn/1988">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1989, covers the 9th European Workshop on
+Applications and Theory in Petri Nets, held in Venice, Italy in June 1988,
+selected papers
+</title>
+<booktitle>
+Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+424
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+3-540-52494-0
+</isbn>
+<url>
+db/conf/apn/apn1988.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-07" key="conf/apn/1989">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1990 [10th International Conference on Applications
+and Theory of Petri Nets, Bonn, Germany, June 1989, Proceedings]
+</title>
+<booktitle>
+Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+483
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1991
+</year>
+<isbn>
+3-540-53863-1
+</isbn>
+<url>
+db/conf/apn/apn1989.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-07" key="conf/apn/1990">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1991, Papers from the 11th International Conference
+on Applications and Theory of Petri Nets,  Paris, France, June 1990
+</title>
+<booktitle>
+Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+524
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1991
+</year>
+<isbn>
+3-540-54398-8
+</isbn>
+<url>
+db/conf/apn/apn1990.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-01" key="conf/apn/1991">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1993, Papers from the 12th International Conference
+on Applications and Theory of Petri Nets, Gjern, Denmark, June 1991
+</title>
+<booktitle>
+Applications and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+674
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-56689-9
+</isbn>
+<url>
+db/conf/apn/apn91.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-01" key="conf/apn/1992">
+<editor>
+Kurt Jensen
+</editor>
+<title>
+Application and Theory of Petri Nets 1992, 13th International Conference,
+Sheffield, UK, June 22-26, 1992, Proceedings
+</title>
+<booktitle>
+Application and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+616
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+3-540-55676-1
+</isbn>
+<url>
+db/conf/apn/apn92.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-01" key="conf/apn/1992d">
+<editor>
+Grzegorz Rozenberg
+</editor>
+<title>
+Advances in Petri Nets 1992, The DEMON Project
+</title>
+<booktitle>
+Advances in Petri Nets: The DEMON Project
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+609
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+3-540-55610-9
+</isbn>
+<url>
+db/conf/apn/apndemon92.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-01" key="conf/apn/1993">
+<editor>
+Marco Ajmone Marsan
+</editor>
+<title>
+Application and Theory of Petri Nets 1993, 14th International Conference,
+Chicago, Illinois, USA, June 21-25, 1993, Proceedings
+</title>
+<booktitle>
+Application and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+691
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1993
+</year>
+<isbn>
+3-540-56863-8
+</isbn>
+<url>
+db/conf/apn/apn93.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-04" key="conf/apn/1994">
+<editor>
+Robert Valette
+</editor>
+<title>
+Application and Theory of Petri Nets 1994, 15th International Conference,
+Zaragoza, Spain, June 20-24, 1994, Proceedings
+</title>
+<booktitle>
+Application and Theory of Petri Nets
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+815
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+3-540-58152-9
+</isbn>
+<url>
+db/conf/apn/apn1994.html
+</url>
+</proceedings>
+<proceedings mdate="2006-08-31" key="conf/appinf/1994">
+<editor>
+M. H. Hamza
+</editor>
+<title>
+The 12st IASTED International Conference on Applied Informatics, May 18-20,
+1994, Annecy, France
+</title>
+<booktitle>
+Applied Informatics
+</booktitle>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<year>
+1994
+</year>
+<isbn>
+0-88986-190-0
+</isbn>
+<url>
+db/conf/appinf/appinf1994.html
+</url>
+</proceedings>
+<proceedings mdate="2006-08-31" key="conf/appinf/1999">
+<editor>
+M. H. Hamza
+</editor>
+<title>
+Proceedings of the 17th IASTED International Conference on Applied
+Informatics, February 15-18, 1999, Innsbruck, Austria
+</title>
+<booktitle>
+Applied Informatics
+</booktitle>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+0-88986-241-9
+</isbn>
+<url>
+db/conf/appinf/appinf1999.html
+</url>
+</proceedings>
+<proceedings mdate="2003-07-15" key="conf/appinf/2003">
+<editor>
+M. H. Hamza
+</editor>
+<title>
+The 21st IASTED International Multi-Conference on Applied Informatics (AI
+2003), February 10-13, 2003, Innsbruck, Austria
+</title>
+<booktitle>
+Applied Informatics
+</booktitle>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+0-88986-345-8
+</isbn>
+<url>
+db/conf/appinf/appinf2003.html
+</url>
+</proceedings>
+<proceedings mdate="2005-04-08" key="conf/apvis/2005">
+<editor>
+Seok-Hee Hong
+</editor>
+<title>
+Asia-Pacific Symposium on Information Visualisation, APVIS 2005, Sydney,
+Australia,  January 27-29, 2005
+</title>
+<booktitle>
+APVIS
+</booktitle>
+<series href="db/series/crpit/index.html">
+CRPIT
+</series>
+<volume>
+45
+</volume>
+<publisher>
+Australian Computer Society
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+1-920682-27-9
+</isbn>
+<url>
+db/conf/apvis/apvis2005.html
+</url>
+</proceedings>
+<proceedings mdate="2002-07-16" key="conf/arcs/1974">
+<editor>
+Hans-Otto Leilich
+</editor>
+<title>
+Fachtagung Struktur und Betrieb von Rechensystemen, GI-NTG, Braunschweig,
+20.-22.3.1974, Proceedings
+</title>
+<booktitle>
+ARCS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+8
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1974
+</year>
+<isbn>
+3-540-06677-2
+</isbn>
+<url>
+db/conf/arcs/arcs1974.html
+</url>
+</proceedings>
+<proceedings mdate="2003-01-22" key="conf/arcs/1975">
+<editor>
+Wolfgang H
+ändler
+</editor>
+<title>
+Computer Architecture, Workshop of the Gesellschaft f
+ür Informatik, Erlangen, May 22-23, 1995, Proceedings
+</title>
+<booktitle>
+Computer Architecture
+</booktitle>
+<series href="db/series/ifb/index.html">
+Informatik-Fachberichte
+</series>
+<volume>
+4
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1976
+</year>
+<isbn>
+3-540-07761-8
+</isbn>
+<url>
+db/conf/arcs/arcs1975.html
+</url>
+</proceedings>
+<proceedings mdate="2003-01-24" key="conf/arcs/1980">
+<editor>
+Gerhard Zimmermann
+</editor>
+<title>
+GI-NTG Fachtagung Struktur und Betrieb von Rechensystemen, Kiel, 19.-21. M
+ärz 1980, Proceedings
+</title>
+<booktitle>
+ARCS
+</booktitle>
+<series href="db/series/ifb/index.html">
+Informatik-Fachberichte
+</series>
+<volume>
+27
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1980
+</year>
+<isbn>
+3-540-09952-2
+</isbn>
+<url>
+db/conf/arcs/arcs1980.html
+</url>
+</proceedings>
+<proceedings mdate="2003-02-12" key="conf/arcs/1984">
+<editor>
+Horst D. Wettstein
+</editor>
+<title>
+Architektur und Betrieb von Rechensystemen, 8. GI-NTG-Fachtagung,
+Karlsruhe, 26.-28. M
+ärz 1984, Proceedings
+</title>
+<booktitle>
+ARCS
+</booktitle>
+<series href="db/series/ifb/index.html">
+Informatik-Fachberichte
+</series>
+<volume>
+78
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1984
+</year>
+<isbn>
+3-540-12913-8
+</isbn>
+<url>
+db/conf/arcs/arcs1984.html
+</url>
+</proceedings>
+<proceedings mdate="2002-03-21" key="conf/arcs/1990">
+<editor>
+P. M
+üller-Stoy
+</editor>
+<title>
+Architektur von Rechensystemen, Tagungsband, 11. ITG/GI-Fachtagung, 7.-9. M
+ärz 1990, München, Germany
+</title>
+<booktitle>
+ARCS
+</booktitle>
+<publisher>
+VDE Verlag
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+3-8007-1688-7
+</isbn>
+<url>
+db/conf/arcs/arcs1990.html
+</url>
+</proceedings>
+<proceedings mdate="2002-04-15" key="conf/arcs/1992">
+<editor>
+Alfons J. Jammel
+</editor>
+<title>
+Architektur von Rechensystemen, 12. GI/ITG-Fachtagung, 23.-25. M
+ärz 1992, Kiel, Germany
+</title>
+<booktitle>
+ARCS
+</booktitle>
+<series>
+Informatik Aktuell
+</series>
+<publisher>
+Springer
+</publisher>
+<year>
+1992
+</year>
+<isbn>
+3-540-55340-1
+</isbn>
+<url>
+db/conf/arcs/arcs1992.html
+</url>
+</proceedings>
+<proceedings mdate="2002-04-24" key="conf/arcs/1997">
+<editor>
+Djamshid Tavangarian
+</editor>
+<title>
+Architektur von Rechensystemen, Arbeitsteilige Systemarchitekturen:
+Konzepte, L
+ösungen, Anwendungen, Trends - Vorträge der 14. ITG/GI-Fachtagung ARCS
+'97, 8.-11. September 1997, Rostock, Germany
+</title>
+<booktitle>
+ARCS
+</booktitle>
+<publisher>
+VDE Verlag
+</publisher>
+<year>
+1997
+</year>
+<isbn>
+3-8007-2295-X
+</isbn>
+<url>
+db/conf/arcs/arcs1997.html
+</url>
+</proceedings>
+<proceedings mdate="2002-02-04" key="conf/ares/1998">
+<editor>
+Frank van der Linden
+</editor>
+<title>
+Development and Evolution of Software Architectures for Product Families,
+Second International ESPRIT ARES Workshop, Las Palmas de Gran Canaria,
+Spain, February 26-27, 1998, Proceedings
+</title>
+<booktitle>
+ESPRIT ARES Workshop
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1429
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1998
+</year>
+<isbn>
+3-540-64916-6
+</isbn>
+<url>
+db/conf/ares/ares1998.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/arts/1999">
+<editor>
+Joost-Pieter Katoen
+</editor>
+<title>
+Formal Methods for Real-Time and Probabilistic Systems, 5th International
+AMAST Workshop, ARTS'99, Bamberg, Germany, May 26-28, 1999. Proceedings
+</title>
+<booktitle>
+ARTS
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1601
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1999
+</year>
+<isbn>
+3-540-66010-0
+</isbn>
+<url>
+db/conf/arts/arts1999.html
+</url>
+</proceedings>
+<proceedings mdate="2003-10-13" key="conf/asc/2000">
+<editor>
+M. K. Hamza
+</editor>
+<title>
+Artificial Intelligence and Soft Computing, July 24-26, 2000, Banff,
+Alberta, Canada
+</title>
+<booktitle>
+Artificial Intelligence and Soft Computing
+</booktitle>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+0-88986-292-3
+</isbn>
+<url>
+db/conf/asc/asc2000.html
+</url>
+</proceedings>
+<proceedings mdate="2007-01-26" key="conf/asc/2006">
+<editor>
+Angel P. Del Pobil
+</editor>
+<title>
+Artificial Intelligence and Soft Computing, August 28-30, 2006, Palma de
+Mallorca, Spain
+</title>
+<booktitle>
+Artificial Intelligence and Soft Computing
+</booktitle>
+<publisher>
+IASTED/ACTA Press
+</publisher>
+<year>
+2006
+</year>
+<isbn>
+0-88986-612-0
+</isbn>
+<url>
+db/conf/asc/asc2006.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/asiacrypt/2000">
+<editor>
+Tatsuaki Okamoto
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2000, 6th International Conference on
+the Theory and Application of Cryptology and Information Security, Kyoto,
+Japan, December 3-7, 2000, Proceedings
+</title>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+1976
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2000
+</year>
+<isbn>
+3-540-41404-5
+</isbn>
+<url>
+db/conf/asiacrypt/asiacrypt2000.html
+</url>
+</proceedings>
+<proceedings mdate="2002-01-03" key="conf/asiacrypt/2001">
+<editor>
+Colin Boyd
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2001, 7th International Conference on
+the Theory and Application of Cryptology and Information Security, Gold
+Coast, Australia, December 9-13, 2001, Proceedings
+</title>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2248
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2001
+</year>
+<isbn>
+3-540-42987-5
+</isbn>
+<url>
+db/conf/asiacrypt/asiacrypt2001.html
+</url>
+</proceedings>
+<proceedings mdate="2002-11-13" key="conf/asiacrypt/2002">
+<editor>
+Yuliang Zheng
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2002, 8th International Conference on
+the Theory and Application of Cryptology and Information Security,
+Queenstown, New Zealand, December 1-5, 2002, Proceedings
+</title>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2501
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+3-540-00171-9
+</isbn>
+<url>
+db/conf/asiacrypt/asiacrypt2002.html
+</url>
+</proceedings>
+<proceedings mdate="2004-01-07" key="conf/asiacrypt/2003">
+<editor>
+Chi-Sung Laih
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2003, 9th International Conference on
+the Theory and Application of Cryptology and Information Security, Taipei,
+Taiwan, November 30 - December 4, 2003, Proceedings
+</title>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2894
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+3-540-20592-6
+</isbn>
+<url>
+db/conf/asiacrypt/asiacrypt2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-11-17" key="conf/asiacrypt/2004">
+<editor>
+Pil Joong Lee
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2004, 10th International Conference on
+the Theory and Application of Cryptology and Information Security, Jeju
+Island, Korea, December 5-9, 2004, Proceedings
+</title>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+3329
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2004
+</year>
+<isbn>
+3-540-23975-8
+</isbn>
+<url>
+db/conf/asiacrypt/asiacrypt2004.html
+</url>
+</proceedings>
+<proceedings mdate="2006-05-31" key="conf/asiacrypt/2005">
+<editor>
+Bimal K. Roy
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2005, 11th International Conference on
+the Theory and Application of Cryptology and Information Security, Chennai,
+India, December 4-8, 2005, Proceedings
+</title>
+<volume>
+3788
+</volume>
+<year>
+2005
+</year>
+<isbn>
+3-540-30684-6
+</isbn>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/asiacrypt/asiacrypt2005.html
+</url>
+</proceedings>
+<proceedings mdate="2007-11-06" key="conf/asiacrypt/2007">
+<editor>
+Kaoru Kurosawa
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2007, 13th International Conference on
+the Theory and Application of Cryptology and Information Security, Kuching,
+Malaysia, December 2-6, 2007, Proceedings
+</title>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+4833
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2007
+</year>
+<isbn>
+978-3-540-76899-9
+</isbn>
+<url>
+db/conf/asiacrypt/asiacrypt2007.html
+</url>
+</proceedings>
+<proceedings mdate="2008-12-04" key="conf/asiacrypt/2008">
+<editor>
+Josef Pieprzyk
+</editor>
+<title>
+Advances in Cryptology - ASIACRYPT 2008, 14th International Conference on
+the Theory and Application of Cryptology and Information Security,
+Melbourne, Australia, December 7-11, 2008. Proceedings
+</title>
+<volume>
+5350
+</volume>
+<year>
+2008
+</year>
+<isbn>
+978-3-540-89254-0
+</isbn>
+<booktitle>
+ASIACRYPT
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/asiacrypt/asiacrypt2008.html
+</url>
+</proceedings>
+<proceedings mdate="2002-11-14" key="conf/asian/2002">
+<editor>
+Alain Jean-Marie
+</editor>
+<title>
+Advances in Computing Science - ASIAN 2002, Internet Computing and
+Modeling, Grid Computing, Peer-to-Peer Computing, and Cluster Computing,
+7th Asian Computing Science Conference, Hanoi, Vietnam, December 4-6, 2002,
+Proceedings
+</title>
+<booktitle>
+ASIAN
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2550
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2002
+</year>
+<isbn>
+3-540-00195-6
+</isbn>
+<url>
+db/conf/asian/asian2002.html
+</url>
+</proceedings>
+<proceedings mdate="2004-01-12" key="conf/asian/2003">
+<editor>
+Vijay A. Saraswat
+</editor>
+<title>
+Advances in Computing Science - ASIAN 2003 Programming Languages and
+Distributed Computation, 8th Asian Computing Science Conference, Mumbai,
+India, December 10-14, 2003, Proceedings
+</title>
+<booktitle>
+ASIAN
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+2896
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2003
+</year>
+<isbn>
+3-540-20632-9
+</isbn>
+<url>
+db/conf/asian/asian2003.html
+</url>
+</proceedings>
+<proceedings mdate="2004-12-13" key="conf/asian/2004">
+<editor>
+Michael J. Maher
+</editor>
+<title>
+Advances in Computer Science - ASIAN 2004, Higher-Level Decision Making,
+9th Asian Computing Science Conference, Dedicated to Jean-Louis Lassez on
+the Occasion of His 5th Cycle Birthday, Chiang Mai, Thailand, December
+8-10, 2004, Proceedings
+</title>
+<isbn>
+3-540-24087-X
+</isbn>
+<booktitle>
+ASIAN
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+3321
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2004
+</year>
+<url>
+db/conf/asian/asian2004.html
+</url>
+</proceedings>
+<proceedings mdate="2007-11-19" key="conf/asian/2007">
+<editor>
+Iliano Cervesato
+</editor>
+<title>
+Advances in Computer Science - ASIAN 2007. Computer and Network Security,
+12th Asian Computing Science Conference, Doha, Qatar, December 9-11, 2007,
+Proceedings
+</title>
+<booktitle>
+ASIAN
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<volume>
+4846
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+2007
+</year>
+<isbn>
+978-3-540-76927-9
+</isbn>
+<url>
+db/conf/asian/asian2007.html
+</url>
+</proceedings>
+<proceedings mdate="2005-02-09" key="conf/asiasim/2004">
+<editor>
+Doo-Kwon Baik
+</editor>
+<title>
+Systems Modeling and Simulation: Theory and Applications, Third Asian
+Simulation Conference, AsiaSim 2004, Jeju Island, Korea, October 4-6, 2004,
+Revised Selected Papers
+</title>
+<volume>
+3398
+</volume>
+<isbn>
+3-540-24477-8
+</isbn>
+<year>
+2005
+</year>
+<booktitle>
+AsiaSim
+</booktitle>
+<series href="db/journals/lncs.html">
+Lecture Notes in Computer Science
+</series>
+<publisher>
+Springer
+</publisher>
+<url>
+db/conf/asiasim/asiasim2004.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-03" key="conf/aspdac/1995">
+<editor>
+Isao Shirakawa
+</editor>
+<title>
+Proceedings of the 1995 Conference on Asia Pacific Design Automation,
+Makuhari, Massa, Chiba, Japan, August 29 - September 1, 1995
+</title>
+<booktitle>
+ASP-DAC
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<isbn>
+0-89791-766-9
+</isbn>
+<year>
+1995
+</year>
+<url>
+db/conf/aspdac/aspdac1995.html
+</url>
+</proceedings>
+<proceedings mdate="2004-09-01" key="conf/aspdac/2004">
+<editor>
+Masaharu Imai
+</editor>
+<title>
+Proceedings of the 2004 Conference on Asia South Pacific Design Automation:
+Electronic Design and Solution Fair 2004, Yokohama, Japan, January 27-30,
+2004
+</title>
+<booktitle>
+ASP-DAC
+</booktitle>
+<publisher>
+IEEE
+</publisher>
+<year>
+2004
+</year>
+<url>
+db/conf/aspdac/aspdac2004.html
+</url>
+<isbn>
+0-7803-8175-0
+</isbn>
+</proceedings>
+<proceedings mdate="2008-05-06" key="conf/aspdac/2005">
+<editor>
+Ting-Ao Tang
+</editor>
+<title>
+Proceedings of the 2005 Conference on Asia South Pacific Design Automation,
+ASP-DAC 2005, Shanghai, China, January 18-21, 2005
+</title>
+<publisher>
+ACM Press
+</publisher>
+<year>
+2005
+</year>
+<isbn>
+0-7803-8737-6
+</isbn>
+<booktitle>
+ASP-DAC
+</booktitle>
+<url>
+db/conf/aspdac/aspdac2005.html
+</url>
+</proceedings>
+<proceedings mdate="2006-04-28" key="conf/aspdac/2006">
+<editor>
+Fumiyasu Hirose
+</editor>
+<title>
+Proceedings of the 2006 Conference on Asia South Pacific Design Automation:
+ASP-DAC 2006, Yokohama, Japan, January 24-27, 2006
+</title>
+<booktitle>
+ASP-DAC
+</booktitle>
+<publisher>
+IEEE
+</publisher>
+<year>
+2006
+</year>
+<url>
+db/conf/aspdac/aspdac2006.html
+</url>
+<isbn>
+0-7803-9451-8
+</isbn>
+</proceedings>
+<proceedings mdate="2007-05-15" key="conf/asplos/2006plos">
+<editor>
+Christian W. Probst
+</editor>
+<title>
+Proceedings of the 3rd Workshop on Programming Languages and Operating
+Systems: Linguistic Support for Modern Operating Systems, PLOS 2006, San
+Jose, California, USA, October 22, 2006
+</title>
+<booktitle>
+PLOS
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2006
+</year>
+<url>
+db/conf/asplos/plos2006.html
+</url>
+<isbn>
+1-59593-577-0
+</isbn>
+</proceedings>
+<proceedings mdate="2007-05-15" key="conf/asplos/2006asid">
+<editor>
+Josep Torrellas
+</editor>
+<title>
+Proceedings of the 1st Workshop on Architectural and System Support for
+Improving Software Dependability, ASID 2006, San Jose, California, USA,
+October 21, 2006
+</title>
+<booktitle>
+ASID
+</booktitle>
+<publisher>
+ACM
+</publisher>
+<year>
+2006
+</year>
+<url>
+db/conf/asplos/asid2006.html
+</url>
+<isbn>
+1-59593-576-2
+</isbn>
+</proceedings>
+<proceedings mdate="2002-08-27" key="conf/asst/1987">
+<editor>
+Dietrich Meyer-Ebrecht
+</editor>
+<title>
+ASST '87, 6. Aachener Symposium f
+ür Signaltheorie: Mehrdimensionale Signale und Bildverarbeitung, Aachen,
+9.-12. September 1987, Proceedings
+</title>
+<booktitle>
+ASST
+</booktitle>
+<series href="db/series/ifb/index.html">
+Informatik-Fachberichte
+</series>
+<volume>
+153
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1987
+</year>
+<isbn>
+3-540-18401-5
+</isbn>
+<url>
+db/conf/asst/asst1987.html
+</url>
+</proceedings>
+<proceedings mdate="2002-08-02" key="conf/asst/1990">
+<editor>
+Walter Ameling
+</editor>
+<title>
+ASST '90, 7. Aachener Symposium f
+ür Signaltheorie: Modellgestützte Signalverarbeitung, Aachen, 12.-14.
+September 1990, Proceedings
+</title>
+<booktitle>
+ASST
+</booktitle>
+<series href="db/series/ifb/index.html">
+Informatik-Fachberichte
+</series>
+<volume>
+253
+</volume>
+<publisher>
+Springer
+</publisher>
+<year>
+1990
+</year>
+<isbn>
+3-540-53124-6
+</isbn>
+<url>
+db/conf/asst/asst1990.html
+</url>
+</proceedings>
+</dblp>

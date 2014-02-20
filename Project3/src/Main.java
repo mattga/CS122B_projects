@@ -84,7 +84,7 @@ public class Main {
 					s1 = s.nextLine();
 					System.out.print("Password: ");
 					s2 = s.nextLine();
-					statement = cm.connect("root", "");					
+					statement = cm.connect("root", "ma1991ga");					
 					cm.createStoredProcedure();
 				}
 
