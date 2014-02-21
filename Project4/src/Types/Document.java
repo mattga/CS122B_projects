@@ -1,5 +1,7 @@
 package Types;
 
+import java.util.List;
+
 public class Document {
 	/** Document Attributes **/
 	public String title;
@@ -27,4 +29,7 @@ public class Document {
 	
 	/** Publisher Attributes **/
 	public String publisher_name;
+	
+	/** Author Attributes **/
+	public List<String> author_names;
 }

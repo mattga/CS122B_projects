@@ -46,9 +46,16 @@ public class ArticleXMLParser extends DefaultHandler {
 		
 	}
 	
-	/******************
+	/*******************************************************************************************************
 	 * Event Handlers
-	 ******************/
+	 * 
+	 * Possible Optimizations:
+	 * - If an order can be assumed within the document tags of the XML, use switch instead of if-elses
+	 * - Reduce space complexity by executing queries every time a document element is finished
+	 * - Turn off auto commit and manually commit after parsing finishes
+	 * - 
+	 *******************************************************************************************************/
+	
 	
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
