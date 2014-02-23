@@ -107,7 +107,7 @@ public class MySQL {
 		return key.getInt(1);
 	}
 
-	public int insertPublisher(String publisher_name) throws SQLException {
+	public static int insertPublisher(String publisher_name) throws SQLException {
 		if(_this == null)
 			_this = new MySQL();
 		
@@ -126,7 +126,7 @@ public class MySQL {
 		return key.getInt(1);
 	}
 
-	public int insertAuthor(String author_name) throws SQLException {
+	public static int insertAuthor(String author_name) throws SQLException {
 		if(_this == null)
 			_this = new MySQL();
 		
@@ -145,7 +145,7 @@ public class MySQL {
 		return key.getInt(1);
 	}
 
-	public static int insertDocument(String title, int start_page, int end_page, int year, int volume, int number, String url, 
+	public static int insertDocument(String title, int start_page, int end_page, int year, String volume, int number, String url, 
 			String ee, String cdrom, String cite, String crossref, String isbn, String series, String editor_id, 
 			String genre_id, String booktitle_id, String publisher_id) throws SQLException {
 		if(_this == null)
@@ -156,7 +156,7 @@ public class MySQL {
 		insDocument.setInt(2, start_page);
 		insDocument.setInt(3, end_page);
 		insDocument.setInt(4, year);
-		insDocument.setInt(5, volume);
+		insDocument.setString(5, volume);
 		insDocument.setInt(6, number);
 		insDocument.setString(7, url);
 		insDocument.setString(8, ee);
@@ -180,8 +180,8 @@ public class MySQL {
 		if(_this == null)
 			_this = new MySQL();
 		
-		insAuthorMapping.setInt(1, author_id);
 		insAuthorMapping.setInt(1, document_id);
+		insAuthorMapping.setInt(2, author_id);
 		
 		insAuthorMapping.execute();
 		ResultSet key = insAuthorMapping.getGeneratedKeys();

@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import Helpers.MySQL;
 import Types.Document;
 import Types.Element;
 
@@ -30,6 +32,33 @@ public class ArticleXMLParser extends DefaultHandler {
 		printData();
 	}
 
+	public void insertRecords() {
+		parseDocument(mFilePath);
+		for (Document d : mDocuments) {
+			try {
+				int titleId = MySQL.insertBooktitle(d.book_title);
+				int editorId = MySQL.insertEditor(d.editor_name);
+				int genreId = MySQL.insertGenre(d.genre_name);
+				int publisherId =MySQL.insertPublisher(d.publisher_name);
+				int documentId = MySQL.insertDocument(d.book_title, d.start_page, d.end_page, 
+													  d.year, d.volume, d.number, 
+													  d.url, d.ee, d.cdrom, d.cite, d.crossref, 
+													  d.isbn, d.series, String.valueOf(editorId), String.valueOf(genreId), String.valueOf(titleId), String.valueOf(publisherId));
+				
+				// Loop through all authors.
+				int[] authorIds = new int[d.author_names.size()];
+				int i = 0;
+				for (String author : d.author_names)
+					authorIds[i++] = MySQL.insertAuthor(author);
+				// Insert all authors...
+				for (int j = 0; j < authorIds.length; j++) 
+					MySQL.insertAuthorMapping(authorIds[j], documentId);
+				
+			} catch (SQLException e) { e.printStackTrace();}
+		}
+		
+	}
+	
 	private void parseDocument(String filepath) {
 		
 		//get a factory
@@ -110,8 +139,16 @@ public class ArticleXMLParser extends DefaultHandler {
 		    mCurrentDocument.author_names.add(mCurrentString);
 		    break;
 		case PAGES:
-			mCurrentDocument.start_page = Integer.parseInt(mCurrentString.split("-")[0]);
-		    mCurrentDocument.end_page = Integer.parseInt(mCurrentString.split("-")[1]);
+			if (!mCurrentString.equals("") && mCurrentString.split("-").length > 1 && mCurrentString != null) {
+				try {
+				mCurrentDocument.start_page = Integer.parseInt(mCurrentString.split("-")[0]);
+		    	mCurrentDocument.end_page = Integer.parseInt(mCurrentString.split("-")[1]);
+				} catch(Exception e) {
+					// catching a weird number formatting error in big-file
+					mCurrentDocument.start_page = 0;
+					mCurrentDocument.end_page = 0;
+				}
+			}
 		    break;
 		case YEAR: 
 		    mCurrentDocument.year = !mCurrentString.equals("") ? Integer.parseInt(mCurrentString) : 0;
@@ -143,6 +180,7 @@ public class ArticleXMLParser extends DefaultHandler {
 		case SERIES: 
 		    mCurrentDocument.series = mCurrentString;
 		    break;
+		default://do nothing?
 		}
 	}
 	

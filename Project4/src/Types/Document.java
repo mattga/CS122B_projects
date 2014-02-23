@@ -6,11 +6,11 @@ import java.util.List;
 public class Document {
 	/** Document Attributes **/
 	public String title;
-	public Integer start_page;
-	public Integer end_page;
-	public Integer year;
+	public int start_page;
+	public int end_page;
+	public int year;
 	public String volume;
-	public Integer number;
+	public int number;
 	public String url;
 	public String ee;
 	public String cdrom;
