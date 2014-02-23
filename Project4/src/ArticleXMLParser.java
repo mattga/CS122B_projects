@@ -1,5 +1,9 @@
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -10,14 +14,22 @@ import org.xml.sax.SAXException;
 
 import org.xml.sax.helpers.DefaultHandler;
 
+import Types.Document;
+import Types.Element;
+
 public class ArticleXMLParser extends DefaultHandler {
 
-	public ArticleXMLParser(){
-		
+	private List<Document> mDocuments = new ArrayList<Document>();;
+	private Document mCurrentDocument;
+	private String mCurrentString;
+	private String mFilePath;
+	
+	public ArticleXMLParser(String filePath){
+		mFilePath = filePath;
 	}
 	
 	public void runExample() {
-		parseDocument("final-data.xml");
+		parseDocument(mFilePath);
 		printData();
 	}
 
@@ -43,7 +55,10 @@ public class ArticleXMLParser extends DefaultHandler {
 	}
 
 	private void printData(){
-		
+		System.out.println("No of Documents '" + mDocuments.size() + "'.");
+		for (Document d : mDocuments) {
+			System.out.println(d);
+		}
 	}
 	
 	/*******************************************************************************************************
@@ -59,16 +74,132 @@ public class ArticleXMLParser extends DefaultHandler {
 	
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-		
+		//reset
+		mCurrentString = "";
+		if(qName.equalsIgnoreCase("article") ||
+				qName.equalsIgnoreCase("inproceedings") ||
+				qName.equalsIgnoreCase("proceedings") ||
+				qName.equalsIgnoreCase("book") ||
+				qName.equalsIgnoreCase("incollection") ||
+				qName.equalsIgnoreCase("phdthesis") ||
+				qName.equalsIgnoreCase("mastersthesis") ||
+				qName.equalsIgnoreCase("www")) {
+			//create a new instance of employee
+			mCurrentDocument = new Document();
+			mCurrentDocument.mdate = attributes.getValue("mdate"); 
+			mCurrentDocument.key   = attributes.getValue("key");
+		}
+
 	}
 
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
-		
+		mCurrentString = new String(ch,start,length).trim();
 	}
 	
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
+		switch(getEnum(qName)) {
+		case DOCUMENT:
+			mDocuments.add(mCurrentDocument);
+			break;
+		case TITLE: 
+		    mCurrentDocument.title = mCurrentString;
+		    break;
+		case EDITOR: 
+		    mCurrentDocument.editor_name = mCurrentString;
+		    break;
+		case AUTHOR: 
+		    mCurrentDocument.author_names.add(mCurrentString);
+		    break;
+		case PAGES:
+			mCurrentDocument.start_page = mCurrentString.split("-")[0];
+		    mCurrentDocument.end_page = mCurrentString.split("-")[1];
+		    break;
+		case YEAR: 
+		    mCurrentDocument.year = Integer.parseInt(mCurrentString);
+		    break;
+		case VOLUME: 
+		    mCurrentDocument.volume = mCurrentString;
+		    break;
+		case NUMBER: 
+		    mCurrentDocument.number = Integer.parseInt(mCurrentString);
+		    break;
+		case URL: 
+		    mCurrentDocument.url = mCurrentString;
+		    break;
+		case EE: 
+		    mCurrentDocument.ee = mCurrentString;
+		    break;
+		case CDROM: 
+		    mCurrentDocument.cdrom = mCurrentString;
+		    break;
+		case CITE: 
+		    mCurrentDocument.cite = mCurrentString;
+		    break;
+		case CROSSREF: 
+		    mCurrentDocument.crossref = mCurrentString;
+		    break;
+		case ISBN: 
+		    mCurrentDocument.isbn = mCurrentString;
+		    break;
+		case SERIES: 
+		    mCurrentDocument.series = mCurrentString;
+		    break;
+		}
+	}
+	
+	private Element getEnum(String tagName) {
+		// Lower Case it, avoid typos... :-P
+		tagName = tagName.toLowerCase();
+		
+		if (tagName.equals("author"))
+		    return Element.AUTHOR;
+		if (tagName.equals("editor"))
+		    return Element.EDITOR;
+		if (tagName.equals("title"))
+		    return Element.TITLE;
+		if (tagName.equals("booktitle"))
+		    return Element.BOOKTITLE;
+		if (tagName.equals("pages"))
+		    return Element.PAGES;
+		if (tagName.equals("year"))
+		    return Element.YEAR;
+		if (tagName.equals("address"))
+		    return Element.ADDRESS;
+		if (tagName.equals("journal"))
+		    return Element.JOURNAL;
+		if (tagName.equals("volume"))
+		    return Element.VOLUME;
+		if (tagName.equals("number"))
+		    return Element.NUMBER;
+		if (tagName.equals("month"))
+		    return Element.MONTH;
+		if (tagName.equals("url"))
+		    return Element.URL;
+		if (tagName.equals("ee"))
+		    return Element.EE;
+		if (tagName.equals("cdrom"))
+		    return Element.CDROM;
+		if (tagName.equals("cite"))
+		    return Element.CITE;
+		if (tagName.equals("publisher"))
+		    return Element.PUBLISHER;
+		if (tagName.equals("note"))
+		    return Element.NOTE;
+		if (tagName.equals("crossref"))
+		    return Element.CROSSREF;
+		if (tagName.equals("isbn"))
+		    return Element.ISBN;
+		if (tagName.equals("series"))
+		    return Element.SERIES;
+		if (tagName.equals("school"))
+		    return Element.SCHOOL;
+		if (tagName.equals("chapter"))
+		    return Element.CHAPTER;
 
+		
+		// Default Return the document tag....?
+		return Element.DOCUMENT;
 	}
 }
