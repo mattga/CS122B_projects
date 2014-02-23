@@ -6,8 +6,8 @@ import java.util.List;
 public class Document {
 	/** Document Attributes **/
 	public String title;
-	public String start_page;
-	public String end_page;
+	public Integer start_page;
+	public Integer end_page;
 	public Integer year;
 	public String volume;
 	public Integer number;

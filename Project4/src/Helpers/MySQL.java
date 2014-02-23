@@ -9,16 +9,16 @@ import java.sql.Statement;
 
 
 public class MySQL {
-	private PreparedStatement selGenre, selPerson, selBooktitle, selPublisher;
-	private PreparedStatement insDocument, insGenre, insPerson, insBooktitle, insPublisher, insAuthorMapping;
-	private Connection con;
-	
+	private static PreparedStatement selGenre, selPerson, selBooktitle, selPublisher;
+	private static PreparedStatement insDocument, insGenre, insPerson, insBooktitle, insPublisher, insAuthorMapping;
 	private static MySQL _this;
 
+	private Connection con;
+	
 	public MySQL() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con  = DriverManager.getConnection("jdbc:mysql://localhost/moviedb?user=testuser&pass=testpass");
+			con  = DriverManager.getConnection("jdbc:mysql://localhost/documentdb?user=testuser&password=testpass");
 
 			// Prepare queries
 			selGenre = con.prepareStatement("SELECT id FROM tbl_genres WHERE genre_name=?");
@@ -50,7 +50,7 @@ public class MySQL {
 		return _this.con;
 	}
 
-	public int insertGenre(String genre_name) throws SQLException {
+	public static int insertGenre(String genre_name) throws SQLException {
 		if(_this == null)
 			_this = new MySQL();
 		
@@ -65,10 +65,11 @@ public class MySQL {
 		insGenre.setString(1, genre_name);
 		insGenre.execute();
 		key = insGenre.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 
-	public int insertEditor(String editor_name) throws SQLException {
+	public static int insertEditor(String editor_name) throws SQLException {
 		if(_this == null)
 			_this = new MySQL();
 		
@@ -83,10 +84,11 @@ public class MySQL {
 		insPerson.setString(1, editor_name);
 		insPerson.execute();
 		key = insPerson.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 
-	public int insertBooktitle(String booktitle) throws SQLException {
+	public static int insertBooktitle(String booktitle) throws SQLException {
 		if(_this == null)
 			_this = new MySQL();
 		
@@ -101,6 +103,7 @@ public class MySQL {
 		insBooktitle.setString(1, booktitle);
 		insBooktitle.execute();
 		key = insBooktitle.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 
@@ -119,6 +122,7 @@ public class MySQL {
 		insPublisher.setString(1, publisher_name);
 		insPublisher.execute();
 		key = insPublisher.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 
@@ -137,10 +141,11 @@ public class MySQL {
 		insPerson.setString(1, author_name);
 		insPerson.execute();
 		key = insPerson.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 
-	public int insertDocument(String title, int start_page, int end_page, int year, int volume, int number, String url, 
+	public static int insertDocument(String title, int start_page, int end_page, int year, int volume, int number, String url, 
 			String ee, String cdrom, String cite, String crossref, String isbn, String series, String editor_id, 
 			String genre_id, String booktitle_id, String publisher_id) throws SQLException {
 		if(_this == null)
@@ -167,10 +172,11 @@ public class MySQL {
 		
 		insDocument.execute();
 		ResultSet key = insDocument.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 	
-	public int insertAuthorMapping(int author_id, int document_id) throws SQLException {
+	public static int insertAuthorMapping(int author_id, int document_id) throws SQLException {
 		if(_this == null)
 			_this = new MySQL();
 		
@@ -179,6 +185,7 @@ public class MySQL {
 		
 		insAuthorMapping.execute();
 		ResultSet key = insAuthorMapping.getGeneratedKeys();
+		key.first();
 		return key.getInt(1);
 	}
 }

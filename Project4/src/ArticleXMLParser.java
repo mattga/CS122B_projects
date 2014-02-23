@@ -1,8 +1,6 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -11,7 +9,6 @@ import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
-
 import org.xml.sax.helpers.DefaultHandler;
 
 import Types.Document;
@@ -113,8 +110,8 @@ public class ArticleXMLParser extends DefaultHandler {
 		    mCurrentDocument.author_names.add(mCurrentString);
 		    break;
 		case PAGES:
-			mCurrentDocument.start_page = mCurrentString.split("-")[0];
-		    mCurrentDocument.end_page = mCurrentString.split("-")[1];
+			mCurrentDocument.start_page = Integer.parseInt(mCurrentString.split("-")[0]);
+		    mCurrentDocument.end_page = Integer.parseInt(mCurrentString.split("-")[1]);
 		    break;
 		case YEAR: 
 		    mCurrentDocument.year = Integer.parseInt(mCurrentString);
