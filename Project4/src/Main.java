@@ -4,8 +4,8 @@ public class Main {
 		
 		// Run Article Parser...
 		 ArticleXMLParser sax = new ArticleXMLParser("res/dblp-data-small/final-data.xml");
-		//sax.runExample();
-		 sax.insertRecords();
+		 sax.runExample();
+//		 sax.insertRecords();
 		
 //		try {
 //			System.out.println(MySQL.insertBooktitle("book title1"));

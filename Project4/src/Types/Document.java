@@ -9,7 +9,7 @@ public class Document {
 	public int start_page;
 	public int end_page;
 	public int year;
-	public String volume;
+	public int volume;
 	public int number;
 	public String url;
 	public String ee;
@@ -44,7 +44,10 @@ public class Document {
 		StringBuilder out = new StringBuilder();
 		out.append("BOOK DOCUMENT:\n");
 		out.append("title: "+ title + "\n");
+		out.append("book_title: "+ book_title + "\n");
+		out.append("genre_name: "+ genre_name + "\n");
 		out.append("editor: "+ editor_name + "\n");
+		out.append("publisher_name: "+ publisher_name + "\n");
 		out.append("start_page: "+ start_page + "\n");
 		out.append("end_page: "+ end_page + "\n");
 		out.append("year: "+ year + "\n");

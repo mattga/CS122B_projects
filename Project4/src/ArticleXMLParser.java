@@ -39,8 +39,8 @@ public class ArticleXMLParser extends DefaultHandler {
 				int titleId = MySQL.insertBooktitle(d.book_title);
 				int editorId = MySQL.insertEditor(d.editor_name);
 				int genreId = MySQL.insertGenre(d.genre_name);
-				int publisherId =MySQL.insertPublisher(d.publisher_name);
-				int documentId = MySQL.insertDocument(d.book_title, d.start_page, d.end_page, 
+				int publisherId = MySQL.insertPublisher(d.publisher_name);
+				int documentId = MySQL.insertDocument(d.title, d.start_page, d.end_page, 
 													  d.year, d.volume, d.number, 
 													  d.url, d.ee, d.cdrom, d.cite, d.crossref, 
 													  d.isbn, d.series, String.valueOf(editorId), String.valueOf(genreId), String.valueOf(titleId), String.valueOf(publisherId));
@@ -132,6 +132,9 @@ public class ArticleXMLParser extends DefaultHandler {
 		case TITLE: 
 		    mCurrentDocument.title = mCurrentString;
 		    break;
+		case BOOKTITLE:
+			mCurrentDocument.book_title = mCurrentString;
+			break;
 		case EDITOR: 
 		    mCurrentDocument.editor_name = mCurrentString;
 		    break;
@@ -144,7 +147,7 @@ public class ArticleXMLParser extends DefaultHandler {
 				mCurrentDocument.start_page = Integer.parseInt(mCurrentString.split("-")[0]);
 		    	mCurrentDocument.end_page = Integer.parseInt(mCurrentString.split("-")[1]);
 				} catch(Exception e) {
-					// catching a weird number formatting error in big-file
+					// catching a number formatting error in big-file
 					mCurrentDocument.start_page = 0;
 					mCurrentDocument.end_page = 0;
 				}
@@ -154,7 +157,11 @@ public class ArticleXMLParser extends DefaultHandler {
 		    mCurrentDocument.year = !mCurrentString.equals("") ? Integer.parseInt(mCurrentString) : 0;
 		    break;
 		case VOLUME: 
-		    mCurrentDocument.volume = mCurrentString;
+			try {
+				mCurrentDocument.volume = Integer.parseInt(mCurrentString);
+			} catch (Exception e) {
+				mCurrentDocument.volume = 0;// Non Numeric Chars in Input
+			}
 		    break;
 		case NUMBER: 
 		    mCurrentDocument.number = Integer.parseInt(mCurrentString);
@@ -180,6 +187,9 @@ public class ArticleXMLParser extends DefaultHandler {
 		case SERIES: 
 		    mCurrentDocument.series = mCurrentString;
 		    break;
+		case PUBLISHER:
+			mCurrentDocument.publisher_name = mCurrentString;
+			break;
 		default://do nothing?
 		}
 	}
