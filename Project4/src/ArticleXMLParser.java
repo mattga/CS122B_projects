@@ -114,7 +114,7 @@ public class ArticleXMLParser extends DefaultHandler {
 		    mCurrentDocument.end_page = Integer.parseInt(mCurrentString.split("-")[1]);
 		    break;
 		case YEAR: 
-		    mCurrentDocument.year = Integer.parseInt(mCurrentString);
+		    mCurrentDocument.year = !mCurrentString.equals("") ? Integer.parseInt(mCurrentString) : 0;
 		    break;
 		case VOLUME: 
 		    mCurrentDocument.volume = mCurrentString;
