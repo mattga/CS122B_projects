@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE web-app>
 <web-app>
-	<servlet>
-		<servlet-class>LoginServelet</servlet-class>
-		<servlet-name>LoginServelet</servlet-name>
-	</servlet>
+	<!-- <servlet>
+        <servlet-class>LoginServelet</servlet-class>
+        <servlet-name>LoginServelet</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServelet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping> -->
 
-	<servlet-mapping>
-		<servlet-name>LoginServelet</servlet-name>
-		<url-pattern>/Login</url-pattern>
-	</servlet-mapping>
-	
+    <!-- Servelet for Handling Ajax Search Queries: -->
+    <servlet>
+        <servlet-class>AjaxSearchServelet</servlet-class>
+        <servlet-name>AjaxSearchServelet</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjaxSearchServelet</servlet-name>
+        <url-pattern>/ajaxSearch</url-pattern>
+    </servlet-mapping>
 </web-app>

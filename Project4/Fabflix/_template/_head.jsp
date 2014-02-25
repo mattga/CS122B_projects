@@ -28,6 +28,9 @@
                 <!-- Autocompletion JQuery function -->
                 <script>
                 $(function() {
+                    //global variable to track some state
+                    resultFetched = false;
+
                     // The data source...
                     var availableTags = [
                     "test1",
@@ -36,6 +39,38 @@
 
                     var options = {'source': availableTags};
                     $('#searchField').autocomplete(options);
+
+                    $('#searchField').on('input', function() {
+                        // We already fetched result once... 
+                        // Used to temporarly only fetch resulte once...
+                        // Change to match some other condition...
+                        if (window.resultFetched)
+                            return;
+
+                        // Options to pass to Ajax Method...
+                        var ajaxOptions = {
+                            url:'ajaxSearch',
+                            method:'POST',
+                            data: '?kw=value',
+                            error:  function(e){
+                                        alert("ERROR OCCURRED -- CHECK CONSOLE...");
+                                        console.log(e);
+                                    }
+                        };
+                        
+                        // Function to execute once the ajax has returned...
+                        var finishedFetching = function(data){
+                            console.log(data);
+                            // Parse the String into something useable...
+                            data = JSON.parse(data);
+                            // Replace the data-set with something dynamic...
+                            $('#searchField').autocomplete({'source': data.result});
+                            window.resultFetched = true;
+                        };
+                        
+                        // Set up the Ajax Call
+                        $.ajax(ajaxOptions).done(finishedFetching);
+                    });
                 });
                 </script>
 
