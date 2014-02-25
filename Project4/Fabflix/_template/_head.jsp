@@ -30,28 +30,19 @@
                 $(function() {
                     //global variable to track some state
                     resultFetched = false;
-
-                    // The data source...
-                    var availableTags = [
-                    "test1",
-                    "test2"
-                    ];
-
-                    var options = {'source': availableTags};
-                    $('#searchField').autocomplete(options);
-
+                    
                     $('#searchField').on('input', function() {
                         // We already fetched result once... 
-                        // Used to temporarly only fetch resulte once...
+                        // Used to temporarly only fetch result once...
                         // Change to match some other condition...
-                        if (window.resultFetched)
-                            return;
+                        // if (window.resultFetched)
+                        //     return;
 
                         // Options to pass to Ajax Method...
                         var ajaxOptions = {
                             url:'ajaxSearch',
                             method:'POST',
-                            data: '?kw=value',
+                            data: { kw : $('#searchField').val() },
                             error:  function(e){
                                         alert("ERROR OCCURRED -- CHECK CONSOLE...");
                                         console.log(e);
