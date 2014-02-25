@@ -21,51 +21,24 @@
             <!-- Search Bar -->
             <div class="col-md-4">
 
-                <script language="javascript" type="text/javascript">
-                <!--
-                //Browser Support Code
-                function ajaxFunction(){
-                    var ajaxRequest;  // The variable that makes Ajax possible!
-
-                    try{
-                        // Opera 8.0+, Firefox, Safari
-                        ajaxRequest = new XMLHttpRequest();
-                    } catch (e){
-                        // Internet Explorer Browsers
-                        try{
-                            ajaxRequest = new ActiveXObject("Msxml2.XMLHTTP");
-                        } catch (e) {
-                            try{
-                                ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
-                            } catch (e){
-                                // Something went wrong
-                                alert("Cannot autocomplete on this browser!");
-                                return false;
-                            }
-                        }
-                    }
-                    // Create a function that will receive data sent from the server
-                    ajaxRequest.onreadystatechange = function(){
-                        if(ajaxRequest.readyState == 4){
-                            var form = document.getElementById("searchForm");
-                            form.setAttribute("autocomplete", "off");
-
-                            var div = document.createElement("div");
-                            div.textContent = "AjaxTest";
-                            div.style.visibility = "visible";
-                            div.style.display = "block";
-                        }
-                    }
-                    // ajaxRequest.open("GET", "/AjaxTest/servlet/AjaxTest", true);
-                    // ajaxRequest.send(null);
-                }
-                //-->
+                <!-- Autocompletion JQuery function -->
+                <script>
+                $(function() {
+                    var availableTags = [
+                    "test1",
+                    "test2"
+                    ];
+                    $( "#searchField" ).autocomplete({
+                        source: availableTags
+                    });
+                });
                 </script>
+
 
                 <!-- Input Group for Search Box -->
                 <form action="search.jsp" method="post" id="searchForm">
                 <div class="input-group" style="margin:15px 0 5px;">
-                    <input type="text" onChange="ajaxFunction();" name="title" placeholder="Movie Name">
+                    <input type="text" class="form-control" id="searchField" name="title" placeholder="Movie Name">
                     <div class="input-group-btn">
                         <button class="btn btn-primary">Search</button>
                     </div>
