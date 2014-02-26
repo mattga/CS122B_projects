@@ -12,6 +12,7 @@
     <!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/underscore.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -28,25 +29,19 @@
                 <!-- Autocompletion JQuery function -->
                 <script>
                 $(function() {
-                    //global variable to track some state
-                    resultFetched = false;
-                    
-                    $('#searchField').on('input', function() {
-                        // We already fetched result once... 
-                        // Used to temporarly only fetch result once...
-                        // Change to match some other condition...
-                        // if (window.resultFetched)
-                        //     return;
-
+                    // Debounce is used to throttle the number of times the function is called.
+                    $('#searchField').on('input', _.debounce(function() {
+                        // Cancel Previous Request....
+                        if (window.ajaxRequest && window.ajaxRequest.readyState != 4) {
+                            window.ajaxRequest.abort();
+                        }
+                        
                         // Options to pass to Ajax Method...
                         var ajaxOptions = {
                             url:'ajaxSearch',
                             method:'POST',
                             data: { kw : $('#searchField').val() },
-                            error:  function(e){
-                                        alert("ERROR OCCURRED -- CHECK CONSOLE...");
-                                        console.log(e);
-                                    }
+                            error:  function(e){ console.log("Some Error Occurred...who knows..."); }
                         };
                         
                         // Function to execute once the ajax has returned...
@@ -56,12 +51,11 @@
                             data = JSON.parse(data);
                             // Replace the data-set with something dynamic...
                             $('#searchField').autocomplete({'source': data.result});
-                            window.resultFetched = true;
                         };
                         
                         // Set up the Ajax Call
-                        $.ajax(ajaxOptions).done(finishedFetching);
-                    });
+                        window.ajaxRequest = $.ajax(ajaxOptions).done(finishedFetching);
+                    }, 250));
                 });
                 </script>
 
