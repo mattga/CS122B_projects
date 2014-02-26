@@ -60,7 +60,7 @@ public class AjaxSearchServelet extends HttpServlet {
 		System.out.println(query);
 
 		// Execute & output results
-		out.print("{\"result\":[");
+		out.print("{\"result\":[\"");
 		try {
 			results = mysql.getInstance().getStatement().executeQuery(query);
 			if(results.first())
