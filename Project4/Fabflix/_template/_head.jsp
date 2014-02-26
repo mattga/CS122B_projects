@@ -38,10 +38,13 @@
                         
                         // Options to pass to Ajax Method...
                         var ajaxOptions = {
-                            url:'ajaxSearch',
-                            method:'POST',
-                            data: { kw : $('#searchField').val() },
-                            error:  function(e){ console.log("Some Error Occurred...who knows..."); }
+                            url: 'ajaxSearch',
+                            method: 'POST',
+                            data: {'kw' : $('#searchField').val()},
+                            error:  function(e){ 
+                                console.log(new Date()); // Date to distiguish errors
+                                console.log(e);
+                            }
                         };
                         
                         // Function to execute once the ajax has returned...
@@ -50,7 +53,7 @@
                             // Parse the String into something useable...
                             data = JSON.parse(data);
                             // Replace the data-set with something dynamic...
-                            $('#searchField').autocomplete({'source': data.result});
+                            $('#searchField').autocomplete({'source': _.uniq(data.result)});
                         };
                         
                         // Set up the Ajax Call
