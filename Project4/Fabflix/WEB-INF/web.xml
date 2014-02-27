@@ -19,4 +19,13 @@
         <servlet-name>AjaxSearchServelet</servlet-name>
         <url-pattern>/ajaxSearch</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-class>AjaxMovieInfoServelet</servlet-class>
+        <servlet-name>AjaxMovieInfoServelet</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjaxMovieInfoServelet</servlet-name>
+        <url-pattern>/ajaxMovie</url-pattern>
+    </servlet-mapping>
 </web-app>

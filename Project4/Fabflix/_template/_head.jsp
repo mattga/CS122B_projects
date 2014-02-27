@@ -14,6 +14,20 @@
     <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/underscore.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <style>
+        #info-hover {
+            position:fixed;
+            top:0;
+            left:0;
+            display:none;
+            border:#aaa;
+            background-color:#fff;
+            border-radius: 10px;
+            padding:10px;
+            z-index: 1000;
+            box-shadow: 0 0 10px #000;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -29,6 +43,12 @@
                 <!-- Autocompletion JQuery function -->
                 <script>
                 $(function() {
+                    // just tracking mouse to place the hover over in the right place...
+                    $(document).mousemove(function(e){
+                       window.mouseXPos = e.pageX;
+                       window.mouseYPos = e.pageY;
+                     }); 
+
                     // Debounce is used to throttle the number of times the function is called.
                     $('#searchField').on('input', _.debounce(function() {
                         // Cancel Previous Request....
@@ -60,9 +80,39 @@
                         window.ajaxRequest = $.ajax(ajaxOptions).done(finishedFetching);
                     }, 250));
                 });
-                </script>
 
+                function displayMovieInfo(id) {
+                                            // Options to pass to Ajax Method...
+                        var ajaxOptions = {
+                            url: 'ajaxMovie',
+                            method: 'POST',
+                            data: {'id' : id},
+                            error:  function(e){ 
+                                console.log(new Date()); // Date to distiguish errors
+                                console.log(e);
+                            }
+                        };
+                        
+
+                    window.ajaxRequest = $.ajax(ajaxOptions).done(function(data) {
+                        data = JSON.parse(data);
+                        var html = "<img src=\""+ data.result.banner +"\"><br>";
+                        html += "<b>Year</b>:"+ data.result.year +"<br>"; 
+                        html += "<b>Stars</b>: ";
+                        for (var i in data.result.stars)
+                            html += data.result.stars[i] + "<br>";
+                        
+                        $("#info-hover").html(html).show();
+                        $("#info-hover").css({left:window.mouseXPos,top:window.mouseYPos - $(document).scrollTop()});
+                    });
+                }
+
+                function hideMovieInfo(id) {
+                    $("#info-hover").fadeOut();
+                }
+                </script>
                 <!-- Input Group for Search Box -->
+                <div id="info-hover"></div>
                 <form action="search.jsp" method="post" id="searchForm">
                 <div class="input-group" style="margin:15px 0 5px;">
                     <input type="text" class="form-control" id="searchField" name="title" placeholder="Movie Name">
@@ -74,7 +124,6 @@
                 <p>
                     <a href="advanced_search.jsp">Advanced Search</a>
                 </p>
-
             </div>
         </header>
         

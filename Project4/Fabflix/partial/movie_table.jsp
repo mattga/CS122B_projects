@@ -70,7 +70,7 @@
                 <%=m.id%>
             </td>   
             <td>
-                <a href="movie.jsp?id=<%=m.id%>"><%=m.title%></a>
+                <a href="movie.jsp?id=<%=m.id%>"  onmouseover="displayMovieInfo(<%=m.id%>)" onmouseout="hideMovieInfo(<%=m.id%>)" id="movie-id-<%=m.id%>"><%=m.title%></a>
             </td> 
             <td>
                 <%=m.year%>
