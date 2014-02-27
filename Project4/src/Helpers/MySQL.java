@@ -19,25 +19,26 @@ public class MySQL {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con  = DriverManager.getConnection("jdbc:mysql://localhost/documentdb?user=testuser&password=testpass");
-
+			con.setAutoCommit(false);
+			
 			// Prepare queries
 			selGenre = con.prepareStatement("SELECT id FROM tbl_genres WHERE genre_name=?");
-			insGenre = con.prepareStatement("INSERT INTO tbl_genres (genre_name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+			insGenre = con.prepareStatement("INSERT IGNORE INTO tbl_genres (genre_name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
 
 			selPerson = con.prepareStatement("SELECT id FROM tbl_people WHERE name=?");
-			insPerson = con.prepareStatement("INSERT INTO tbl_people (name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+			insPerson = con.prepareStatement("INSERT IGNORE INTO tbl_people (name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
 
 			selBooktitle = con.prepareStatement("SELECT id FROM tbl_booktitle WHERE title=?");
-			insBooktitle = con.prepareStatement("INSERT INTO tbl_booktitle (title) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+			insBooktitle = con.prepareStatement("INSERT IGNORE INTO tbl_booktitle (title) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
 
 			selPublisher = con.prepareStatement("SELECT id FROM tbl_publisher WHERE publisher_name=?");
-			insPublisher = con.prepareStatement("INSERT INTO tbl_publisher (publisher_name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
+			insPublisher = con.prepareStatement("INSERT IGNORE INTO tbl_publisher (publisher_name) VALUES (?)", Statement.RETURN_GENERATED_KEYS);
 
-			insDocument = con.prepareStatement("INSERT INTO tbl_dblp_document (title, start_page, end_page, year, volume, number, url," +
+			insDocument = con.prepareStatement("INSERT IGNORE INTO tbl_dblp_document (title, start_page, end_page, year, volume, number, url," +
 					"ee, cdrom, cite, crossref, isbn, series, editor_id, genre_id, booktitle_id, publisher_id) VALUES " +
 					"(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
 
-			insAuthorMapping = con.prepareStatement("INSERT INTO tbl_author_document_mapping (doc_id, author_id) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
+			insAuthorMapping = con.prepareStatement("INSERT IGNORE INTO tbl_author_document_mapping (doc_id, author_id) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
 
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
