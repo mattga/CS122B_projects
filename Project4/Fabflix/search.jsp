@@ -74,7 +74,7 @@
 			out.println(" 			<table border=\"0\">");
 			out.println("				<tr>");
 			out.println("					<td>" + m.id + "</td>");
-			out.println("					<td><a href=\"movie.jsp?id=" + m.id + "\"><b>" + m.title + " (" + m.year + ")</b></a></td>");
+			out.println("					<td><a href=\"movie.jsp?id=" + m.id + "\" onmouseover=\"displayMovieInfo("+m.id+")\" onmouseout=\"hideMovieInfo("+m.id+")\" id=\"movie-id-"+m.id+"\"><b>" + m.title + " (" + m.year + ")</b></a></td>");
 			out.println("				</tr>");
 			out.println("				<tr>");
 			out.println("					<td>Director: </td>");
