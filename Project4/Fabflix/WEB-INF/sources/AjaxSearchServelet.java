@@ -58,12 +58,15 @@ public class AjaxSearchServelet extends HttpServlet {
 
 		// Format WHERE clause with the last keyword being any words prefix and the rest matching some word
 		for (int i = 0; i < keywords.length; i++) {
+//			query += "LOCATE('" + keywords[i] + "', title) > 0";
+			query += "title LIKE '%" + keywords[i] + "%'";
 			if (i < keywords.length-1)
-				query += "LOCATE('" + keywords[i] + "', title) > 0 AND ";
-			else
-				query += "title LIKE '%" + keywords[i] + "%'";
+				query += " AND "; // connector between each item...
+			else 
+				query += ";";// last item
+
 		}
-		// System.out.println(query);
+		System.out.println(query);
 
 		// Execute & output results
 		out.print("{\"result\":[");
@@ -78,7 +81,7 @@ public class AjaxSearchServelet extends HttpServlet {
 			 ex.printStackTrace();
 		} finally {
 			try {
-				mysql.getConnection().close();
+//				mysql.getConnection().close();
 			} catch (Exception e) {
 				 e.printStackTrace();
 			}
