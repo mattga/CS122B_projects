@@ -99,7 +99,7 @@ public class ArticleXMLParser extends DefaultHandler {
 //				System.out.println(warning.getErrorCode() + " - " + warning.getMessage());
 //				warning = warning.getNextWarning();
 //			}
-			MySQL.getConnection().commit();
+			MySQL.commitAll();
 			
 		}catch(SAXException se) {
 			se.printStackTrace();
@@ -107,8 +107,6 @@ public class ArticleXMLParser extends DefaultHandler {
 			pce.printStackTrace();
 		}catch (IOException ie) {
 			ie.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
 		}
 	}
 
@@ -159,8 +157,9 @@ public class ArticleXMLParser extends DefaultHandler {
 	public void endElement(String uri, String localName, String qName) throws SAXException {
 		switch(getEnum(qName)) {
 		case DOCUMENT:
-			System.out.println(mCurrentDocument);
+//			System.out.println(mCurrentDocument);
 			//			mDocuments.add(mCurrentDocument);
+			mCurrentDocument.genre_name = qName;
 			insertRecord(mCurrentDocument);
 			break;
 		case TITLE: 

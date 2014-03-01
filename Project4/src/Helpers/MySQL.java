@@ -40,6 +40,11 @@ public class MySQL {
 
 			insAuthorMapping = con.prepareStatement("INSERT IGNORE INTO tbl_author_document_mapping (doc_id, author_id) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
 
+			con.createStatement().execute("ALTER TABLE `tbl_genres` DISABLE KEYS;");
+			con.createStatement().execute("ALTER TABLE `tbl_people` DISABLE KEYS;");
+			con.createStatement().execute("ALTER TABLE `tbl_booktitle` DISABLE KEYS;");
+			con.createStatement().execute("ALTER TABLE `tbl_publisher` DISABLE KEYS;");
+			con.createStatement().execute("ALTER TABLE `tbl_dblp_document` DISABLE KEYS;");
 		} catch (SQLException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -49,6 +54,22 @@ public class MySQL {
 		if(_this == null)
 			_this = new MySQL();
 		return _this.con;
+	}
+	
+	public static void commitAll() {
+		if(_this == null)
+			_this = new MySQL();
+		
+		try {
+			_this.con.createStatement().execute("ALTER TABLE `tbl_genres` ENABLE KEYS;");
+			_this.con.createStatement().execute("ALTER TABLE `tbl_people` ENABLE KEYS;");
+			_this.con.createStatement().execute("ALTER TABLE `tbl_booktitle` ENABLE KEYS;");
+			_this.con.createStatement().execute("ALTER TABLE `tbl_publisher` ENABLE KEYS;");
+			_this.con.createStatement().execute("ALTER TABLE `tbl_dblp_document` ENABLE KEYS;");
+			_this.con.commit();
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static int insertGenre(String genre_name) throws SQLException {
