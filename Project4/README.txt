@@ -19,4 +19,8 @@ Small (Inserts every document)
 51781 ms
 
 Small (Inserts & manual commits)
-3917 ms
+3917 msi
+
+RUNNING THE PARSER:
+Open in Eclipse, and Compile and Run from there...
+

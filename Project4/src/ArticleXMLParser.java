@@ -23,7 +23,8 @@ public class ArticleXMLParser extends DefaultHandler {
 	private Document mCurrentDocument;
 	private String mCurrentString;
 	private String mFilePath;
-
+	private static int counter = 1;
+	
 	public ArticleXMLParser(String filePath){
 		mFilePath = filePath;
 	}
@@ -181,6 +182,7 @@ public class ArticleXMLParser extends DefaultHandler {
 					mCurrentDocument.end_page = Integer.parseInt(mCurrentString.split("-")[1]);
 				} catch(Exception e) {
 					// catching a number formatting error in big-file
+					System.out.println("Invalid Page Format.");
 					mCurrentDocument.start_page = 0;
 					mCurrentDocument.end_page = 0;
 				}
@@ -193,6 +195,7 @@ public class ArticleXMLParser extends DefaultHandler {
 			try {
 				mCurrentDocument.volume = Integer.parseInt(mCurrentString);
 			} catch (Exception e) {
+				System.out.println("Invalid Numeric Format in Volume Input.");
 				mCurrentDocument.volume = 0;// Non Numeric Chars in Input
 			}
 			break;

@@ -4,6 +4,7 @@ public class Main {
 
 		// Run Article Parser...
 		long start = System.currentTimeMillis();
+//		ArticleXMLParser sax = new ArticleXMLParser("res/dblp-data-small/final-data.xml");
 		ArticleXMLParser sax = new ArticleXMLParser("res/dblp-data-big/dblp-data.xml");
 		sax.parse();
 		long parsingend = System.currentTimeMillis();
