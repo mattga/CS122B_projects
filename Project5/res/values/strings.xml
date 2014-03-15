@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MovieQuiz</string>
+    <string name="title">FabFlix Quiz</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="take_quiz">Start a New Quiz</string>
+    <string name="see_stats">See Lifetime Statistics</string>
+    <string name="done">Done</string>
+
+    <string name="sample_question">Who is the director of the movie "Star Wars"?</string>
+    <string name="sample_answer1">A. Answer A</string>
+    <string name="sample_answer2">B. Answer B</string>
+    <string name="sample_answer3">C. Answer C</string>
+    <string name="sample_answer4">D. Answer D</string>
+
+    <string name="correct">You are Correct!</string>
+    <string name="wrong">You are Wrong!</string>
+
+    <string name="stats_question_count">Questions Answered: 1001</string>
+    <string name="stats_question_correct">Correct Answers: 1</string>
+    <string name="stats_question_incorrect">Incorrect Answers: 1000</string>
+    <string name="stats_question_avg_resp">Average Response Time: 10s</string>
+    <string name="stats_quizes_taken">Quizes Taken: 101</string>
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+    <style name="button_defaults">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="button_correct" parent="button_defaults">
+        <item name="android:background">@android:color/holo_green_light</item>
+    </style>
+
+    <style name="button_incorrect" parent="button_defaults">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/holo_red_dark</item>
+    </style>
+
+
+    <style name="default_white_text">
+        <item name="android:layout_width">
+            wrap_content
+        </item>
+        <item name="android:layout_height">
+            wrap_content
+        </item>
+        <item name="android:layout_gravity">
+            center
+        </item>
+        <item name="android:textSize">
+            25dp
+        </item>
+        <item name="android:textColor">
+            @android:color/white
+        </item>
+        <item name="android:layout_marginTop">
+            20dp
+        </item>
+    </style>
+    <style name="default_white_text.left">
+        <item name="android:layout_width">
+            match_parent
+        </item>
+    </style>
+</resources>
