@@ -16,16 +16,18 @@
         android:layout_gravity="center"
         android:textSize="25dp"
         android:textColor="@android:color/darker_gray"
-        android:layout_marginTop="30dp"/>
+        android:id="@+id/textViewQuestionNumber"
+        android:layout_marginTop="5dp"/>
 
     <TextView
         android:text="@string/sample_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textColor="@android:color/white"
-        android:layout_marginTop="20dp"/>
+        android:id="@+id/textViewQuestion"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/answer1"
