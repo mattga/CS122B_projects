@@ -46,7 +46,7 @@ public class MoviesDBHelper {
 		Cursor c;
 		
 		// Pick random question
-		switch ((int)(Math.random()*2)) {
+		switch ((int)(Math.random()*9)) {
 		case 0: // Who directed the movie %s?
 			c = mDb.rawQuery("SELECT * FROM movies", null);
 			row = (int)(Math.random()*c.getCount());
@@ -67,7 +67,7 @@ public class MoviesDBHelper {
 				}
 			}
 			break;
-		default: // When was the movie %s released?
+		case 1: // When was the movie %s released?
 			c = mDb.rawQuery("SELECT * FROM movies", null);
 			row = (int)(Math.random()*c.getCount());
 			c.moveToPosition(row);
@@ -86,23 +86,42 @@ public class MoviesDBHelper {
 				}
 			}
 			break;
-//		case 2: // Which star was in the movie %s?
-//			break;
+		case 2: // Which star was in the movie %s?
+			c = mDb.rawQuery("SELECT m.`title`, m.`director`, s.`first_name`, s.`last_name` FROM `movies` m, `stars` s, `stars_in_movies` sm WHERE m.id = sm.movie_id AND s.id = sm.star_id AND s.id GROUP BY m.`id`, s.`first_name`, s.`last_name` ORDER BY RANDOM() LIMIT 4", null);
+			row = (int)(Math.random()*c.getCount());
+			c.moveToFirst(); // only 4 results are returned.
+			newQ.question = String.format(QuestionTemplates.QUESTIONS[2], c.getString(0));
+			newQ.answers[0] = c.getString(2) +" "+ c.getString(3); 
+			newQ.correctAnswerIndex = 0;
+			for (int j = 1; j < 4; j++) {
+				c.moveToNext();
+				newQ.answers[j] =  c.getString(2) +" "+ c.getString(3);
+			}
+			break;
 //		case 3: // Which star was not in the movie %s?
 //			break;
 //		case 4: // In which movie do the stars %s and %s appear together?
 //			break;
-//		case 5: // Who directed the movie %s?
+		// case 5: // Who did not direct the movie %s?
+		// Dumb question... 
+		/// lol...how about we skip this one...
+		//	break;
+//		case 6: // Which star appears in both movies %s and %s?
 //			break;
-//		case 6: // Who did not direct the movie %s?
-//			// Dumb question...
-////			break;
-//		case 7: // Which star appears in both movies %s and %s?
+//		case 7: // Which star did not appear in the same movie with the star %s?
 //			break;
-//		case 8: // Which star did not appear in the same movie with the star %s?
-//			break;
-//		case 9: // Who directed the star %s in year %s?
-//			break;
+		default: // Who directed the star %s in year %s?
+			c = mDb.rawQuery("SELECT m.`year`, m.`director`, s.`first_name`, s.`last_name` FROM `movies` m, `stars` s, `stars_in_movies` sm WHERE m.id = sm.movie_id AND s.id = sm.star_id AND s.id GROUP BY m.`id`, s.`first_name`, s.`last_name` ORDER BY RANDOM() LIMIT 4", null);
+			row = (int)(Math.random()*c.getCount());
+			c.moveToFirst(); // only 4 results are returned.
+			newQ.question = String.format(QuestionTemplates.QUESTIONS[8], c.getString(2) +" "+ c.getString(3), c.getString(0));
+			newQ.answers[0] = c.getString(1); 
+			newQ.correctAnswerIndex = 0;
+			for (int j = 1; j < 4; j++) {
+				c.moveToNext();
+				newQ.answers[j] =  c.getString(1);
+			}
+			break;
 		}
 		
 		return newQ;
