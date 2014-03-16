@@ -54,7 +54,7 @@
     <Button
         android:id="@+id/answer4"
         android:text="@string/sample_answer4"
-        style="@style/button_correct"
+        style="@style/button_defaults"
         />
 
 

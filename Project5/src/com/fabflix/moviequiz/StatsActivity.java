@@ -1,6 +1,8 @@
 package com.fabflix.moviequiz;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,10 +46,24 @@ public class StatsActivity extends Activity {
         mTextViewAvgResponse = (TextView)(findViewById(R.id.textViewAvgResponse));
     }
 
-
     private class ExitEventListener implements View.OnClickListener {
         public void onClick(View v) {
-            // TODO: UPDATE GLOBAL STATS DATASTORE
+            // Get Current Lifetime Data.
+            int defaultValue = 0;
+            SharedPreferences lifetimeData = StatsActivity.this.getPreferences(MODE_PRIVATE);
+            int correct = lifetimeData.getInt(QuizActivity.KEY_QUESTION_CORRECT, defaultValue);
+            int wrong = lifetimeData.getInt(QuizActivity.KEY_QUESTION_WRONG, defaultValue);
+            int avg = lifetimeData.getInt(QuizActivity.KEY_TIME_ELAPSED, defaultValue);
+
+
+            // Update the Lifetime Data
+            // TODO: Do actual calculation with values from most recent quiz...
+            SharedPreferences.Editor updateLifetimeData = lifetimeData.edit();
+            updateLifetimeData.putInt(QuizActivity.KEY_QUESTION_CORRECT, correct);
+            updateLifetimeData.putInt(QuizActivity.KEY_QUESTION_CORRECT, wrong);
+            updateLifetimeData.putInt(QuizActivity.KEY_TIME_ELAPSED, avg);
+            updateLifetimeData.commit();
+            
             StatsActivity.this.finish();
         }
     }

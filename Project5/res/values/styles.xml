@@ -6,6 +6,7 @@
     </style>
 
     <style name="button_defaults">
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:padding">5dp</item>
         <item name="android:textSize">25dp</item>
@@ -15,6 +16,7 @@
     </style>
 
     <style name="button_correct" parent="button_defaults">
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:background">@android:color/holo_green_dark</item>
     </style>
 
