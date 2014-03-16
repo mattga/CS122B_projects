@@ -17,12 +17,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <!--<activity-->
-            <!--android:name="com.fabflix.moviequiz.QuizActivity"-->
-            <!--android:label="QuizActivity">-->
-        <!--</activity>-->
+        
+        <activity
+            android:name="com.fabflix.moviequiz.QuizActivity"
+            android:label="QuizActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            />
+        
+        <activity
+            android:name="com.fabflix.moviequiz.StatsActivity"
+            android:label="QuizActivity"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            />
     </application>
 
 </manifest>

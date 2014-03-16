@@ -23,13 +23,19 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int answer1=0x7f070002;
-        public static final int answer2=0x7f070003;
-        public static final int answer3=0x7f070004;
-        public static final int answer4=0x7f070005;
-        public static final int response_status=0x7f070006;
+        public static final int answer1=0x7f070004;
+        public static final int answer2=0x7f070005;
+        public static final int answer3=0x7f070006;
+        public static final int answer4=0x7f070007;
+        public static final int buttonFinish=0x7f07000c;
         public static final int see_stats=0x7f070001;
         public static final int take_quiz=0x7f070000;
+        public static final int textViewAnswered=0x7f070008;
+        public static final int textViewAvgResponse=0x7f07000b;
+        public static final int textViewCorrect=0x7f070009;
+        public static final int textViewQuestion=0x7f070003;
+        public static final int textViewQuestionNumber=0x7f070002;
+        public static final int textViewWrong=0x7f07000a;
     }
     public static final class layout {
         public static final int activity_lifetime_stats=0x7f030000;
@@ -58,11 +64,11 @@ public final class R {
         public static final int wrong=0x7f05000c;
     }
     public static final class style {
-        public static final int AppTheme=0x7f060005;
-        public static final int button_correct=0x7f060001;
-        public static final int button_defaults=0x7f060000;
-        public static final int button_incorrect=0x7f060002;
-        public static final int default_white_text=0x7f060003;
-        public static final int default_white_text_left=0x7f060004;
+        public static final int AppTheme=0x7f060000;
+        public static final int button_correct=0x7f060002;
+        public static final int button_defaults=0x7f060001;
+        public static final int button_incorrect=0x7f060003;
+        public static final int default_white_text=0x7f060004;
+        public static final int default_white_text_left=0x7f060005;
     }
 }

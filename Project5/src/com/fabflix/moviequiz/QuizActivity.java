@@ -122,7 +122,6 @@ public class QuizActivity extends Activity {
      * OnClickListener for every answer.
      */
     private class AnswerEventListener implements View.OnClickListener {
-        @Override
         public void onClick(View view) {
             Log.w("BUTTON CLCIKED", "Answer Clicked.....");
             // update the timer....
@@ -162,7 +161,6 @@ public class QuizActivity extends Activity {
      * Class implements runnable, and is called whenever a new question needs to be generated.
      */
     private class NewQuestionAction implements Runnable {
-        @Override
         public void run() {
             Log.w("DELAYED", "QUESTION RUNNING");
             // Update view with new title....
@@ -187,7 +185,6 @@ public class QuizActivity extends Activity {
      * Implements runnable, and is called whenever the time expires.
      */
     private class TimeUpAction implements Runnable {
-        @Override
         public void run() {
             Log.e("TIME UP", "SWITCHING TO STATS ACTIVITY");
             mTimerValue = System.currentTimeMillis() - mStartTime;
