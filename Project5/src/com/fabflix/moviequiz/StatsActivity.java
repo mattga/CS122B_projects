@@ -95,7 +95,7 @@ public class StatsActivity extends Activity {
         	LifetimeData ld = new LifetimeData();
         	// Update with bundle information from quiz activity.
         	Bundle stats = getIntent().getExtras();
-            int totalQuestions = stats.getInt(QuizActivity.KEY_QUESTION_CORRECT) + stats.getInt(QuizActivity.KEY_QUESTION_WRONG);
+//            int totalQuestions = stats.getInt(QuizActivity.KEY_QUESTION_CORRECT) + stats.getInt(QuizActivity.KEY_QUESTION_WRONG);
             ld.totalCorrect = ld.totalCorrect + stats.getInt(QuizActivity.KEY_QUESTION_CORRECT);
         	ld.totalWrong = ld.totalWrong + stats.getInt(QuizActivity.KEY_QUESTION_WRONG);
         	ld.totalTime = ld.totalTime + stats.getLong(QuizActivity.KEY_TIME_ELAPSED);

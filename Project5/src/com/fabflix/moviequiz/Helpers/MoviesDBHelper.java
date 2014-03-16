@@ -45,9 +45,10 @@ public class MoviesDBHelper {
 		int row;
 		Cursor c;
 		boolean okToAdd = false;
-
+		int q = (int)(Math.random()*9);
+		Log.i("QUESTION TYPE", "" + q);
 		// Pick random question
-		switch ((int)(Math.random()*9)) {
+		switch (7) {
 		case 0: // Who directed the movie %s?
 			c = mDb.rawQuery("SELECT * FROM movies", null);
 			row = (int)(Math.random()*c.getCount());
@@ -111,7 +112,7 @@ public class MoviesDBHelper {
 			newQ.answers[0] = c.getString(1) +" "+c.getString(2);
 
 			// The cool kids: A group of actors in the same movie....excluding the lone star.
-			String starId = c.getString(3);
+//			String starId = c.getString(3);
 			String multipleActorQuery = "SELECT mov.`title`, star.`first_name`, star.`last_name` " +
 					"FROM `movies` mov, `stars` star, `stars_in_movies` sim, " +
 					"(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) > 2 ORDER BY RANDOM() LIMIT 1) mult" +
@@ -220,23 +221,5 @@ public class MoviesDBHelper {
 		}
 
 		return newQ;
-	}
-
-	private String randomMovie() {
-		Cursor c = mDb.query(DatabaseHelper.TABLE_MOVIES, COLUMNS_MOVIES, null, null, null, null, null);
-		c.moveToPosition((int)(Math.random()+c.getCount()));
-		return c.getString(1);
-	}
-
-	private String randomStar() {
-		Cursor c = mDb.query(DatabaseHelper.TABLE_STARS, COLUMNS_STARS, null, null, null, null, null);
-		c.moveToPosition((int)(Math.random()+c.getCount()));
-		return c.getString(1) + " " + c.getString(2);
-	}
-
-	private String randomDirector() {
-		Cursor c = mDb.query(DatabaseHelper.TABLE_MOVIES, COLUMNS_MOVIES, "WHERE DISTINCT(director)", null, null, null, null);
-		c.moveToPosition((int)(Math.random()+c.getCount()));
-		return c.getString(3);
 	}
 }
