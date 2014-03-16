@@ -23,7 +23,6 @@
             android:label="QuizActivity"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait"
-            android:noHistory="true"
             />
         
         <activity
