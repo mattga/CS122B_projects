@@ -45,10 +45,9 @@ public class MoviesDBHelper {
 		int row;
 		Cursor c;
 		boolean okToAdd = false;
-		int q = (int)(Math.random()*9);
-		Log.i("QUESTION TYPE", "" + q);
+
 		// Pick random question
-		switch (7) {
+		switch ((int)(Math.random()*9)) {
 		case 0: // Who directed the movie %s?
 			c = mDb.rawQuery("SELECT * FROM movies", null);
 			row = (int)(Math.random()*c.getCount());
