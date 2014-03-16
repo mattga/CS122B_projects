@@ -20,6 +20,7 @@ public class QuizActivity extends Activity {
     public final static String KEY_QUESTION_CORRECT = "CORRECT";
     public final static String KEY_QUESTION_WRONG = "WRONG";
     public final static String KEY_TIME_ELAPSED = "TIME_ELAPSED";
+    public final static String KEY_QUIZES_TAKEN = "TOTAL_TAKEN";
 
     private static int mCorrectAnswerIndex;
     private final static int QUESTION_DELAY = 1500; // 1.5 second delay.
@@ -186,10 +187,10 @@ public class QuizActivity extends Activity {
      */
     private class TimeUpAction implements Runnable {
         public void run() {
-            Log.e("TIME UP", "SWITCHING TO STATS ACTIVITY");
             mTimerValue = System.currentTimeMillis() - mStartTime;
             // Start a new activity with the quiz stats passed in....
             Bundle quizStats = new Bundle();
+            quizStats.putBoolean(StatsActivity.KEY_IS_LIFETIME, false);
             quizStats.putInt(KEY_QUESTION_CORRECT, mQuestionsCorrect);
             quizStats.putInt(KEY_QUESTION_WRONG, mQuestionsWrong);
             quizStats.putLong(KEY_TIME_ELAPSED, mTimerValue);
