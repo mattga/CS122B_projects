@@ -11,7 +11,7 @@ public class MovieQuestion {
 		for(int i = 0; i < length; i++) {
 			int j = (int)(Math.random()*length);
 			
-			// Update current index
+			// Update correct index
 			if(i == correctAnswerIndex)
 				correctAnswerIndex = j;
 			else if (j == correctAnswerIndex)
