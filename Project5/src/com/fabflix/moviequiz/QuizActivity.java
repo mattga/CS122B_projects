@@ -215,7 +215,7 @@ public class QuizActivity extends Activity {
             QuizActivity.this.startActivity(statsActivity);
 
             // NoHistory preference in Manifest calls finish automagically....
-            // QuizActivity.this.finish(); // Close the quiz activity
+             QuizActivity.this.finish(); // Close the quiz activity
         }
     }
 }
