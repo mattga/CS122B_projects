@@ -44,7 +44,6 @@ public class MoviesDBHelper {
 		MovieQuestion newQ = new MovieQuestion();
 		int row;
 		Cursor c;
-		boolean okToAdd = false;
 
 		// Pick random question
 		switch ((int)(Math.random()*9)) {
@@ -54,24 +53,18 @@ public class MoviesDBHelper {
 			c.moveToPosition(row);
 			newQ.question = String.format(QuestionTemplates.QUESTIONS[0], c.getString(1));
 			newQ.answers[0] = c.getString(3);
-			
-			Log.i("NewQuestion", "Correct:" + c.getString(3));
-			
+
 			// Fill answers with unique wrong values
 			for(int i = 1; i < 4;) {
 				row = (int)(Math.random()*c.getCount());
 				c.moveToPosition(row);
-				Log.i("NewQuestion", "Wrong:" + c.getString(3));
 				// i < 4, so we do not increment indefinitely.
 				for(int j = 0; j < i && i < 4; j++) {
-					if(newQ.answers[j].equals(c.getString(3))) {
-						okToAdd = false;
-						break;
-					}
-					okToAdd = true;
-				}
-				if(okToAdd)
+					String s = newQ.answers[j];
+					if(s.equals(c.getString(3)))
+						continue;
 					newQ.answers[i++] = c.getString(3);
+				}
 			}
 			break;
 		case 1: // When was the movie %s released?
@@ -83,9 +76,14 @@ public class MoviesDBHelper {
 
 			// Fill answers with unique wrong values
 			for(int i = 1; i < 4;) {
-				int wrongYear = Integer.parseInt(newQ.answers[0]) + (int)((Math.random()-.5)*50); // +/- [1-25] years
-				if (wrongYear <= 2014 && wrongYear != Integer.parseInt(newQ.answers[0]))
-					newQ.answers[i++] = "" + wrongYear;
+				row = (int)(Math.random()*c.getCount());
+				c.moveToPosition(row);
+				for(int j = 0; j < i && i < 4; j++) {
+					String s = newQ.answers[j];
+					if(s.equals(c.getString(2)))
+						continue;
+					newQ.answers[i++] = c.getString(2);
+				}
 			}
 			break;
 		case 2: // Which star was in the movie %s?
@@ -103,13 +101,22 @@ public class MoviesDBHelper {
 		case 3: // Which star was not in the movie %s?
 			// The lone star, the left out one...the answer
 			String singleActorQuery = "SELECT mov.`title`, star.`first_name`, star.`last_name`, star.`id` FROM `movies` mov, `stars` star, "+
+<<<<<<< HEAD
 					"(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) <= 1 ORDER BY RANDOM() LIMIT 1) mult "+ 
 					"WHERE mov.`id` = mult.`movie_id` AND star.`id`= mult.`star_id`";
+=======
+					   "(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) <= 1 ORDER BY RANDOM() LIMIT 1) mult "+ 
+					   "WHERE mov.`id` = mult.`movie_id` AND star.`id`= mult.`star_id`";
+>>>>>>> 9fe775bbd6b2624ceb19a462f0d2021ec8f74379
 			c = mDb.rawQuery(singleActorQuery, null);
 			c.moveToFirst();
 			newQ.correctAnswerIndex = 0;
 			newQ.answers[0] = c.getString(1) +" "+c.getString(2);
+<<<<<<< HEAD
 
+=======
+			
+>>>>>>> 9fe775bbd6b2624ceb19a462f0d2021ec8f74379
 			// The cool kids: A group of actors in the same movie....excluding the lone star.
 			String starId = c.getString(3);
 			String multipleActorQuery = "SELECT mov.`title`, star.`first_name`, star.`last_name` " +
@@ -124,6 +131,7 @@ public class MoviesDBHelper {
 				newQ.answers[i] = c.getString(1) +" "+c.getString(2);
 				c.moveToNext();
 			}
+<<<<<<< HEAD
 
 			break;
 		case 4: // In which movie do the stars %s and %s appear together?
@@ -134,19 +142,7 @@ public class MoviesDBHelper {
 					"GROUP BY m.`id`, s.`first_name`, s.`last_name` ORDER BY RANDOM() LIMIT 4", null);
 			row = (int)(Math.random()*c.getCount());
 			c.moveToFirst();
-			newQ.question = String.format(QuestionTemplates.QUESTIONS[4], c.getString(1)+" "+c.getString(2), c.getString(3)+" "+c.getString(4));
-			newQ.answers[0] = c.getString(0); 
-			newQ.correctAnswerIndex = 0;
-			for (int j = 1; j < 4; j++) {
-				c.moveToNext();
-				newQ.answers[j] =  c.getString(0);
-			}
-			break;
-		case 5: // Who directed the star %s?
-			c = mDb.rawQuery("SELECT DISTINCT m.`year`, m.`director`, s.`first_name`, s.`last_name` FROM `movies` m, `stars` s, `stars_in_movies` sm WHERE m.id = sm.movie_id AND s.id = sm.star_id AND s.id GROUP BY m.`id`, s.`first_name`, s.`last_name` ORDER BY RANDOM() LIMIT 4", null);
-			row = (int)(Math.random()*c.getCount());
-			c.moveToFirst(); // only 4 results are returned.
-			newQ.question = String.format(QuestionTemplates.QUESTIONS[5], c.getString(2) +" "+ c.getString(3));
+			newQ.question = String.format(QuestionTemplates.QUESTIONS[4], c.getString(1) +" "+c.getString(2), c.getString(3) +" "+c.getString(4));
 			newQ.answers[0] = c.getString(1); 
 			newQ.correctAnswerIndex = 0;
 			for (int j = 1; j < 4; j++) {
@@ -154,10 +150,26 @@ public class MoviesDBHelper {
 				newQ.answers[j] =  c.getString(1);
 			}
 			break;
+		case 5: // Who directed the movie %s?
+			break;
 		case 6: // Which star appears in both movies %s and %s?
 			break;
 		case 7: // Which star did not appear in the same movie with the star %s?
 			break;
+=======
+			
+			break;
+//		case 4: // In which movie do the stars %s and %s appear together?
+//			break;
+		// case 5: // Who did not direct the movie %s?
+		// Dumb question... 
+		/// lol...how about we skip this one...
+		//	break;
+//		case 6: // Which star appears in both movies %s and %s?
+//			break;
+//		case 7: // Which star did not appear in the same movie with the star %s?
+//			break;
+>>>>>>> 9fe775bbd6b2624ceb19a462f0d2021ec8f74379
 		default: // Who directed the star %s in year %s?
 			c = mDb.rawQuery("SELECT DISTINCT m.`year`, m.`director`, s.`first_name`, s.`last_name` FROM `movies` m, `stars` s, `stars_in_movies` sm WHERE m.id = sm.movie_id AND s.id = sm.star_id AND s.id GROUP BY m.`id`, s.`first_name`, s.`last_name` ORDER BY RANDOM() LIMIT 4", null);
 			row = (int)(Math.random()*c.getCount());
