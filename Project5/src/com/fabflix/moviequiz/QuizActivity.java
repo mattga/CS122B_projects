@@ -121,6 +121,7 @@ public class QuizActivity extends Activity {
     private void rescheduleTimeUp() {
         // Reschedule the Time-Up operation onCreate, onResume.
         mScheduler.postDelayed(new TimeUpAction(), TIME_MAX - mTimerValue);
+        mScheduler.postDelayed(new TimerUpdate(), 1000);
     }
     /**
      * OnClickListener for every answer.
@@ -217,5 +218,14 @@ public class QuizActivity extends Activity {
             // NoHistory preference in Manifest calls finish automagically....
              QuizActivity.this.finish(); // Close the quiz activity
         }
+    }
+    
+    private class TimerUpdate implements Runnable {
+    	public void run() {
+    		int num = mQuestionsCorrect + mQuestionsWrong + 1;
+    		long timeLeft = TIME_MAX - (System.currentTimeMillis() - mStartTime);
+    		QuizActivity.this.mTextViewQuestionNumber.setText("Question #"+ num + "| Time: "+ timeLeft/1000 +"s");
+    		mScheduler.postDelayed(new TimerUpdate(), 1000);
+    	}
     }
 }
