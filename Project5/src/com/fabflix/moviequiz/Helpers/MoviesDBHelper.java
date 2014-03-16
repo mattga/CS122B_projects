@@ -98,8 +98,32 @@ public class MoviesDBHelper {
 				newQ.answers[j] =  c.getString(2) +" "+ c.getString(3);
 			}
 			break;
-//		case 3: // Which star was not in the movie %s?
-//			break;
+		case 3: // Which star was not in the movie %s?
+			// The lone star, the left out one...the answer
+			String singleActorQuery = "SELECT mov.`title`, star.`first_name`, star.`last_name`, star.`id` FROM `movies` mov, `stars` star, "+
+					   "(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) <= 1 ORDER BY RANDOM() LIMIT 1) mult "+ 
+					   "WHERE mov.`id` = mult.`movie_id` AND star.`id`= mult.`star_id`";
+			c = mDb.rawQuery(singleActorQuery, null);
+			c.moveToFirst();
+			newQ.correctAnswerIndex = 0;
+			newQ.answers[0] = c.getString(1) +" "+c.getString(2);
+			
+			// The cool kids: A group of actors in the same movie....excluding the lone star.
+			String starId = c.getString(3);
+			String multipleActorQuery = "SELECT mov.`title`, star.`first_name`, star.`last_name` " +
+					"FROM `movies` mov, `stars` star, `stars_in_movies` sim, " +
+					"(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) > 2 ORDER BY RANDOM() LIMIT 1) mult" +
+					" WHERE mov.`id` = mult.`movie_id` AND star.`id` = sim.`star_id` AND mult.`movie_id` = sim.`movie_id` " +
+					"LIMIT 3";
+			c = mDb.rawQuery(multipleActorQuery, null);
+			c.moveToFirst();
+			newQ.question = String.format(QuestionTemplates.QUESTIONS[3], c.getString(0));
+			for (int i = 1; i < 4; i++) {
+				newQ.answers[i] = c.getString(1) +" "+c.getString(2);
+				c.moveToNext();
+			}
+			
+			break;
 //		case 4: // In which movie do the stars %s and %s appear together?
 //			break;
 		// case 5: // Who did not direct the movie %s?
