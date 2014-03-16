@@ -2,6 +2,7 @@ package com.fabflix.moviequiz;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -15,13 +16,15 @@ public class QuizActivity extends Activity {
      * Keys used for storing state between Activity Life Cycle.
      * Keys correspond to integer values inside a Bundle.
      */
-    private final static String KEY_QUESTION_COUNT = "COUNT";
-    private final static String KEY_QUESTION_CORRECT = "CORRECT";
-    private final static String KEY_QUESTION_WRONG = "WRONG";
-    private final static String KEY_TIME_ELAPSED = "TIME_ELAPSED";
+    public final static String KEY_QUESTION_COUNT = "COUNT";
+    public final static String KEY_QUESTION_CORRECT = "CORRECT";
+    public final static String KEY_QUESTION_WRONG = "WRONG";
+    public final static String KEY_TIME_ELAPSED = "TIME_ELAPSED";
 
-    private final static int QUESTION_DELAY = 2000; // 2second delay.
-    private final static long TIME_MAX = 180000; // 3 minute max in milliseconds
+    private static int mCorrectAnswerIndex;
+    private final static int QUESTION_DELAY = 1500; // 1.5 second delay.
+//    private final static long TIME_MAX = 180000; // 3 minute max in milliseconds
+    private final static long TIME_MAX = 10000; // 3 minute max in milliseconds
     private long mStartTime = System.currentTimeMillis();
     private long mTimerValue = 0;
     private int mQuestionsCorrect = 0;
@@ -56,6 +59,8 @@ public class QuizActivity extends Activity {
         mTextViewQuestion = (TextView)(findViewById(R.id.textViewQuestion));
         mTextViewQuestionNumber = (TextView)(findViewById(R.id.textViewQuestionNumber));
 
+        // Initialize the first question....
+        mScheduler.post(new NewQuestionAction());
     }
 
     /**
@@ -122,13 +127,34 @@ public class QuizActivity extends Activity {
             Log.w("BUTTON CLCIKED", "Answer Clicked.....");
             // update the timer....
             mTimerValue += (System.currentTimeMillis() - mStartTime);
-            //Log.e("TIME ELAPSED", ""+ mTimerValue/1000);
 
+            // Check if the question was answered correctly.
             Button btn = (Button)view;
-            String answer = btn.getText().toString();
+
+            if (evaluateAnswer(btn))
+                QuizActivity.this.mQuestionsCorrect++;
+            else
+                QuizActivity.this.mQuestionsWrong++;
 
             // Set a time-out to move to the next question...
             new Handler().postDelayed(new NewQuestionAction(), QUESTION_DELAY);
+        }
+
+
+        private boolean evaluateAnswer(Button btn) {
+            int colorCorrect = Color.GREEN;
+            int colorWrong = Color.RED;
+
+            // Set the background color of the correct answer green
+            mButtons[mCorrectAnswerIndex].setBackgroundColor(colorCorrect);
+
+            // Did we click the same button?
+            // The instance of the buttons is always the same, buttons are reused....
+            if (mButtons[mCorrectAnswerIndex] != btn) {
+                btn.setBackgroundColor(colorWrong);
+                return false;
+            }
+            return true;
         }
     }
 
@@ -138,36 +164,46 @@ public class QuizActivity extends Activity {
     private class NewQuestionAction implements Runnable {
         @Override
         public void run() {
-            Log.w("DELAYED", "QUESTION RUNNIGN");
-            // Update the view with a new question......
-
-            // Reset styles of the buttons
-
-            // Clear the status text box
+            Log.w("DELAYED", "QUESTION RUNNING");
+            // Update view with new title....
+            int totalQuestions = 1 + QuizActivity.this.mQuestionsCorrect + QuizActivity.this.mQuestionsWrong;
+            QuizActivity.this.mTextViewQuestionNumber.setText("Question #"+  totalQuestions);
 
             // Fetch a new Question....
+            // TODO: FETCH A NEW QUESTION.
+            mCorrectAnswerIndex = (mCorrectAnswerIndex + 1) % 4; // Update the index of the correct index
+            String question = "This is a new question: "+ totalQuestions;
 
-            // Update the view with the new question and button options.
+            // Load New Questions...
+            QuizActivity.this.mTextViewQuestion.setText(question);
+
+            // Reset styles of the buttons
+            for (Button btn : QuizActivity.this.mButtons)
+                btn.setBackgroundColor(Color.DKGRAY);
         }
     }
 
-
+    /**
+     * Implements runnable, and is called whenever the time expires.
+     */
     private class TimeUpAction implements Runnable {
         @Override
         public void run() {
             Log.e("TIME UP", "SWITCHING TO STATS ACTIVITY");
-
+            mTimerValue = System.currentTimeMillis() - mStartTime;
             // Start a new activity with the quiz stats passed in....
             Bundle quizStats = new Bundle();
             quizStats.putInt(KEY_QUESTION_CORRECT, mQuestionsCorrect);
             quizStats.putInt(KEY_QUESTION_WRONG, mQuestionsWrong);
+            quizStats.putLong(KEY_TIME_ELAPSED, mTimerValue);
 
             // Create a new intent to show the stats, and pass in the info from this quiz.
             Intent statsActivity = new Intent(QuizActivity.this, StatsActivity.class);
             statsActivity.putExtras(quizStats);
             QuizActivity.this.startActivity(statsActivity);
 
-            QuizActivity.this.finish(); // Close the quiz activity
+            // NoHistory preference in Manifest calls finish automagically....
+            // QuizActivity.this.finish(); // Close the quiz activity
         }
     }
 }
