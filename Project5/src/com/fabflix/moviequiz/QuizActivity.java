@@ -1,6 +1,9 @@
 package com.fabflix.moviequiz;
 
+import java.util.Random;
+
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,6 +12,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.fabflix.moviequiz.Helpers.MoviesDBHelper;
+import com.fabflix.moviequiz.Helpers.QuestionGenerator;
+import com.fabflix.moviequiz.Types.MovieQuestion;
 
 
 public class QuizActivity extends Activity {
@@ -170,15 +177,41 @@ public class QuizActivity extends Activity {
 
             // Fetch a new Question....
             // TODO: FETCH A NEW QUESTION.
-            mCorrectAnswerIndex = (mCorrectAnswerIndex + 1) % 4; // Update the index of the correct index
-            String question = "This is a new question: "+ totalQuestions;
+            // mCorrectAnswerIndex = (mCorrectAnswerIndex + 1) % 4; // Update the index of the correct index
+            // String question = "This is a new question: "+ totalQuestions;
 
             // Load New Questions...
-            QuizActivity.this.mTextViewQuestion.setText(question);
+            MoviesDBHelper mdb = new MoviesDBHelper(QuizActivity.this);
+            mdb.open();
+            QuestionGenerator questionGenerator = new QuestionGenerator(mdb);
+            MovieQuestion movieQuestion;
+            
+            switch ((new Random()).nextInt(2)) {
+            case 0:
+            	// Genereate Type 1 Question....
+                movieQuestion= questionGenerator.generateMovieReleaseYearQuestion();
+                mCorrectAnswerIndex = movieQuestion.answerIndex;
+            	break;
+            default:
+                // Generate Type 2 Question
+                movieQuestion = questionGenerator.generateMovieDirectorQuestion();
+                mCorrectAnswerIndex = movieQuestion.answerIndex;
+            	break;
+            }
+
+            // Close DB Connection
+            mdb.close();
+            
+            QuizActivity.this.mTextViewQuestion.setText(movieQuestion.question);
 
             // Reset styles of the buttons
-            for (Button btn : QuizActivity.this.mButtons)
+            int i = 0;
+            String[] prefix = new String[] {"A. ", "B. ", "C. ", "D. "};
+            for (Button btn : QuizActivity.this.mButtons) {
                 btn.setBackgroundColor(Color.DKGRAY);
+                btn.setText(prefix[i]+ movieQuestion.answers[i]);
+                i++;
+            }
         }
     }
 
