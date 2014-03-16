@@ -28,7 +28,7 @@ public class QuizActivity extends Activity {
     private static int mCorrectAnswerIndex;
     private final static int QUESTION_DELAY = 1500; // 1.5 second delay.
 //    private final static long TIME_MAX = 180000; // 3 minute max in milliseconds
-    private final static long TIME_MAX = 10000; // 3 minute max in milliseconds
+    private final static long TIME_MAX = 30000; // 3 minute max in milliseconds
     private long mStartTime = System.currentTimeMillis();
     private long mTimerValue = 0;
     private int mQuestionsCorrect = 0;
