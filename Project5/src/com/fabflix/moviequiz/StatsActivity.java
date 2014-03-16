@@ -2,7 +2,6 @@ package com.fabflix.moviequiz;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;

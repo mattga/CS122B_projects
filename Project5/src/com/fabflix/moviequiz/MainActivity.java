@@ -28,6 +28,8 @@ public class MainActivity extends Activity {
 
     private class NewQuizListener implements View.OnClickListener {
         public void onClick(View btn) {
+        	new MoviesDBHelper(MainActivity.this).open().getQuestion();
+        	
             Intent newQuiz = new Intent(MainActivity.this, QuizActivity.class);
             MainActivity.this.startActivity(newQuiz);
         }

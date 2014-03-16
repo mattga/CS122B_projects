@@ -1,9 +1,6 @@
 package com.fabflix.moviequiz;
 
-import java.util.Random;
-
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,7 +11,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.fabflix.moviequiz.Helpers.MoviesDBHelper;
-import com.fabflix.moviequiz.Helpers.QuestionGenerator;
 import com.fabflix.moviequiz.Types.MovieQuestion;
 
 
@@ -170,7 +166,6 @@ public class QuizActivity extends Activity {
      */
     private class NewQuestionAction implements Runnable {
         public void run() {
-            Log.w("DELAYED", "QUESTION RUNNING");
             // Update view with new title....
             int totalQuestions = 1 + QuizActivity.this.mQuestionsCorrect + QuizActivity.this.mQuestionsWrong;
             QuizActivity.this.mTextViewQuestionNumber.setText("Question #"+  totalQuestions);
@@ -183,22 +178,8 @@ public class QuizActivity extends Activity {
             // Load New Questions...
             MoviesDBHelper mdb = new MoviesDBHelper(QuizActivity.this);
             mdb.open();
-            QuestionGenerator questionGenerator = new QuestionGenerator(mdb);
-            MovieQuestion movieQuestion;
-            
-            switch ((new Random()).nextInt(2)) {
-            case 0:
-            	// Genereate Type 1 Question....
-                movieQuestion= questionGenerator.generateMovieReleaseYearQuestion();
-                mCorrectAnswerIndex = movieQuestion.answerIndex;
-            	break;
-            default:
-                // Generate Type 2 Question
-                movieQuestion = questionGenerator.generateMovieDirectorQuestion();
-                mCorrectAnswerIndex = movieQuestion.answerIndex;
-            	break;
-            }
-
+            MovieQuestion movieQuestion = mdb.getQuestion().shuffleAnswers();
+            mCorrectAnswerIndex = movieQuestion.correctAnswerIndex;
             // Close DB Connection
             mdb.close();
             
