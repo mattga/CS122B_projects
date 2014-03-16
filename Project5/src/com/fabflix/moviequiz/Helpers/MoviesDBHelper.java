@@ -155,8 +155,55 @@ public class MoviesDBHelper {
 			}
 			break;
 		case 6: // Which star appears in both movies %s and %s?
+			// Get the 2 movies with the same actor...
+			c = mDb.rawQuery("SELECT mov.`id`, mov.`title`, star.`first_name`, star.`last_name`, star.`id` FROM `movies` mov, `stars_in_movies` sim, `stars` star, (SELECT movie_id, star_id, COUNT(movie_id) as cnt FROM `stars_in_movies` GROUP BY star_id HAVING COUNT(movie_id) > 3 ORDER BY RANDOM() LIMIT 1) as popular WHERE sim.`movie_id` = mov.`id` AND popular.`star_id` = sim.`star_id` AND star.`id` = sim.`star_id` LIMIT 2", null);
+			c.moveToFirst();
+			String id = c.getString(4);
+			
+			String[] movies = new String[2];
+			movies[0] = c.getString(1);
+			c.moveToNext();
+			movies[1] = c.getString(1);
+			
+			newQ.question = String.format(QuestionTemplates.QUESTIONS[6], movies[0], movies[1]);
+			newQ.answers[0] = c.getString(2) +" "+ c.getString(3);
+			
+			newQ.correctAnswerIndex = 0;
+			
+			// Pick 3 alternatives...
+			c = mDb.rawQuery("SELECT s.first_name, s.last_name FROM stars s WHERE s.id != "+id+" GROUP BY s.id ORDER BY RANDOM() LIMIT 3", null);
+			c.moveToFirst();
+			for (int i = 1; i < 4; i++) {
+				newQ.answers[i] = c.getString(0) +" "+ c.getString(1);
+				c.moveToNext();
+			}
 			break;
 		case 7: // Which star did not appear in the same movie with the star %s?
+			// The lone star, the left out one...the answer
+			String singleActorQueryII = "SELECT mov.`title`, star.`first_name`, star.`last_name`, star.`id` FROM `movies` mov, `stars` star, "+
+					"(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) <= 1 ORDER BY RANDOM() LIMIT 1) mult "+ 
+					"WHERE mov.`id` = mult.`movie_id` AND star.`id`= mult.`star_id`";
+			c = mDb.rawQuery(singleActorQueryII, null);
+			c.moveToFirst();
+			newQ.correctAnswerIndex = 0;
+			newQ.answers[0] = c.getString(1) +" "+c.getString(2);
+
+			// The cool kids: A group of actors in the same movie....excluding the lone star.
+			String multipleActorQueryII = "SELECT mov.`title`, star.`first_name`, star.`last_name` " +
+					"FROM `movies` mov, `stars` star, `stars_in_movies` sim, " +
+					"(SELECT movie_id, star_id FROM `stars_in_movies` GROUP BY movie_id  HAVING COUNT(star_id) > 3 ORDER BY RANDOM() LIMIT 1) mult" +
+					" WHERE mov.`id` = mult.`movie_id` AND star.`id` = sim.`star_id` AND mult.`movie_id` = sim.`movie_id` " +
+					" GROUP BY star.`id`"+
+					" LIMIT 4";
+			c = mDb.rawQuery(multipleActorQueryII, null);
+			c.moveToFirst();
+			// Take the first of the group and put his name in the question
+			newQ.question = String.format(QuestionTemplates.QUESTIONS[7], c.getString(1) +" "+c.getString(2));
+			c.moveToNext();
+			for (int i = 1; i < 4; i++) {
+				newQ.answers[i] = c.getString(1) +" "+c.getString(2);
+				c.moveToNext();
+			}
 			break;
 		default: // Who directed the star %s in year %s?
 			c = mDb.rawQuery("SELECT DISTINCT m.`year`, m.`director`, s.`first_name`, s.`last_name` FROM `movies` m, `stars` s, `stars_in_movies` sm WHERE m.id = sm.movie_id AND s.id = sm.star_id AND s.id GROUP BY m.`id`, s.`first_name`, s.`last_name` ORDER BY RANDOM() LIMIT 4", null);
