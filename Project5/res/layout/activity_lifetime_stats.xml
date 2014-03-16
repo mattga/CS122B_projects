@@ -7,6 +7,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.fabflix.moviequiz.MainActivity"
+    android:background="@android:color/black"
     android:orientation="vertical">
 
     <TextView
@@ -20,32 +21,38 @@
 
     <TextView
         android:text="@string/stats_quizes_taken"
+        android:id="@+id/lifetime_textViewTaken"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_count"
+        android:id="@+id/lifetime_textViewAnswered"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_correct"
+        android:id="@+id/lifetime_textViewCorrect"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_incorrect"
+        android:id="@+id/lifetime_textViewWrong"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_avg_resp"
+        android:id="@+id/lifetime_textViewAvgResponse"
         style="@style/default_white_text.left"
         />
 
 
     <Button
         android:text="@string/done"
+        android:id="@+id/lifetime_buttonFinish"
         style="@style/button_defaults"
         />
 

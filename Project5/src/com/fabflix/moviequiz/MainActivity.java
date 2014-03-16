@@ -37,7 +37,12 @@ public class MainActivity extends Activity {
 
     private class StatsButtonListener implements View.OnClickListener {
         public void onClick(View btn) {
-            Intent newStats = new Intent(MainActivity.this, StatsActivity.class);
+        	Bundle extras = new Bundle();
+        	extras.putBoolean(StatsActivity.KEY_IS_LIFETIME, true);
+            
+        	Intent newStats = new Intent(MainActivity.this, StatsActivity.class);
+            newStats.putExtras(extras);
+            
             MainActivity.this.startActivity(newStats);
         }
     }

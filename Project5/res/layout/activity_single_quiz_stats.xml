@@ -21,31 +21,31 @@
 
     <TextView
         android:text="@string/stats_question_count"
-        android:id="@+id/textViewAnswered"
+        android:id="@+id/single_textViewAnswered"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_correct"
-        android:id="@+id/textViewCorrect"
+        android:id="@+id/single_textViewCorrect"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_incorrect"
-        android:id="@+id/textViewWrong"
+        android:id="@+id/single_textViewWrong"
         style="@style/default_white_text.left"
         />
 
     <TextView
         android:text="@string/stats_question_avg_resp"
-        android:id="@+id/textViewAvgResponse"
+        android:id="@+id/single_textViewAvgResponse"
         style="@style/default_white_text.left"
         />
 
     <Button
         android:text="@string/done"
-        android:id="@+id/buttonFinish"
+        android:id="@+id/single_buttonFinish"
         style="@style/button_defaults"
         />
 
